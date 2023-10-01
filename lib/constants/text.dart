@@ -1,0 +1,9 @@
+const String chat = 'Chat';
+const String chatDrivers = 'Chat Drivers';
+const String groups = 'Groups';
+const String hintOfSearch = 'Search';
+const String allContacts = 'All Contacts · 24';
+const String mansName = 'Wade Warren';
+const String messageName = "What's the progress on trip its like hard... ";
+const String online = 'Online';
+const String groupsName = 'Pixsellz Team';
