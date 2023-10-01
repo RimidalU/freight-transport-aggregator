@@ -38,6 +38,7 @@ dependencies:
   awesome_extensions:
   google_fonts:
   flutter_svg:
+  provider:
 dev_dependencies:
   flutter_test:
     sdk: flutter

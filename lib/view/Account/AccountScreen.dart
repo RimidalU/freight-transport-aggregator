@@ -3,7 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/Account/widgets/2block.dart';
+import 'package:untitled55/view/global_widgets/navbarWidget.dart';
+
 bool val = false;
+
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
 
@@ -47,10 +50,11 @@ class _AccountScreenState extends State<AccountScreen> {
                     16.widthBox,
                     Image.asset('assets/images/back.png'),
                     3.widthBox,
-                    Text('Back',style: GoogleFonts.dmSans(
-                      fontSize: 14,
-                      color: Color(0xffD0D0D0)
-                    ),)
+                    Text(
+                      'Back',
+                      style: GoogleFonts.dmSans(
+                          fontSize: 14, color: const Color(0xffD0D0D0)),
+                    )
                   ],
                 ),
               ),
@@ -91,8 +95,8 @@ class _AccountScreenState extends State<AccountScreen> {
                       child: Center(
                         child: Text(
                           'Vacation',
-                          style:
-                              GoogleFonts.dmSans(color: const Color(0xff32A5D7)),
+                          style: GoogleFonts.dmSans(
+                              color: const Color(0xff32A5D7)),
                         ),
                       ),
                     ),
@@ -115,8 +119,8 @@ class _AccountScreenState extends State<AccountScreen> {
                           width: 47,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            border:
-                                Border.all(color: Colors.white.withOpacity(0.08)),
+                            border: Border.all(
+                                color: Colors.white.withOpacity(0.08)),
                             color: const Color(0xffFCFCFC).withOpacity(0.08),
                           ),
                           child: Center(
@@ -137,8 +141,8 @@ class _AccountScreenState extends State<AccountScreen> {
                           width: 47,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            border:
-                                Border.all(color: Colors.white.withOpacity(0.08)),
+                            border: Border.all(
+                                color: Colors.white.withOpacity(0.08)),
                             color: const Color(0xffFCFCFC).withOpacity(0.08),
                           ),
                           child: Center(
@@ -157,7 +161,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ),
               3.heightBox,
-            const twoBlock(),
+              const twoBlock(),
               4.heightBox,
               Container(
                 height: 52,
@@ -173,19 +177,23 @@ class _AccountScreenState extends State<AccountScreen> {
                         16.widthBox,
                         Image.asset('assets/images/Notification.png'),
                         4.widthBox,
-                        Text('Turn on notifications', style: GoogleFonts.dmSans(
-                          color: const Color(0xffFCFCFC),
-                          fontSize: 14,
-                        ),),
+                        Text(
+                          'Turn on notifications',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xffFCFCFC),
+                            fontSize: 14,
+                          ),
+                        ),
                       ],
                     ),
                     Row(
                       children: [
-                        CupertinoSwitch(value: val, onChanged:  (val) {
-                          val != val;
-                          setState(() {
-                          });
-                        }),
+                        CupertinoSwitch(
+                            value: val,
+                            onChanged: (v) {
+                              val = v;
+                              setState(() {});
+                            }),
                         16.widthBox,
                       ],
                     ),
@@ -194,7 +202,6 @@ class _AccountScreenState extends State<AccountScreen> {
               ),
               4.heightBox,
               Container(
-
                 height: 52,
                 width: context.width - 8,
                 decoration: BoxDecoration(
@@ -208,10 +215,13 @@ class _AccountScreenState extends State<AccountScreen> {
                         16.widthBox,
                         Image.asset('assets/images/invite.png'),
                         4.widthBox,
-                        Text('Invite people', style: GoogleFonts.dmSans(
-                          color: const Color(0xffFCFCFC),
-                          fontSize: 14,
-                        ),),
+                        Text(
+                          'Invite people',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xffFCFCFC),
+                            fontSize: 14,
+                          ),
+                        ),
                       ],
                     ),
                     Padding(
@@ -236,10 +246,13 @@ class _AccountScreenState extends State<AccountScreen> {
                         16.widthBox,
                         Image.asset('assets/images/Time.png'),
                         4.widthBox,
-                        Text('Time off', style: GoogleFonts.dmSans(
-                          color: const Color(0xffFCFCFC),
-                          fontSize: 14,
-                        ),),
+                        Text(
+                          'Time off',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xffFCFCFC),
+                            fontSize: 14,
+                          ),
+                        ),
                       ],
                     ),
                     Padding(
@@ -248,7 +261,8 @@ class _AccountScreenState extends State<AccountScreen> {
                     ),
                   ],
                 ),
-              ), 4.heightBox,
+              ),
+              4.heightBox,
               Container(
                 height: 52,
                 width: context.width - 8,
@@ -263,88 +277,28 @@ class _AccountScreenState extends State<AccountScreen> {
                         16.widthBox,
                         Image.asset('assets/images/timeout.png'),
                         4.widthBox,
-                        Text('Log out', style: GoogleFonts.dmSans(
-                          color: const Color(0xffFCFCFC),
-                          fontSize: 14,
-                        ),),
+                        Text(
+                          'Log out',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xffFCFCFC),
+                            fontSize: 14,
+                          ),
+                        ),
                       ],
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
-                      child: Image.asset('assets/images/Arrow.png'),//buttonplus.png
+                      child: Image.asset(
+                          'assets/images/Arrow.png'), //buttonplus.png
                     ),
                   ],
                 ),
               ),
             ],
           ),
-        ), //iconaccount.png
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 5.0),
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 3.0, right: 2.0),
-              child: Container(
-                height: 55,
-                width: context.width - 83,
-                decoration: BoxDecoration(
-                  color: Color(0xff202329),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 27.0, top: 11, right: 33),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Image.asset('assets/images/Dashboard.png'),
-                          Text('Dashboard',
-                           style: GoogleFonts.dmSans(
-                             fontSize: 12,
-                             color: Color(0xffFCFCFC).withOpacity(0.46)
-                           ),),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Image.asset('assets/images/Trip.png'),
-                          Text('My trip',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color: Color(0xffFCFCFC).withOpacity(0.46)
-                            ),),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Image.asset('assets/images/user.png'),
-                          Text('User',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color: Color(0xffFCFCFC).withOpacity(0.46)
-                            ),),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              height: 55,
-              width: 77,
-              decoration: BoxDecoration(
-                color: Color(0xff202329),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Center(child: Image.asset('assets/images/buttonplus.png')),
-            ),
-          ],
         ),
       ),
+      bottomNavigationBar: const NavBarWidget(),
     );
   }
 }
