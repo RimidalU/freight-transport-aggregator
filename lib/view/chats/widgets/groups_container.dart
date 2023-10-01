@@ -1,8 +1,6 @@
 import '/constants/images_path.dart' as image;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../constants/text.dart';
 import '../../../ui/text_style.dart';
 
