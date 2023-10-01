@@ -44,7 +44,7 @@ class NewTripScreen extends StatelessWidget {
                       Text(
                         'Back',
                         style: GoogleFonts.dmSans(
-                            fontSize: 14, color: Color(0xffD0D0D0)),
+                            fontSize: 14, color: const Color(0xffD0D0D0)),
                       )
                     ],
                   ),

@@ -45,17 +45,22 @@ class _AccountScreenState extends State<AccountScreen> {
                       bottomLeft: Radius.circular(17),
                       bottomRight: Radius.circular(17),
                     )),
-                child: Row(
-                  children: [
-                    16.widthBox,
-                    Image.asset('assets/images/back.png'),
-                    3.widthBox,
-                    Text(
-                      'Back',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 14, color: const Color(0xffD0D0D0)),
-                    )
-                  ],
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Row(
+                    children: [
+                      16.widthBox,
+                      Image.asset('assets/images/back.png'),
+                      3.widthBox,
+                      Text(
+                        'Back',
+                        style: GoogleFonts.dmSans(
+                            fontSize: 14, color: const Color(0xffD0D0D0)),
+                      )
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
@@ -161,7 +166,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ),
               3.heightBox,
-              const twoBlock(),
+              const TwoBlock(),
               4.heightBox,
               Container(
                 height: 52,
@@ -289,7 +294,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: Image.asset(
-                          'assets/images/Arrow.png'), //buttonplus.png
+                          'assets/images/Arrow.png'),
                     ),
                   ],
                 ),

@@ -2,8 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class twoBlock extends StatelessWidget {
-  const twoBlock({super.key});
+class TwoBlock extends StatelessWidget {
+  const TwoBlock({super.key});
 
   @override
   Widget build(BuildContext context) {

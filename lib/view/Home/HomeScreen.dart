@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => AccountScreen()));
+                            builder: (context) => const AccountScreen()));
                   },
                   child: Container(
                     width: context.width - 120,
@@ -386,7 +386,6 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     10.heightBox,
-                    //testbar.png
                     Stack(
                       children: [
                         Container(
@@ -417,7 +416,7 @@ class HomeScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ChatsScreen()));
+                        MaterialPageRoute(builder: (context) => const ChatsScreen()));
                   },
                   child: Container(
                     height: 106,
