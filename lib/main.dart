@@ -4,6 +4,7 @@ import 'package:untitled55/view/Home/HomeScreen.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chat/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
+import 'package:untitled55/view/my_trips/new_trip_screen.dart';
 import 'package:untitled55/view/notification/notification.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const NewTripScreen(),
       routes: {
         'profile': (context) => const AccountScreen(),
         'home': (context) => const HomeScreen(),

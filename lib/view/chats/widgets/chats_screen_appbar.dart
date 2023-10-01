@@ -42,7 +42,7 @@ class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
-      actions: const [
+      actions: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 5),
           child: Row(
