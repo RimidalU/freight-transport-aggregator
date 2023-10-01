@@ -49,13 +49,13 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Text(
                   mansName,
                   style: HeadlineTextStyle.style500w14.copyWith(
-                    color: Colors.white,
+                    color: ProjectColors.white,
                   ),
                 ),
                 Text(
                   online,
                   style: HeadlineTextStyle.style400w12.copyWith(
-                    color: ChatsColors.laim,
+                    color: ProjectColors.laim,
                   ),
                 ),
               ],
@@ -63,13 +63,7 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
-      backgroundColor: ChatsColors.backgraund,
-      // actions: [
-      //   Padding(
-      //     padding: const EdgeInsets.symmetric(horizontal: 15),
-      //     child:
-      //   )
-      // ],
+      backgroundColor: ProjectColors.backgraund,
     );
   }
 }

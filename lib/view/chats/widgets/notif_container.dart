@@ -20,7 +20,7 @@ class NotifContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(
           12,
         ),
-        color: ChatsColors.backgraund,
+        color: ProjectColors.backgraund,
       ),
       padding: EdgeInsets.symmetric(horizontal: width * 0.04),
       child: Row(
@@ -37,7 +37,7 @@ class NotifContainer extends StatelessWidget {
             child: Text(
               chat,
               style: HeadlineTextStyle.style500w24.copyWith(
-                color: ChatsColors.headLine,
+                color: ProjectColors.headLine,
               ),
             ),
           ),

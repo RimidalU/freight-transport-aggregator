@@ -1,4 +1,5 @@
 
+import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:untitled55/view/chat/widgets/massege_model.dart';
@@ -41,7 +42,7 @@ class _GroupsChatScreenState extends State<GroupsChatScreen> {
                   child: Text(
                     message.text,
                     style: const TextStyle(
-                      color: ChatsColors.appIcon,
+                      color: ProjectColors.appIcon,
                     ),
                   ),
                 ),
@@ -66,9 +67,7 @@ class _GroupsChatScreenState extends State<GroupsChatScreen> {
                         color: Colors.grey.shade400,
                       ),
                     ),
-                    const SizedBox(
-                      width: 10,
-                    ),
+                    10.widthBox,
                   ],
                 )
               : Container(
@@ -202,7 +201,7 @@ class _GroupsChatScreenState extends State<GroupsChatScreen> {
                   ? const TextSpan(
                       text: 'Online',
                       style: TextStyle(
-                        color: ChatsColors.laim,
+                        color: ProjectColors.laim,
                         fontSize: 11,
                         fontWeight: FontWeight.w400,
                       ),

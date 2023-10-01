@@ -47,7 +47,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                   child: Text(
                     chatDrivers,
                     style: HeadlineTextStyle.style500w14.copyWith(
-                      color: ChatsColors.white,
+                      color: ProjectColors.white,
                     ),
                   ),
                 ),

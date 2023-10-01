@@ -30,7 +30,7 @@ class ChatsSearch extends StatelessWidget {
             ),
             hintText: hintOfSearch,
             hintStyle: HeadlineTextStyle.style400w14.copyWith(
-              color: ChatsColors.appIcon,
+              color: ProjectColors.appIcon,
             ),
             filled: true,
             fillColor: Colors.grey.shade800,

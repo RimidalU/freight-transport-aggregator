@@ -26,11 +26,11 @@ class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
         },
         child: Icon(
           Icons.arrow_back_ios_new,
-          color: ChatsColors.headLine,
+          color: ProjectColors.headLine,
           size: 16,
         ),
       ),
-      backgroundColor: ChatsColors.backgraund,
+      backgroundColor: ProjectColors.backgraund,
       title: GestureDetector(
         onTap: () {
           Navigator.pop(context);
@@ -38,7 +38,7 @@ class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Text(
           'Back',
           style: HeadlineTextStyle.style400w14.copyWith(
-            color: ChatsColors.headLine,
+            color: ProjectColors.headLine,
           ),
         ),
       ),
