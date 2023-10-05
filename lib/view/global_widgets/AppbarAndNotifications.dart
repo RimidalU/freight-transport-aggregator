@@ -38,29 +38,21 @@ class _AppBarAndNotificationsState extends State<AppBarAndNotifications> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  16.widthBox,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      5.heightBox,
-                      Text(
-                        'Hello',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 12,
-                            color:
-                            const Color(0xffFCFCFC).withOpacity(0.46)),
-                      ),
-                      3.widthBox,
-                      Text(
-                        'Thusday 04.05.2023',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
-                      )
-                    ],
-                  ),
-                ],
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Row(
+                  children: [
+                    16.widthBox,
+                    Image.asset('assets/images/back.png'),
+                    3.widthBox,
+                    Text(
+                      'Back',
+                      style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                    )
+                  ],
+                ),
               ),
               Row(
                 children: [

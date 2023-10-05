@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:untitled55/models.dart';
 import 'package:untitled55/view/Account/AccountScreen.dart';
 import 'package:untitled55/view/Home/HomeScreen.dart';
+import 'package:untitled55/view/Settlement/SettlementScreen.dart';
 import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chat/groups_chats.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const NewTripScreen(),
+        home: const HomeScreen(),
         // home: const HomeScreen(),
         routes: {
           'profile': (context) => const AccountScreen(),

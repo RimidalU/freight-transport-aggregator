@@ -2,8 +2,10 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/Account/AccountScreen.dart';
+import 'package:untitled55/view/Settlement/SettlementScreen.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
+import 'package:untitled55/view/rating/RatingScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -155,39 +157,44 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 4.widthBox,
-                Container(
-                  width: 111,
-                  height: 72,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: const Color(0xff202329),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      children: [
-                        Image.asset('assets/images/rating.png'),
-                        4.widthBox,
-                        Column(
-                          children: [
-                            Text(
-                              'Rating',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => RatingScreen()));
+                  },
+                  child: Container(
+                    width: 111,
+                    height: 72,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: const Color(0xff202329),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        children: [
+                          Image.asset('assets/images/rating.png'),
+                          4.widthBox,
+                          Column(
+                            children: [
+                              Text(
+                                'Rating',
+                                style: GoogleFonts.dmSans(
+                                  fontSize: 12,
+                                  color:
+                                      const Color(0xffFCFCFC).withOpacity(0.46),
+                                ),
                               ),
-                            ),
-                            Text(
-                              '9.23',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                                color: const Color(0xffD0D0D0),
+                              Text(
+                                '9.23',
+                                style: GoogleFonts.dmSans(
+                                  fontSize: 16,
+                                  color: const Color(0xffD0D0D0),
+                                ),
                               ),
-                            ),
-                          ],
-                        )
-                      ],
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
@@ -459,42 +466,47 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 3.widthBox,
-                Container(
-                  height: 106,
-                  width: context.width / 2 - 1.5,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xff202329)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'assets/images/mysetl.png',
-                              height: 56,
-                            ),
-                            Image.asset(
-                              'assets/images/Arrow.png',
-                              height: 56,
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'My Settlement',
-                            style: GoogleFonts.dmSans(
-                              fontSize: 14,
-                              color: const Color(0xffD0D0D0),
-                            ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SettlementScreen()));
+                    },
+                  child: Container(
+                    height: 106,
+                    width: context.width / 2 - 1.5,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: const Color(0xff202329)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Image.asset(
+                                'assets/images/mysetl.png',
+                                height: 56,
+                              ),
+                              Image.asset(
+                                'assets/images/Arrow.png',
+                                height: 56,
+                              ),
+                            ],
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'My Settlement',
+                              style: GoogleFonts.dmSans(
+                                fontSize: 14,
+                                color: const Color(0xffD0D0D0),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
