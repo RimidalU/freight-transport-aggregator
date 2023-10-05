@@ -3,11 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:untitled55/models.dart';
 import 'package:untitled55/view/Account/AccountScreen.dart';
 import 'package:untitled55/view/Home/HomeScreen.dart';
+import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chat/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
-import 'package:untitled55/view/my_trips/new_trip_screen.dart';
-import 'package:untitled55/view/notification/notification.dart';
+import 'package:untitled55/view/user/UserScreen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen(),
+        home: const UserScreen(),
         routes: {
           'profile': (context) => const AccountScreen(),
           'home': (context) => const HomeScreen(),

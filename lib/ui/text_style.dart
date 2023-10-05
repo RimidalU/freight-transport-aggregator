@@ -17,4 +17,8 @@ class HeadlineTextStyle {
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle style700w32 = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w700,
+  );
 }
