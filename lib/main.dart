@@ -7,6 +7,7 @@ import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chat/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
+import 'package:untitled55/view/rating/RatingScreen.dart';
 import 'package:untitled55/view/user/UserScreen.dart';
 
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const UserScreen(),
+        home: const RatingScreen(),
         routes: {
           'profile': (context) => const AccountScreen(),
           'home': (context) => const HomeScreen(),
