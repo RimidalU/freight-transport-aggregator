@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/my_trips/trip.controller.dart';
+import 'package:untitled55/view/my_trips/trip.model.dart';
 
 class TripLineItemWidget extends StatelessWidget {
-  const TripLineItemWidget({Key? key}) : super(key: key);
+  final TripModel data;
+  const TripLineItemWidget({Key? key, required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class TripLineItemWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Trip #87538',
+                  'Trip #${data.index}',
                   style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
                 ),
                 Container(
@@ -241,16 +243,43 @@ class TripLineItemWidget extends StatelessWidget {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () => Get.find<MyTripController>().onTripStartClick(0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xff202329),
-                borderRadius: BorderRadius.circular(8),
+          if (data.status != TripStatus.closed)
+            GestureDetector(
+              onTap: () => Get.find<MyTripController>().onTripClick(data),
+              child: Container(
+                width: 334,
+                height: 36,
+                clipBehavior: Clip.antiAlias,
+                decoration: ShapeDecoration(
+                  gradient: const LinearGradient(
+                    begin: Alignment(1.00, -0.02),
+                    end: Alignment(-1, 0.02),
+                    colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
+                  ),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      data.status == TripStatus.avaliable ? "Start trip" : 'Details',
+                      style: GoogleFonts.dmSans(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    if (data.status == TripStatus.active)
+                      const Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child: Icon(Icons.arrow_forward_ios, color: Colors.white, size: 16),
+                      ),
+                  ],
+                ),
               ),
-              child: Center(child: Image.asset('assets/images/starttrip.png')),
             ),
-          ),
           16.heightBox,
         ],
       ),

@@ -18,9 +18,9 @@ class NewTripScreen extends GetView<MyTripController> {
       child: Scaffold(
         backgroundColor: const Color(0xff121418),
         appBar: const AppBarWidget(),
-        body: SingleChildScrollView(
+        body: SizedBox.expand(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               3.heightBox,
               Container(
@@ -178,25 +178,74 @@ class NewTripScreen extends GetView<MyTripController> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Text(
-                      'Available Trips · 2',
-                      style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                    GestureDetector(
+                      onTap: () => controller.onChangeTripPage(0),
+                      child: Obx(() => Text(
+                            'Available Trips · ${controller.avaliable.length}',
+                            style: GoogleFonts.dmSans(
+                                fontSize: 14,
+                                color: controller.currentTripPage.value == 0 ? const Color(0xffD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                          )),
                     ),
                     15.widthBox,
-                    Text(
-                      'Current Trips · 1',
-                      style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                    GestureDetector(
+                      onTap: () => controller.onChangeTripPage(1),
+                      child: Obx(() => Text(
+                            'Current Trips · ${controller.active.length}',
+                            style: GoogleFonts.dmSans(
+                                fontSize: 14,
+                                color: controller.currentTripPage.value == 1 ? const Color(0xffD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                          )),
                     ),
                     15.widthBox,
-                    Text(
-                      'Closen Trips · 16',
-                      style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                    GestureDetector(
+                      onTap: () => controller.onChangeTripPage(2),
+                      child: Obx(() => Text(
+                            'Closen Trips · ${controller.closed.length}',
+                            style: GoogleFonts.dmSans(
+                                fontSize: 14,
+                                color: controller.currentTripPage.value == 2 ? const Color(0xffD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                          )),
                     ),
                   ],
                 ),
               ),
               10.heightBox,
-              ...List.generate(5, (index) => const TripLineItemWidget()),
+              Expanded(
+                child: PageView(
+                  controller: controller.tripsPage,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    SingleChildScrollView(
+                      child: Column(
+                        children: List.generate(
+                            controller.avaliable.length,
+                            (index) => TripLineItemWidget(
+                                  data: controller.avaliable[index],
+                                )),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      child: Column(
+                        children: List.generate(
+                            controller.active.length,
+                            (index) => TripLineItemWidget(
+                                  data: controller.active[index],
+                                )),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      child: Column(
+                        children: List.generate(
+                            controller.closed.length,
+                            (index) => TripLineItemWidget(
+                                  data: controller.closed[index],
+                                )),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

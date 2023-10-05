@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
           '/chat': (context) => const ChatScreen(),
           '/auth': (context) => const AuthScreen(),
           '/group_chat': (context) => const GroupsChatScreen(),
+          '/mytrips': (context) => const NewTripScreen(),
         },
       ),
     );
