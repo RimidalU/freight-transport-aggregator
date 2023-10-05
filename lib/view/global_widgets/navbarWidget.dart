@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NavBarWidget extends StatelessWidget {
-  const NavBarWidget({super.key});
+  final int selectedIndex;
+  const NavBarWidget({super.key, required this.selectedIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -16,47 +17,78 @@ class NavBarWidget extends StatelessWidget {
             child: Container(
               height: 55,
               width: context.width - 83,
+              padding: const EdgeInsets.only(left: 27.0, top: 11, right: 33),
               decoration: BoxDecoration(
-                color: Color(0xff202329),
+                color: const Color(0xff202329),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 27.0, top: 11, right: 33),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed("home");
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset('assets/images/Dashboard.png'),
-                        Text('Dashboard',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: Color(0xffFCFCFC).withOpacity(0.46)
-                          ),),
+                        Column(
+                          children: [
+                            Image.asset('assets/images/Dashboard.png'),
+                            Text(
+                              'Dashboard',
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 12, color: selectedIndex == 0 ? const Color(0xFFD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                            ),
+                          ],
+                        ),
+                        if (selectedIndex == 0) const SelectedLine(),
                       ],
                     ),
-                    Column(
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed("/mytrips");
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset('assets/images/Trip.png'),
-                        Text('My trip',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: Color(0xffFCFCFC).withOpacity(0.46)
-                          ),),
+                        Column(
+                          children: [
+                            Image.asset('assets/images/Trip.png'),
+                            Text(
+                              'My trip',
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 12, color: selectedIndex == 1 ? const Color(0xFFD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                            ),
+                          ],
+                        ),
+                        if (selectedIndex == 1) const SelectedLine(),
                       ],
                     ),
-                    Column(
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed("profile");
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset('assets/images/user.png'),
-                        Text('User',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: Color(0xffFCFCFC).withOpacity(0.46)
-                          ),),
+                        Column(
+                          children: [
+                            Image.asset('assets/images/user.png'),
+                            Text(
+                              'User',
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 12, color: selectedIndex == 2 ? const Color(0xFFD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                            ),
+                          ],
+                        ),
+                        if (selectedIndex == 2) const SelectedLine(),
                       ],
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -64,12 +96,34 @@ class NavBarWidget extends StatelessWidget {
             height: 55,
             width: 70,
             decoration: BoxDecoration(
-              color: Color(0xff202329),
+              color: const Color(0xff202329),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(child: Image.asset('assets/images/buttonplus.png')),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SelectedLine extends StatelessWidget {
+  const SelectedLine({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 70,
+      height: 4,
+      decoration: const ShapeDecoration(
+        color: Color(0xFF2551EB),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(12),
+            topRight: Radius.circular(12),
+          ),
+        ),
+        shadows: [BoxShadow(color: Color(0xFF2551EB), blurRadius: 21, offset: Offset(1, 7), spreadRadius: 0)],
       ),
     );
   }
