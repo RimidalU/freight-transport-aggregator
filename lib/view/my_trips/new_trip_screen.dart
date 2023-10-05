@@ -1,15 +1,18 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/components/app_bar_widget.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
+import 'package:untitled55/view/my_trips/trip.controller.dart';
 import 'package:untitled55/view/my_trips/tripline.item.widget.dart';
 
-class NewTripScreen extends StatelessWidget {
+class NewTripScreen extends GetView<MyTripController> {
   const NewTripScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Get.put(MyTripController());
     return Padding(
       padding: const EdgeInsets.only(right: 4.0, left: 4.0, bottom: 4.0),
       child: Scaffold(
@@ -22,7 +25,7 @@ class NewTripScreen extends StatelessWidget {
               3.heightBox,
               Container(
                 height: 150,
-                width: context.width - 8,
+                width: Get.width - 8,
                 decoration: BoxDecoration(
                   color: const Color(0xff202329),
                   borderRadius: BorderRadius.circular(17),
@@ -78,7 +81,7 @@ class NewTripScreen extends StatelessWidget {
                     ),
                     Container(
                       height: 1,
-                      width: context.width - 45,
+                      width: Get.width - 45,
                       color: const Color(0xffFCFCFC).withOpacity(0.08),
                     ),
                     Padding(

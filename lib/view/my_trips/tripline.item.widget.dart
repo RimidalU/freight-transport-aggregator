@@ -1,6 +1,8 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled55/view/my_trips/trip.controller.dart';
 
 class TripLineItemWidget extends StatelessWidget {
   const TripLineItemWidget({Key? key}) : super(key: key);
@@ -8,7 +10,7 @@ class TripLineItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: context.width - 8,
+      width: Get.width - 8,
       margin: const EdgeInsets.only(top: 5, bottom: 5),
       decoration: BoxDecoration(
         color: const Color(0xff202329),
@@ -49,7 +51,7 @@ class TripLineItemWidget extends StatelessWidget {
           ),
           Container(
             height: 1,
-            width: context.width,
+            width: Get.width,
             color: const Color(0xffFCFCFC).withOpacity(0.08),
           ),
           Row(
@@ -159,7 +161,7 @@ class TripLineItemWidget extends StatelessWidget {
           ),
           Container(
             height: 1,
-            width: context.width,
+            width: Get.width,
             color: const Color(0xffFCFCFC).withOpacity(0.08),
           ),
           Padding(
@@ -239,12 +241,15 @@ class TripLineItemWidget extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: const Color(0xff202329),
-              borderRadius: BorderRadius.circular(8),
+          GestureDetector(
+            onTap: () => Get.find<MyTripController>().onTripStartClick(0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xff202329),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Center(child: Image.asset('assets/images/starttrip.png')),
             ),
-            child: Center(child: Image.asset('assets/images/starttrip.png')),
           ),
           16.heightBox,
         ],
