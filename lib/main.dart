@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const HomeScreen(),
+        home: const NewTripScreen(),
+        // home: const HomeScreen(),
         routes: {
           'profile': (context) => const AccountScreen(),
           'home': (context) => const HomeScreen(),

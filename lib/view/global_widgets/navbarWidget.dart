@@ -62,7 +62,7 @@ class NavBarWidget extends StatelessWidget {
           ),
           Container(
             height: 55,
-            width: 77,
+            width: 70,
             decoration: BoxDecoration(
               color: Color(0xff202329),
               borderRadius: BorderRadius.circular(12),
