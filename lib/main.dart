@@ -7,9 +7,9 @@ import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chat/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
+import 'package:untitled55/view/my_trips/mytrips.screen.dart';
 import 'package:untitled55/view/rating/RatingScreen.dart';
 import 'package:untitled55/view/user/UserScreen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
           '/chat': (context) => const ChatScreen(),
           '/auth': (context) => const AuthScreen(),
           '/group_chat': (context) => const GroupsChatScreen(),
+          '/mytrips': (context) => const MyTripsScreen(),
         },
       ),
     );

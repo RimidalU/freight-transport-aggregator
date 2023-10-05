@@ -56,8 +56,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       3.widthBox,
                       Text(
                         'Back',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
+                        style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
                       )
                     ],
                   ),
@@ -69,9 +68,7 @@ class _AccountScreenState extends State<AccountScreen> {
               Container(
                 height: 291,
                 width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -100,8 +97,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       child: Center(
                         child: Text(
                           'Vacation',
-                          style: GoogleFonts.dmSans(
-                              color: const Color(0xff32A5D7)),
+                          style: GoogleFonts.dmSans(color: const Color(0xff32A5D7)),
                         ),
                       ),
                     ),
@@ -110,8 +106,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     ),
                     Text(
                       'Erichbachman@piedpiper.com',
-                      style: GoogleFonts.dmSans(
-                          color: const Color(0xffffffff).withOpacity(0.5)),
+                      style: GoogleFonts.dmSans(color: const Color(0xffffffff).withOpacity(0.5)),
                     ),
                     const SizedBox(
                       height: 15,
@@ -124,8 +119,7 @@ class _AccountScreenState extends State<AccountScreen> {
                           width: 47,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                color: Colors.white.withOpacity(0.08)),
+                            border: Border.all(color: Colors.white.withOpacity(0.08)),
                             color: const Color(0xffFCFCFC).withOpacity(0.08),
                           ),
                           child: Center(
@@ -146,8 +140,7 @@ class _AccountScreenState extends State<AccountScreen> {
                           width: 47,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                color: Colors.white.withOpacity(0.08)),
+                            border: Border.all(color: Colors.white.withOpacity(0.08)),
                             color: const Color(0xffFCFCFC).withOpacity(0.08),
                           ),
                           child: Center(
@@ -171,9 +164,7 @@ class _AccountScreenState extends State<AccountScreen> {
               Container(
                 height: 52,
                 width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -209,9 +200,7 @@ class _AccountScreenState extends State<AccountScreen> {
               Container(
                 height: 52,
                 width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -240,9 +229,7 @@ class _AccountScreenState extends State<AccountScreen> {
               Container(
                 height: 52,
                 width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -271,9 +258,7 @@ class _AccountScreenState extends State<AccountScreen> {
               Container(
                 height: 52,
                 width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -293,8 +278,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
-                      child: Image.asset(
-                          'assets/images/Arrow.png'),
+                      child: Image.asset('assets/images/Arrow.png'),
                     ),
                   ],
                 ),
@@ -303,7 +287,7 @@ class _AccountScreenState extends State<AccountScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: const NavBarWidget(),
+      bottomNavigationBar: const NavBarWidget(selectedIndex: 2),
     );
   }
 }

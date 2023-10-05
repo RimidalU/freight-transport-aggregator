@@ -587,7 +587,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const NavBarWidget(),
+      bottomNavigationBar: const NavBarWidget(selectedIndex: 0),
     );
   }
 }

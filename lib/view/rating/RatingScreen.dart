@@ -53,16 +53,12 @@ class _RatingScreenState extends State<RatingScreen> {
                           5.heightBox,
                           Text(
                             'Hello',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46)),
+                            style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
                           ),
                           3.widthBox,
                           Text(
                             'Thusday 04.05.2023',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14, color: const Color(0xffD0D0D0)),
+                            style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
                           )
                         ],
                       ),
@@ -90,8 +86,7 @@ class _RatingScreenState extends State<RatingScreen> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Center(
-                          child: Image.asset(
-                              'assets/images/NotificationWhite.png'),
+                          child: Image.asset('assets/images/NotificationWhite.png'),
                         ),
                       ),
                       16.widthBox,
@@ -211,7 +206,7 @@ class _RatingScreenState extends State<RatingScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: const NavBarWidget(),
+      bottomNavigationBar: const NavBarWidget(selectedIndex: 0),
     );
   }
 }

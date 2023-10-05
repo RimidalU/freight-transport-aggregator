@@ -59,8 +59,7 @@ class _UserScreenState extends State<UserScreen> {
                       3.widthBox,
                       Text(
                         'Back',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
+                        style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
                       )
                     ],
                   ),
@@ -79,21 +78,18 @@ class _UserScreenState extends State<UserScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       16.heightBox,
-                      Text('Time off',
-                      style: GoogleFonts.dmSans(
-                        fontSize: 14,
-                        color: const Color(0xffD0D0D0)
-                      ),),
+                      Text(
+                        'Time off',
+                        style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                      ),
                       16.heightBox,
                       TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-
                             borderRadius: BorderRadius.circular(
                               12,
                             ),
                           ),
-
                           label: Text(
                             'To',
                             style: HeadlineTextStyle.style500w14.copyWith(
@@ -106,12 +102,10 @@ class _UserScreenState extends State<UserScreen> {
                       TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-
                             borderRadius: BorderRadius.circular(
                               12,
                             ),
                           ),
-
                           label: Text(
                             'From',
                             style: HeadlineTextStyle.style500w14.copyWith(
@@ -124,12 +118,10 @@ class _UserScreenState extends State<UserScreen> {
                       TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-
                             borderRadius: BorderRadius.circular(
                               12,
                             ),
                           ),
-
                           label: Text(
                             'Location',
                             style: HeadlineTextStyle.style500w14.copyWith(
@@ -142,12 +134,10 @@ class _UserScreenState extends State<UserScreen> {
                       TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-
                             borderRadius: BorderRadius.circular(
                               12,
                             ),
                           ),
-
                           label: Text(
                             'Note',
                             style: HeadlineTextStyle.style500w14.copyWith(
@@ -158,22 +148,24 @@ class _UserScreenState extends State<UserScreen> {
                       ),
                       16.heightBox,
                       Container(
-                        width: context.width-16,
+                        width: context.width - 16,
                         height: 44,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xff2551eb),
-                              Color(0xff2898ff),
-                            ],
-                          )
-                        ),
+                            borderRadius: BorderRadius.circular(12),
+                            gradient: const LinearGradient(
+                              colors: [
+                                Color(0xff2551eb),
+                                Color(0xff2898ff),
+                              ],
+                            )),
                         child: Center(
-                          child: Text('Save', style: GoogleFonts.dmSans(
-                            color: ProjectColors.white,
-                            fontWeight: FontWeight.w500,
-                          ),),
+                          child: Text(
+                            'Save',
+                            style: GoogleFonts.dmSans(
+                              color: ProjectColors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ),
                       16.heightBox,
@@ -185,7 +177,7 @@ class _UserScreenState extends State<UserScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: NavBarWidget(),
+      bottomNavigationBar: const NavBarWidget(selectedIndex: 2),
     );
   }
 }
