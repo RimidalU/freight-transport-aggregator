@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/components/app_bar_widget.dart';
 import 'package:untitled55/view/my_trips/trip.controller.dart';
 import 'package:untitled55/view/my_trips/trip.model.dart';
+import 'package:untitled55/view/my_trips/widgets/tripdetail.issuemoney.page.dart';
+import 'package:untitled55/view/my_trips/widgets/tripdetail.tracking.page.dart';
 
 class TripDetailsPage extends GetView<MyTripController> {
   final TripModel data;
@@ -190,11 +192,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                                   Text(
                                     '70%',
                                     textAlign: TextAlign.center,
-                                    style: GoogleFonts.dmSans(
-                                      color: const Color(0xFFD0D0D0),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                    style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 14, fontWeight: FontWeight.w500),
                                   ),
                                 ],
                               ),
@@ -208,11 +206,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                                     '/',
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.inter(
-                                      color: const Color(0x75FCFCFC),
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400,
-                                      letterSpacing: -0.05,
-                                    ),
+                                        color: const Color(0x75FCFCFC), fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: -0.05),
                                   ),
                                 ],
                               ),
@@ -255,189 +249,63 @@ class TripDetailsPage extends GetView<MyTripController> {
                 ),
               ),
               Expanded(
-                child: Container(
-                  margin: const EdgeInsets.only(top: 2, bottom: 2),
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(17)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Row(
-                        children: [
-                          GestureDetector(
-                            onTap: () => controller.onChangeTripDetailsPage(0),
-                            child: Obx(() => Text(
-                                  'Tracking',
-                                  style: GoogleFonts.dmSans(
-                                      fontSize: 14,
-                                      color: controller.currentTripDetailsPage.value == 0
-                                          ? const Color(0xffD0D0D0)
-                                          : const Color(0xffFCFCFC).withOpacity(0.46)),
-                                )),
-                          ),
-                          15.widthBox,
-                          GestureDetector(
-                            onTap: () => controller.onChangeTripDetailsPage(1),
-                            child: Obx(() => Text(
-                                  'Issue Money Code',
-                                  style: GoogleFonts.dmSans(
-                                      fontSize: 14,
-                                      color: controller.currentTripDetailsPage.value == 1
-                                          ? const Color(0xffD0D0D0)
-                                          : const Color(0xffFCFCFC).withOpacity(0.46)),
-                                )),
-                          ),
-                        ],
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 2),
+                      decoration: const BoxDecoration(
+                        color: Color(0xff1C1F24),
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(17), topRight: Radius.circular(17)),
                       ),
-                      10.heightBox,
-                      Expanded(
-                        child: PageView(
-                          controller: controller.tripsDetailsPage,
-                          physics: const NeverScrollableScrollPhysics(),
-                          children: [
-                            Column(
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                            child: Row(
                               children: [
-                                20.heightBox,
-                                Container(
-                                  width: 335,
-                                  height: 28,
-                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                  decoration: ShapeDecoration(
-                                    color: const Color(0x14D7BD32),
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Pick Up',
-                                        style: GoogleFonts.dmSans(color: const Color(0xFFD7BC31), fontSize: 14, fontWeight: FontWeight.w400),
-                                      ),
-                                    ],
-                                  ),
+                                GestureDetector(
+                                  onTap: () => controller.onChangeTripDetailsPage(0),
+                                  child: Obx(() => Text(
+                                        'Tracking',
+                                        style: GoogleFonts.dmSans(
+                                            fontSize: 14,
+                                            color: controller.currentTripDetailsPage.value == 0
+                                                ? const Color(0xffD0D0D0)
+                                                : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                      )),
                                 ),
-                                Expanded(
-                                  child: ListView(
-                                    itemExtent: 56,
-                                    children: List.generate(
-                                      15,
-                                      (index) => ListTile(
-                                        minLeadingWidth: 32,
-                                        leading: Column(
-                                          mainAxisAlignment: index != 14 ? MainAxisAlignment.end : MainAxisAlignment.start,
-                                          children: [
-                                            if (index != 0) Container(width: 3, height: 12, color: const Color(0xFF32343A)),
-                                            Container(
-                                              width: 32,
-                                              height: 32,
-                                              decoration: ShapeDecoration(
-                                                color: index == 0 ? const Color(0xFFFB923C) : const Color(0xFF32343A),
-                                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.33)),
-                                              ),
-                                              child: index == 0
-                                                  ? const Padding(
-                                                      padding: EdgeInsets.all(8.0),
-                                                      child: CircularProgressIndicator(
-                                                        strokeWidth: 2,
-                                                        valueColor: AlwaysStoppedAnimation(Colors.white),
-                                                      ),
-                                                    )
-                                                  : Icon(Icons.place, color: const Color(0xFFFCFCFC).withOpacity(.46), size: 16),
-                                            ),
-                                            if (index != 14) Container(width: 3, height: 12, color: const Color(0xFF32343A)),
-                                          ],
-                                        ),
-                                        title: Row(
-                                          mainAxisAlignment: MainAxisAlignment.start,
-                                          children: [
-                                            Icon(Icons.check, color: const Color(0xFFFCFCFC).withOpacity(.46), size: 16),
-                                            8.widthBox,
-                                            Text("54 Radley Street, Off 25",
-                                                style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 16, fontWeight: FontWeight.w400)),
-                                          ],
-                                        ),
-                                        subtitle: Row(
-                                          children: [
-                                            24.widthBox,
-                                            Text('Mon 23 Mar.  11:00',
-                                                style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400)),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 335,
-                                  height: 44,
-                                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: ShapeDecoration(
-                                    gradient: const LinearGradient(
-                                      begin: Alignment(1.00, -0.02),
-                                      end: Alignment(-1, 0.02),
-                                      colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
-                                    ),
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Check In',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.dmSans(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
-                                      ),
-                                    ],
-                                  ),
+                                15.widthBox,
+                                GestureDetector(
+                                  onTap: () => controller.onChangeTripDetailsPage(1),
+                                  child: Obx(() => Text(
+                                        'Issue Money Code',
+                                        style: GoogleFonts.dmSans(
+                                            fontSize: 14,
+                                            color: controller.currentTripDetailsPage.value == 1
+                                                ? const Color(0xffD0D0D0)
+                                                : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                      )),
                                 ),
                               ],
                             ),
-                            SingleChildScrollView(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  20.heightBox,
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Trip #${data.index}',
-                                        style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
-                                      ),
-                                      16.widthBox,
-                                      Image.asset("assets/images/TruckIcon.png"),
-                                      4.widthBox,
-                                      Text(
-                                        '44',
-                                        style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400),
-                                      ),
-                                      8.widthBox,
-                                      Image.asset("assets/images/TrailerIcon.png"),
-                                      4.widthBox,
-                                      Text(
-                                        '36',
-                                        style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400),
-                                      ),
-                                    ],
-                                  ),
-                                  8.heightBox,
-                                  Text(
-                                    'Issue Money Code',
-                                    style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 24, fontWeight: FontWeight.w500),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                          12.heightBox,
+                          Container(height: 1, color: const Color(0xffFCFCFC).withOpacity(0.08)),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    Expanded(
+                      child: PageView(
+                        controller: controller.tripsDetailsPage,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: [
+                          const TripDetailTrackingPage(),
+                          TripDetailIssueMoneyPage(data: data),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
