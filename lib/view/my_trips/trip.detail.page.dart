@@ -1,5 +1,4 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
-import 'package:cupertino_stepper/cupertino_stepper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,10 +22,7 @@ class TripDetailsPage extends GetView<MyTripController> {
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 5, bottom: 5),
-                decoration: BoxDecoration(
-                  color: const Color(0xff202329),
-                  borderRadius: BorderRadius.circular(17),
-                ),
+                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(17)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -44,31 +40,19 @@ class TripDetailsPage extends GetView<MyTripController> {
                           4.widthBox,
                           Text(
                             '44',
-                            style: GoogleFonts.dmSans(
-                              color: const Color(0x75FCFCFC),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                            ),
+                            style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400),
                           ),
                           8.widthBox,
                           Image.asset("assets/images/TrailerIcon.png"),
                           4.widthBox,
                           Text(
                             '36',
-                            style: GoogleFonts.dmSans(
-                              color: const Color(0x75FCFCFC),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                            ),
+                            style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400),
                           ),
                         ],
                       ),
                     ),
-                    Container(
-                      height: 1,
-                      width: Get.width,
-                      color: const Color(0xffFCFCFC).withOpacity(0.08),
-                    ),
+                    Container(height: 1, color: const Color(0xffFCFCFC).withOpacity(0.08)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -174,11 +158,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                         Image.asset('assets/images/Truck.png'),
                       ],
                     ),
-                    Container(
-                      height: 1,
-                      width: Get.width,
-                      color: const Color(0xffFCFCFC).withOpacity(0.08),
-                    ),
+                    Container(height: 1, color: const Color(0xffFCFCFC).withOpacity(0.08)),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                       child: Row(
@@ -194,11 +174,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                               Text(
                                 'Trips progress',
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.dmSans(
-                                  color: const Color(0xFFD0D0D0),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                                style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 14, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
@@ -254,11 +230,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                                       Text(
                                         '100%',
                                         textAlign: TextAlign.center,
-                                        style: GoogleFonts.dmSans(
-                                          color: const Color(0x75FCFCFC),
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400,
-                                        ),
+                                        style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 12, fontWeight: FontWeight.w400),
                                       ),
                                     ],
                                   ),
@@ -286,10 +258,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                 child: Container(
                   margin: const EdgeInsets.only(top: 2, bottom: 2),
                   padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(17),
-                  ),
+                  decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(17)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -326,87 +295,107 @@ class TripDetailsPage extends GetView<MyTripController> {
                           controller: controller.tripsDetailsPage,
                           physics: const NeverScrollableScrollPhysics(),
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                children: [
-                                  20.heightBox,
-                                  Container(
-                                    width: 335,
-                                    height: 28,
-                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                    decoration: ShapeDecoration(
-                                      color: const Color(0x14D7BD32),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(13),
+                            Column(
+                              children: [
+                                20.heightBox,
+                                Container(
+                                  width: 335,
+                                  height: 28,
+                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                  decoration: ShapeDecoration(
+                                    color: const Color(0x14D7BD32),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Pick Up',
+                                        style: GoogleFonts.dmSans(color: const Color(0xFFD7BC31), fontSize: 14, fontWeight: FontWeight.w400),
                                       ),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Pick Up',
-                                          style: GoogleFonts.dmSans(
-                                            color: const Color(0xFFD7BC31),
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w400,
-                                          ),
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: ListView(
+                                    itemExtent: 56,
+                                    children: List.generate(
+                                      15,
+                                      (index) => ListTile(
+                                        minLeadingWidth: 32,
+                                        leading: Column(
+                                          mainAxisAlignment: index != 14 ? MainAxisAlignment.end : MainAxisAlignment.start,
+                                          children: [
+                                            if (index != 0) Container(width: 3, height: 12, color: const Color(0xFF32343A)),
+                                            Container(
+                                              width: 32,
+                                              height: 32,
+                                              decoration: ShapeDecoration(
+                                                color: index == 0 ? const Color(0xFFFB923C) : const Color(0xFF32343A),
+                                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.33)),
+                                              ),
+                                              child: index == 0
+                                                  ? const Padding(
+                                                      padding: EdgeInsets.all(8.0),
+                                                      child: CircularProgressIndicator(
+                                                        strokeWidth: 2,
+                                                        valueColor: AlwaysStoppedAnimation(Colors.white),
+                                                      ),
+                                                    )
+                                                  : Icon(Icons.place, color: const Color(0xFFFCFCFC).withOpacity(.46), size: 16),
+                                            ),
+                                            if (index != 14) Container(width: 3, height: 12, color: const Color(0xFF32343A)),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                  CupertinoStepper(
-                                    currentStep: 0,
-                                    type: StepperType.vertical,
-                                    controlsBuilder: (context, details) => const SizedBox(),
-                                    steps: List.generate(
-                                      2,
-                                      (index) => Step(
-                                        title: Text("54 Radley Street, Off 25",
-                                            style: GoogleFonts.dmSans(
-                                              color: const Color(0xFFD0D0D0),
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w400,
-                                            )),
-                                        subtitle: Text('Mon 23 Mar.  11:00',
-                                            style: GoogleFonts.dmSans(
-                                              color: const Color(0x75FCFCFC),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                            )),
-                                        content: const SizedBox(),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 335,
-                                    height: 44,
-                                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: ShapeDecoration(
-                                      gradient: const LinearGradient(
-                                        begin: Alignment(1.00, -0.02),
-                                        end: Alignment(-1, 0.02),
-                                        colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
-                                      ),
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Check In',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.dmSans(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
+                                        title: Row(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: [
+                                            Icon(Icons.check, color: const Color(0xFFFCFCFC).withOpacity(.46), size: 16),
+                                            8.widthBox,
+                                            Text("54 Radley Street, Off 25",
+                                                style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 16, fontWeight: FontWeight.w400)),
+                                          ],
                                         ),
-                                      ],
+                                        subtitle: Row(
+                                          children: [
+                                            24.widthBox,
+                                            Text('Mon 23 Mar.  11:00',
+                                                style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400)),
+                                          ],
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Container(
+                                  width: 335,
+                                  height: 44,
+                                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: ShapeDecoration(
+                                    gradient: const LinearGradient(
+                                      begin: Alignment(1.00, -0.02),
+                                      end: Alignment(-1, 0.02),
+                                      colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
+                                    ),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Check In',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.dmSans(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                             SingleChildScrollView(
                               child: Column(
@@ -425,33 +414,21 @@ class TripDetailsPage extends GetView<MyTripController> {
                                       4.widthBox,
                                       Text(
                                         '44',
-                                        style: GoogleFonts.dmSans(
-                                          color: const Color(0x75FCFCFC),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                        ),
+                                        style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400),
                                       ),
                                       8.widthBox,
                                       Image.asset("assets/images/TrailerIcon.png"),
                                       4.widthBox,
                                       Text(
                                         '36',
-                                        style: GoogleFonts.dmSans(
-                                          color: const Color(0x75FCFCFC),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                        ),
+                                        style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400),
                                       ),
                                     ],
                                   ),
                                   8.heightBox,
                                   Text(
                                     'Issue Money Code',
-                                    style: GoogleFonts.dmSans(
-                                      color: const Color(0xFFD0D0D0),
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                    style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 24, fontWeight: FontWeight.w500),
                                   ),
                                 ],
                               ),
