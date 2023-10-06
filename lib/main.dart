@@ -11,6 +11,7 @@ import 'package:untitled55/view/chat/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
 import 'package:untitled55/view/my_trips/new_trip_screen.dart';
 import 'package:untitled55/view/news/NewsScreen.dart';
+import 'package:untitled55/view/news/OpenNewsScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const NewsScreen(),
+        home: const OpenNewsScreem(),
         // home: const HomeScreen(),
         routes: {
           'profile': (context) => const AccountScreen(),
