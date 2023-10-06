@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/Account/widgets/2block.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
+import 'package:untitled55/view/user/UserScreen.dart';
 
 bool val = false;
 
@@ -197,32 +198,37 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ),
               4.heightBox,
-              Container(
-                height: 52,
-                width: context.width - 8,
-                decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        16.widthBox,
-                        Image.asset('assets/images/invite.png'),
-                        4.widthBox,
-                        Text(
-                          'Invite people',
-                          style: GoogleFonts.dmSans(
-                            color: const Color(0xffFCFCFC),
-                            fontSize: 14,
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserScreen()));
+                },
+                child: Container(
+                  height: 52,
+                  width: context.width - 8,
+                  decoration: BoxDecoration(color: const Color(0xff202329), borderRadius: BorderRadius.circular(12)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          16.widthBox,
+                          Image.asset('assets/images/invite.png'),
+                          4.widthBox,
+                          Text(
+                            'Invite people',
+                            style: GoogleFonts.dmSans(
+                              color: const Color(0xffFCFCFC),
+                              fontSize: 14,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16.0),
-                      child: Image.asset('assets/images/Arrow.png'),
-                    ),
-                  ],
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Image.asset('assets/images/Arrow.png'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               4.heightBox,
