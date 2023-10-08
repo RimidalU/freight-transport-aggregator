@@ -1,17 +1,20 @@
+import 'package:awesome_extensions/awesome_extensions.dart';
+import 'package:flutter/material.dart';
+import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
+
+import '/constants/images_path.dart' as image;
 import '../../../constants/text.dart';
 import '../../../ui/colors.dart';
 import '../../../ui/text_style.dart';
 import '../widgets/chat_container.dart';
-import '../widgets/chats_screen_appbar.dart';
 import '../widgets/chats_search.dart';
 import '../widgets/groups_container.dart';
 import '../widgets/notif_container.dart';
-import '/constants/images_path.dart' as image;
-
-import 'package:flutter/material.dart';
 
 class ChatsScreen extends StatefulWidget {
   const ChatsScreen({super.key});
+
+  static const routeName = '/chats';
 
   @override
   State<ChatsScreen> createState() => _ChatsScreenState();
@@ -26,12 +29,13 @@ class _ChatsScreenState extends State<ChatsScreen> {
 
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: const ChatsScreenAppBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.01),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const AppBarAndNotifications(),
+            3.heightBox,
             SizedBox(height: height * 0.005),
             const NotifContainer(),
             SizedBox(height: height * 0.02),
