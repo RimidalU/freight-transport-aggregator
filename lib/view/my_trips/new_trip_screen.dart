@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/components/app_bar_widget.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 import 'package:untitled55/view/my_trips/trip.controller.dart';
-import 'package:untitled55/view/my_trips/tripline.item.widget.dart';
+import 'package:untitled55/view/my_trips/widgets/tripline.item.widget.dart';
 
 class NewTripScreen extends GetView<MyTripController> {
   const NewTripScreen({Key? key}) : super(key: key);

@@ -3,7 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:awesome_extensions/awesome_extensions.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarWidget({Key? key}) : super(key: key);
+  final List<Widget> actions;
+  const AppBarWidget({Key? key, this.actions = const []}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +35,12 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                 // ),
               ),
               child: ClipRRect(
-    borderRadius: BorderRadius.only(
-    bottomLeft: Radius.circular(17),
-    bottomRight: Radius.circular(17),
-    ),
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(17),
+                  bottomRight: Radius.circular(17),
+                ),
                 child: Padding(
-                  padding:
-                      const EdgeInsets.only(top: 5.0, right: 16.0, left: 16.0),
+                  padding: const EdgeInsets.only(top: 5.0, right: 16.0, left: 16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -50,8 +50,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                           3.widthBox,
                           Text(
                             'Back',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14, color: const Color(0xffD0D0D0)),
+                            style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
                           ),
                         ],
                       ),
@@ -77,10 +76,10 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Center(
-                              child: Image.asset(
-                                  'assets/images/NotificationWhite.png'),
+                              child: Image.asset('assets/images/NotificationWhite.png'),
                             ),
                           ),
+                          ...actions,
                         ],
                       ),
                     ],

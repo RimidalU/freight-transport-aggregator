@@ -7,10 +7,12 @@ import 'package:untitled55/view/my_trips/trip.model.dart';
 
 class TripLineItemWidget extends StatelessWidget {
   final TripModel data;
+
   const TripLineItemWidget({Key? key, required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    MyTripController controller = Get.find<MyTripController>();
     return Container(
       width: Get.width - 8,
       margin: const EdgeInsets.only(top: 5, bottom: 5),
@@ -29,23 +31,26 @@ class TripLineItemWidget extends StatelessWidget {
                   'Trip #${data.index}',
                   style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
                 ),
-                Container(
-                  height: 25,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffFCFCFC).withOpacity(0.08),
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/map.png'),
-                      3.widthBox,
-                      Text(
-                        'Navigator',
-                        style: GoogleFonts.dmSans(fontSize: 10, color: const Color(0xffD0D0D0)),
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => controller.openNavigatorFor(data),
+                  child: Container(
+                    height: 25,
+                    width: 80,
+                    decoration: BoxDecoration(
+                      color: const Color(0xffFCFCFC).withOpacity(0.08),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/images/map.png'),
+                        3.widthBox,
+                        Text(
+                          'Navigator',
+                          style: GoogleFonts.dmSans(fontSize: 10, color: const Color(0xffD0D0D0)),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -245,7 +250,7 @@ class TripLineItemWidget extends StatelessWidget {
           ),
           if (data.status != TripStatus.closed)
             GestureDetector(
-              onTap: () => Get.find<MyTripController>().onTripClick(data),
+              onTap: () => controller.onTripClick(data),
               child: Container(
                 width: 334,
                 height: 36,

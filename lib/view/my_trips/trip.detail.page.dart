@@ -18,7 +18,34 @@ class TripDetailsPage extends GetView<MyTripController> {
       padding: const EdgeInsets.only(right: 4.0, left: 4.0, bottom: 4.0),
       child: Scaffold(
         backgroundColor: const Color(0xff121418),
-        appBar: const AppBarWidget(),
+        appBar: AppBarWidget(
+          actions: [
+            GestureDetector(
+              onTap: () => controller.openNavigatorFor(data),
+              child: Container(
+                height: 40,
+                margin: const EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+                decoration: BoxDecoration(
+                  color: const Color(0xffFCFCFC).withOpacity(0.08),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/map.png'),
+                    4.widthBox,
+                    Text(
+                      'Open map',
+                      style: GoogleFonts.inter(color: const Color(0xFFD0D0D0), fontSize: 10, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
         body: SizedBox.expand(
           child: Column(
             children: [
@@ -300,7 +327,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                         controller: controller.tripsDetailsPage,
                         physics: const NeverScrollableScrollPhysics(),
                         children: [
-                          const TripDetailTrackingPage(),
+                          TripDetailTrackingPage(trip: data),
                           TripDetailIssueMoneyPage(data: data),
                         ],
                       ),
