@@ -21,7 +21,6 @@ class _UserScreenState extends State<UserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121418),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4.0),
@@ -59,7 +58,8 @@ class _UserScreenState extends State<UserScreen> {
                       3.widthBox,
                       Text(
                         'Back',
-                        style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                        style: GoogleFonts.dmSans(
+                            fontSize: 14, color: const Color(0xffD0D0D0)),
                       )
                     ],
                   ),
@@ -80,7 +80,8 @@ class _UserScreenState extends State<UserScreen> {
                       16.heightBox,
                       Text(
                         'Time off',
-                        style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                        style: GoogleFonts.dmSans(
+                            fontSize: 14, color: const Color(0xffD0D0D0)),
                       ),
                       16.heightBox,
                       TextField(

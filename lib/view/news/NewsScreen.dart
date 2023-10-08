@@ -260,7 +260,6 @@ class _NewsScreenState extends State<NewsScreen> {
           ),
         ),
       ),
-      backgroundColor: const Color(0xff121418),
       bottomNavigationBar: const NavBarWidget(
         selectedIndex: 1,
       ),

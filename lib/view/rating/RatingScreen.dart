@@ -16,12 +16,11 @@ class _RatingScreenState extends State<RatingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121418),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 9.0),
         child: Column(
           children: [
-           const AppBarAndNotifications(),
+            const AppBarAndNotifications(),
             5.heightBox,
             Container(
               decoration: BoxDecoration(
@@ -76,7 +75,8 @@ class _RatingScreenState extends State<RatingScreen> {
                               'Closen trips',
                               style: GoogleFonts.dmSans(
                                 fontSize: 12,
-                                color: const Color(0xffFCFCFC).withOpacity(0.46),
+                                color:
+                                    const Color(0xffFCFCFC).withOpacity(0.46),
                               ),
                             ),
                             Text(
@@ -94,7 +94,8 @@ class _RatingScreenState extends State<RatingScreen> {
                               'Total miles in VTS',
                               style: GoogleFonts.dmSans(
                                 fontSize: 12,
-                                color: const Color(0xffFCFCFC).withOpacity(0.46),
+                                color:
+                                    const Color(0xffFCFCFC).withOpacity(0.46),
                               ),
                             ),
                             Text(
@@ -112,7 +113,8 @@ class _RatingScreenState extends State<RatingScreen> {
                               'Year to date ml',
                               style: GoogleFonts.dmSans(
                                 fontSize: 12,
-                                color: const Color(0xffFCFCFC).withOpacity(0.46),
+                                color:
+                                    const Color(0xffFCFCFC).withOpacity(0.46),
                               ),
                             ),
                             Text(
@@ -133,7 +135,9 @@ class _RatingScreenState extends State<RatingScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: const NavBarWidget(selectedIndex: 1,),
+      bottomNavigationBar: const NavBarWidget(
+        selectedIndex: 1,
+      ),
     );
   }
 }

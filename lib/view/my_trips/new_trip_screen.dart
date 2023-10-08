@@ -16,7 +16,6 @@ class NewTripScreen extends GetView<MyTripController> {
     return Padding(
       padding: const EdgeInsets.only(right: 4.0, left: 4.0, bottom: 4.0),
       child: Scaffold(
-        backgroundColor: const Color(0xff121418),
         appBar: const AppBarWidget(),
         body: SizedBox.expand(
           child: Column(
@@ -40,7 +39,8 @@ class NewTripScreen extends GetView<MyTripController> {
                           Row(
                             children: [
                               const CircleAvatar(
-                                backgroundImage: AssetImage('assets/images/testprof.png'),
+                                backgroundImage:
+                                    AssetImage('assets/images/testprof.png'),
                               ),
                               8.widthBox,
                               Column(
@@ -50,12 +50,15 @@ class NewTripScreen extends GetView<MyTripController> {
                                     'Good Morning',
                                     style: GoogleFonts.dmSans(
                                       fontSize: 14,
-                                      color: const Color(0xffFCFCFC).withOpacity(0.46),
+                                      color: const Color(0xffFCFCFC)
+                                          .withOpacity(0.46),
                                     ),
                                   ),
                                   Text(
                                     'Abdula Azis',
-                                    style: GoogleFonts.dmSans(fontSize: 18, color: const Color(0xffD0D0D0)),
+                                    style: GoogleFonts.dmSans(
+                                        fontSize: 18,
+                                        color: const Color(0xffD0D0D0)),
                                   ),
                                 ],
                               ),
@@ -67,7 +70,9 @@ class NewTripScreen extends GetView<MyTripController> {
                                 height: 40,
                                 width: 40,
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: const Color(0xffFCFCFC).withOpacity(0.08)),
+                                  border: Border.all(
+                                      color: const Color(0xffFCFCFC)
+                                          .withOpacity(0.08)),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
@@ -93,27 +98,41 @@ class NewTripScreen extends GetView<MyTripController> {
                             children: [
                               Text(
                                 'Earmed',
-                                style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 12,
+                                    color: const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                               ),
                               Row(
                                 children: [
                                   Text(
                                     '\$',
-                                    style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                    style: GoogleFonts.dmSans(
+                                        fontSize: 16,
+                                        color: const Color(0xffFCFCFC)
+                                            .withOpacity(0.46)),
                                   ),
                                   Text(
                                     '1000',
-                                    style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                                    style: GoogleFonts.dmSans(
+                                        fontSize: 16,
+                                        color: const Color(0xffD0D0D0)),
                                   ),
                                   3.widthBox,
                                   Text(
                                     '/',
-                                    style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                    style: GoogleFonts.dmSans(
+                                        fontSize: 16,
+                                        color: const Color(0xffFCFCFC)
+                                            .withOpacity(0.46)),
                                   ),
                                   3.widthBox,
                                   Text(
                                     '\$5000',
-                                    style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                    style: GoogleFonts.dmSans(
+                                        fontSize: 16,
+                                        color: const Color(0xffFCFCFC)
+                                            .withOpacity(0.46)),
                                   ),
                                 ],
                               ),
@@ -131,11 +150,16 @@ class NewTripScreen extends GetView<MyTripController> {
                             children: [
                               Text(
                                 'Truck:',
-                                style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 12,
+                                    color: const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                               ),
                               Text(
                                 '5263',
-                                style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 16,
+                                    color: const Color(0xffD0D0D0)),
                               ),
                             ],
                           ),
@@ -145,11 +169,16 @@ class NewTripScreen extends GetView<MyTripController> {
                             children: [
                               Text(
                                 'Trailer:',
-                                style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 12,
+                                    color: const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                               ),
                               Text(
                                 '5263',
-                                style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 16,
+                                    color: const Color(0xffD0D0D0)),
                               ),
                             ],
                           ),
@@ -159,11 +188,16 @@ class NewTripScreen extends GetView<MyTripController> {
                             children: [
                               Text(
                                 'Vehicle:',
-                                style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 12,
+                                    color: const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                               ),
                               Text(
                                 'Volvo FMX..',
-                                style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 16,
+                                    color: const Color(0xffD0D0D0)),
                               ),
                             ],
                           ),
@@ -184,7 +218,10 @@ class NewTripScreen extends GetView<MyTripController> {
                             'Available Trips · ${controller.avaliable.length}',
                             style: GoogleFonts.dmSans(
                                 fontSize: 14,
-                                color: controller.currentTripPage.value == 0 ? const Color(0xffD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                color: controller.currentTripPage.value == 0
+                                    ? const Color(0xffD0D0D0)
+                                    : const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                           )),
                     ),
                     15.widthBox,
@@ -194,7 +231,10 @@ class NewTripScreen extends GetView<MyTripController> {
                             'Current Trips · ${controller.active.length}',
                             style: GoogleFonts.dmSans(
                                 fontSize: 14,
-                                color: controller.currentTripPage.value == 1 ? const Color(0xffD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                color: controller.currentTripPage.value == 1
+                                    ? const Color(0xffD0D0D0)
+                                    : const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                           )),
                     ),
                     15.widthBox,
@@ -204,7 +244,10 @@ class NewTripScreen extends GetView<MyTripController> {
                             'Closen Trips · ${controller.closed.length}',
                             style: GoogleFonts.dmSans(
                                 fontSize: 14,
-                                color: controller.currentTripPage.value == 2 ? const Color(0xffD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                color: controller.currentTripPage.value == 2
+                                    ? const Color(0xffD0D0D0)
+                                    : const Color(0xffFCFCFC)
+                                        .withOpacity(0.46)),
                           )),
                     ),
                   ],

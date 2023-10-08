@@ -181,7 +181,6 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     int prevUserId = 0;
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: const Color(0xff202329),
         elevation: 0,

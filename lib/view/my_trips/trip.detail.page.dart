@@ -19,7 +19,6 @@ class TripDetailsPage extends GetView<MyTripController> {
     return Padding(
       padding: const EdgeInsets.only(right: 4.0, left: 4.0, bottom: 4.0),
       child: Scaffold(
-        backgroundColor: const Color(0xff121418),
         appBar: AppBarWidget(
           actions: [
             8.widthBox,

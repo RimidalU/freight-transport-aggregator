@@ -17,7 +17,6 @@ class _SettlementScreenState extends State<SettlementScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121418),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4.0),
         child: Column(

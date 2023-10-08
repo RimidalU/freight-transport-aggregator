@@ -28,7 +28,6 @@ class _ChatsScreenState extends State<ChatsScreen> {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.black,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.01),
         child: Column(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:untitled55/ui/colors.dart';
 import 'package:untitled55/view/auth/widgets/auth_container.dart';
@@ -21,7 +20,6 @@ class _AuthScreenState extends State<AuthScreen> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
