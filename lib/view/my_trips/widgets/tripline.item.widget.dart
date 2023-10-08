@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/my_trips/trip.controller.dart';
 import 'package:untitled55/view/my_trips/trip.model.dart';
 
+import '../../../ui/ui.dart';
+
 class TripLineItemWidget extends StatelessWidget {
   final TripModel data;
 
@@ -29,28 +31,23 @@ class TripLineItemWidget extends StatelessWidget {
               children: [
                 Text(
                   'Trip #${data.index}',
-                  style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                  style: GoogleFonts.dmSans(
+                      fontSize: 14, color: const Color(0xffD0D0D0)),
                 ),
-                GestureDetector(
-                  onTap: () => controller.openNavigatorFor(data),
-                  child: Container(
-                    height: 25,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffFCFCFC).withOpacity(0.08),
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset('assets/images/map.png'),
-                        3.widthBox,
-                        Text(
-                          'Navigator',
-                          style: GoogleFonts.dmSans(fontSize: 10, color: const Color(0xffD0D0D0)),
-                        ),
-                      ],
-                    ),
+                IconButtonGrey(
+                  onTap: () {},
+                  size: 'small',
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/map.png'),
+                      3.widthBox,
+                      Text(
+                        'Navigator',
+                        style: GoogleFonts.dmSans(
+                            fontSize: 10, color: const Color(0xffD0D0D0)),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -76,17 +73,25 @@ class TripLineItemWidget extends StatelessWidget {
                           children: [
                             Text(
                               'Distance',
-                              style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 12,
+                                  color: const Color(0xffFCFCFC)
+                                      .withOpacity(0.46)),
                             ),
                             Row(
                               children: [
                                 Text(
                                   '2260',
-                                  style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                                  style: GoogleFonts.dmSans(
+                                      fontSize: 16,
+                                      color: const Color(0xffD0D0D0)),
                                 ),
                                 Text(
                                   'ml',
-                                  style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                  style: GoogleFonts.dmSans(
+                                      fontSize: 16,
+                                      color: const Color(0xffFCFCFC)
+                                          .withOpacity(0.46)),
                                 ),
                               ],
                             ),
@@ -98,17 +103,25 @@ class TripLineItemWidget extends StatelessWidget {
                           children: [
                             Text(
                               'Money',
-                              style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 12,
+                                  color: const Color(0xffFCFCFC)
+                                      .withOpacity(0.46)),
                             ),
                             Row(
                               children: [
                                 Text(
                                   '\$',
-                                  style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                                  style: GoogleFonts.dmSans(
+                                      fontSize: 16,
+                                      color: const Color(0xffFCFCFC)
+                                          .withOpacity(0.46)),
                                 ),
                                 Text(
                                   '500',
-                                  style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                                  style: GoogleFonts.dmSans(
+                                      fontSize: 16,
+                                      color: const Color(0xffD0D0D0)),
                                 ),
                               ],
                             ),
@@ -124,35 +137,49 @@ class TripLineItemWidget extends StatelessWidget {
                       children: [
                         Text(
                           'Time',
-                          style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                          style: GoogleFonts.dmSans(
+                              fontSize: 12,
+                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
                         ),
                         Row(
                           children: [
                             Text(
                               '2',
-                              style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 16, color: const Color(0xffD0D0D0)),
                             ),
                             Text(
                               'd',
-                              style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 16,
+                                  color: const Color(0xffFCFCFC)
+                                      .withOpacity(0.46)),
                             ),
                             const Text(' '),
                             Text(
                               '16',
-                              style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 16, color: const Color(0xffD0D0D0)),
                             ),
                             Text(
                               'h',
-                              style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 16,
+                                  color: const Color(0xffFCFCFC)
+                                      .withOpacity(0.46)),
                             ),
                             const Text(' '),
                             Text(
                               '23',
-                              style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffD0D0D0)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 16, color: const Color(0xffD0D0D0)),
                             ),
                             Text(
                               'm',
-                              style: GoogleFonts.dmSans(fontSize: 16, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                              style: GoogleFonts.dmSans(
+                                  fontSize: 16,
+                                  color: const Color(0xffFCFCFC)
+                                      .withOpacity(0.46)),
                             ),
                             const Text(' '),
                           ],
@@ -180,16 +207,10 @@ class TripLineItemWidget extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Container(
-                          height: 24,
-                          width: 24,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffFCFCFC).withOpacity(0.08),
-                            borderRadius: BorderRadius.circular(2),
-                          ),
-                          child: Center(
-                            child: Image.asset('assets/images/flag.png'),
-                          ),
+                        IconButtonGrey(
+                          onTap: () {},
+                          size: 'small',
+                          child: Image.asset('assets/images/flag.png'),
                         ),
                         const Text(''),
                       ],
@@ -200,11 +221,14 @@ class TripLineItemWidget extends StatelessWidget {
                       children: [
                         Text(
                           'Omaha NE',
-                          style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                          style: GoogleFonts.dmSans(
+                              fontSize: 14, color: const Color(0xffD0D0D0)),
                         ),
                         Text(
                           'Mon 10/13 00:00',
-                          style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                          style: GoogleFonts.dmSans(
+                              fontSize: 12,
+                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
                         ),
                       ],
                     ),
@@ -215,16 +239,10 @@ class TripLineItemWidget extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Container(
-                          height: 24,
-                          width: 24,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffFCFCFC).withOpacity(0.08),
-                            borderRadius: BorderRadius.circular(2),
-                          ),
-                          child: Center(
-                            child: Image.asset('assets/images/place.png'),
-                          ),
+                        IconButtonGrey(
+                          onTap: () {},
+                          size: 'small',
+                          child: Image.asset('assets/images/place.png'),
                         ),
                         const Text(''),
                       ],
@@ -235,11 +253,14 @@ class TripLineItemWidget extends StatelessWidget {
                       children: [
                         Text(
                           'Oakland, CA',
-                          style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                          style: GoogleFonts.dmSans(
+                              fontSize: 14, color: const Color(0xffD0D0D0)),
                         ),
                         Text(
                           'Mon 10/13 00:00',
-                          style: GoogleFonts.dmSans(fontSize: 12, color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                          style: GoogleFonts.dmSans(
+                              fontSize: 12,
+                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
                         ),
                       ],
                     ),
@@ -261,7 +282,8 @@ class TripLineItemWidget extends StatelessWidget {
                     end: Alignment(-1, 0.02),
                     colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
                   ),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -269,7 +291,9 @@ class TripLineItemWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      data.status == TripStatus.avaliable ? "Start trip" : 'Details',
+                      data.status == TripStatus.avaliable
+                          ? "Start trip"
+                          : 'Details',
                       style: GoogleFonts.dmSans(
                         color: Colors.white,
                         fontSize: 14,
@@ -279,7 +303,8 @@ class TripLineItemWidget extends StatelessWidget {
                     if (data.status == TripStatus.active)
                       const Padding(
                         padding: EdgeInsets.only(left: 8),
-                        child: Icon(Icons.arrow_forward_ios, color: Colors.white, size: 16),
+                        child: Icon(Icons.arrow_forward_ios,
+                            color: Colors.white, size: 16),
                       ),
                   ],
                 ),

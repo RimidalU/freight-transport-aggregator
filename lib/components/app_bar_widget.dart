@@ -1,6 +1,8 @@
+import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:awesome_extensions/awesome_extensions.dart';
+
+import '../../ui/ui.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;
@@ -40,7 +42,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                   bottomRight: Radius.circular(17),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 5.0, right: 16.0, left: 16.0),
+                  padding:
+                      const EdgeInsets.only(top: 5.0, right: 16.0, left: 16.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -50,34 +53,24 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                           3.widthBox,
                           Text(
                             'Back',
-                            style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                            style: GoogleFonts.dmSans(
+                                fontSize: 14, color: const Color(0xffD0D0D0)),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              color: const Color(0xffFCFCFC).withOpacity(0.08),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Center(
-                              child: Image.asset('assets/images/Search.png'),
+                          IconButtonGrey(
+                            onTap: () {},
+                            child: Image.asset(
+                              'assets/images/Search.png',
                             ),
                           ),
                           8.widthBox,
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              color: const Color(0xffFCFCFC).withOpacity(0.08),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Center(
-                              child: Image.asset('assets/images/NotificationWhite.png'),
-                            ),
+                          IconButtonGrey(
+                            onTap: () {},
+                            child: Image.asset(
+                                'assets/images/NotificationWhite.png'),
                           ),
                           ...actions,
                         ],

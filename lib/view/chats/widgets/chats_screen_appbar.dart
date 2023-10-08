@@ -1,10 +1,9 @@
-
+import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/images_path.dart';
 import '../../../ui/colors.dart';
 import '../../../ui/text_style.dart';
-import 'app_bar_icons.dart';
+import '../../../ui/ui.dart';
 
 class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ChatsScreenAppBar({super.key});
@@ -20,11 +19,11 @@ class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
           bottom: Radius.circular(12),
         ),
       ),
-      leading:  GestureDetector(
+      leading: GestureDetector(
         onTap: () {
           Navigator.pop(context);
         },
-        child: Icon(
+        child: const Icon(
           Icons.arrow_back_ios_new,
           color: ProjectColors.headLine,
           size: 16,
@@ -44,16 +43,19 @@ class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              AppBarIcons(
-                appbarIcon: search,
+              IconButtonGrey(
+                onTap: () {},
+                child: Image.asset('assets/images/Search.png'),
               ),
-              AppBarIcons(
-                appbarIcon: notifIcon,
-              )
+              8.widthBox,
+              IconButtonGrey(
+                onTap: () {},
+                child: Image.asset('assets/images/NotificationWhite.png'),
+              ),
+              16.widthBox,
             ],
           ),
         )

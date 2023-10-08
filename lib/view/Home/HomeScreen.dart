@@ -8,6 +8,8 @@ import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 import 'package:untitled55/view/news/NewsScreen.dart';
 import 'package:untitled55/view/rating/RatingScreen.dart';
 
+import '../../ui/ui.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -69,29 +71,15 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                          color: const Color(0xffFCFCFC).withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Image.asset('assets/images/Search.png'),
-                        ),
+                      IconButtonGrey(
+                        onTap: () {},
+                        child: Image.asset('assets/images/Search.png'),
                       ),
                       8.widthBox,
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                          color: const Color(0xffFCFCFC).withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                              'assets/images/NotificationWhite.png'),
-                        ),
+                      IconButtonGrey(
+                        onTap: () {},
+                        child:
+                            Image.asset('assets/images/NotificationWhite.png'),
                       ),
                       16.widthBox,
                     ],
@@ -160,7 +148,10 @@ class HomeScreen extends StatelessWidget {
                 4.widthBox,
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const RatingScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const RatingScreen()));
                   },
                   child: Container(
                     width: 111,
@@ -423,8 +414,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const ChatsScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChatsScreen()));
                   },
                   child: Container(
                     height: 106,
@@ -469,8 +462,11 @@ class HomeScreen extends StatelessWidget {
                 3.widthBox,
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SettlementScreen()));
-                    },
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SettlementScreen()));
+                  },
                   child: Container(
                     height: 106,
                     width: context.width / 2 - 1.5,
@@ -518,7 +514,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => NewsScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NewsScreen()));
                   },
                   child: Container(
                     height: 106,

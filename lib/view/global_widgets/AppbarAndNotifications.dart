@@ -2,6 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../ui/ui.dart';
+
 class AppBarAndNotifications extends StatefulWidget {
   const AppBarAndNotifications({super.key});
 
@@ -49,36 +51,22 @@ class _AppBarAndNotificationsState extends State<AppBarAndNotifications> {
                     3.widthBox,
                     Text(
                       'Back',
-                      style: GoogleFonts.dmSans(fontSize: 14, color: const Color(0xffD0D0D0)),
+                      style: GoogleFonts.dmSans(
+                          fontSize: 14, color: const Color(0xffD0D0D0)),
                     )
                   ],
                 ),
               ),
               Row(
                 children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffFCFCFC).withOpacity(0.08),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Center(
-                      child: Image.asset('assets/images/Search.png'),
-                    ),
+                  IconButtonGrey(
+                    onTap: () {},
+                    child: Image.asset('assets/images/Search.png'),
                   ),
                   8.widthBox,
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffFCFCFC).withOpacity(0.08),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                          'assets/images/NotificationWhite.png'),
-                    ),
+                  IconButtonGrey(
+                    onTap: () {},
+                    child: Image.asset('assets/images/NotificationWhite.png'),
                   ),
                   16.widthBox,
                 ],
