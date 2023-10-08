@@ -4,7 +4,7 @@ import '../../../constants/images_path.dart';
 import '../../../constants/text.dart';
 import '../../../ui/colors.dart';
 import '../../../ui/text_style.dart';
-import 'app_bar_icons.dart';
+import '../../../ui/ui.dart';
 
 class NotifContainer extends StatelessWidget {
   const NotifContainer({super.key});
@@ -42,7 +42,10 @@ class NotifContainer extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          const AppBarIcons(appbarIcon: pen),
+          IconButtonGrey(
+            onTap: () {},
+            child: Image.asset('assets/images/pen.png'),
+          ),
         ],
       ),
     );

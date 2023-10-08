@@ -1,4 +1,3 @@
-
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -9,7 +8,8 @@ import '../../constants/images_path.dart';
 import '../../constants/text.dart';
 import '../../ui/colors.dart';
 import '../../ui/text_style.dart';
-import '../chats/widgets/app_bar_icons.dart';
+import '../../ui/ui.dart';
+import '../chats/view/chats_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   final User? user;
@@ -67,7 +67,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         color: Colors.grey.shade400,
                       ),
                     ),
-                   10.widthBox,
+                    10.widthBox,
                   ],
                 )
               : Container(
@@ -183,7 +183,7 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xff202329),
         elevation: 0,
         centerTitle: true,
         title: RichText(
@@ -216,16 +216,22 @@ class _ChatScreenState extends State<ChatScreen> {
             ],
           ),
         ),
-        actions: const [AppBarIcons(appbarIcon: phone)],
-        leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 7),
-          child: InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, '/chats');
-            },
-            child: const AppBarIcons(
-              appbarIcon: iosBack,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 7),
+            child: IconButtonGrey(
+              onTap: () {},
+              child: Image.asset('assets/images/phone.png'),
             ),
+          ),
+        ],
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+          child: IconButtonGrey(
+            onTap: () {
+              Navigator.of(context).pushNamed(ChatsScreen.routeName);
+            },
+            child: Image.asset('assets/images/back.png'),
           ),
         ),
       ),
