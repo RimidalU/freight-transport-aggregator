@@ -8,7 +8,7 @@ import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 import 'package:untitled55/view/news/NewsScreen.dart';
 import 'package:untitled55/view/rating/RatingScreen.dart';
 
-import '../../ui/ui.dart';
+import '../../../ui/ui.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121418),
+      // backgroundColor: const Color(0xff121418),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
