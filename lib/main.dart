@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:untitled55/models.dart';
 import 'package:untitled55/view/Account/AccountScreen.dart';
 import 'package:untitled55/view/Home/HomeScreen.dart';
-import 'package:untitled55/view/Settlement/SettlementScreen.dart';
 import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chat/groups_chats.dart';
@@ -12,7 +11,9 @@ import 'package:untitled55/view/chats/view/chats_screen.dart';
 import 'package:untitled55/view/my_trips/navigator/navigator.page.dart';
 import 'package:untitled55/view/my_trips/new_trip_screen.dart';
 import 'package:untitled55/view/news/NewsScreen.dart';
-import 'package:untitled55/view/news/OpenNewsScreen.dart';
+
+import './features/features.dart';
+import '../ui/ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,6 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        //home: const OpenNewsScreem(),
         home: const HomeScreen(),
         routes: {
           'profile': (context) => const AccountScreen(),
@@ -40,6 +40,8 @@ class MyApp extends StatelessWidget {
           '/group_chat': (context) => const GroupsChatScreen(),
           '/mytrips': (context) => const NewTripScreen(),
           "/navigator": (context) => const NavigatorPage(),
+          "/news": (context) => const NewsScreen(),
+          NewsDetailsScreen.routeName: (context) => const NewsDetailsScreen(),
         },
       ),
     );
