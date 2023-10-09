@@ -4,11 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 
-import '../../features/features.dart';
-import '../../ui/ui.dart';
+import '../../../ui/ui.dart';
+import '../../features.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});
+
+  static const routeName = '/news';
 
   @override
   State<NewsScreen> createState() => _NewsScreenState();

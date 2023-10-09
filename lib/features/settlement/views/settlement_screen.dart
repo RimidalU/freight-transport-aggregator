@@ -4,10 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/constants/icons_path.dart';
 import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
 
-import '../../ui/ui.dart';
+import '../../../ui/ui.dart';
 
 class SettlementScreen extends StatefulWidget {
   const SettlementScreen({super.key});
+
+  static const routeName = '/settlement';
 
   @override
   State<SettlementScreen> createState() => _SettlementScreenState();

@@ -2,13 +2,13 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/Account/AccountScreen.dart';
-import 'package:untitled55/view/Settlement/SettlementScreen.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
-import 'package:untitled55/view/news/NewsScreen.dart';
 import 'package:untitled55/view/rating/RatingScreen.dart';
 
 import '../../../ui/ui.dart';
+import '../../features.dart';
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +16,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color(0xff121418),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -412,193 +411,33 @@ class HomeScreen extends StatelessWidget {
             16.heightBox,
             Row(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ChatsScreen()));
-                  },
-                  child: Container(
-                    height: 106,
-                    width: context.width / 2 - 1.5,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: const Color(0xff202329)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Image.asset(
-                                'assets/images/mychat.png',
-                                height: 56,
-                              ),
-                              Image.asset(
-                                'assets/images/Arrow.png',
-                                height: 56,
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'My chat',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                color: const Color(0xffD0D0D0),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                const DashboardTab(
+                  title: 'My chat',
+                  imageLink: 'assets/images/mychat.png',
+                  onTapLink: ChatsScreen.routeName,
                 ),
                 3.widthBox,
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SettlementScreen()));
-                  },
-                  child: Container(
-                    height: 106,
-                    width: context.width / 2 - 1.5,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: const Color(0xff202329)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Image.asset(
-                                'assets/images/mysetl.png',
-                                height: 56,
-                              ),
-                              Image.asset(
-                                'assets/images/Arrow.png',
-                                height: 56,
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'My Settlement',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                color: const Color(0xffD0D0D0),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                const DashboardTab(
+                  title: 'My Settlement',
+                  imageLink: 'assets/images/mysetl.png',
+                  onTapLink: SettlementScreen.routeName,
                 ),
               ],
             ),
             3.heightBox,
             Row(
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NewsScreen()));
-                  },
-                  child: Container(
-                    height: 106,
-                    width: context.width / 2 - 1.5,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: const Color(0xff202329)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Image.asset(
-                                'assets/images/mynews.png',
-                                height: 56,
-                              ),
-                              Image.asset(
-                                'assets/images/Arrow.png',
-                                height: 56,
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'My News',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                color: const Color(0xffD0D0D0),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                const DashboardTab(
+                  title: 'My News',
+                  imageLink: 'assets/images/mynews.png',
+                  onTapLink: NewsScreen.routeName,
                 ),
                 3.widthBox,
-                Container(
-                  height: 106,
-                  width: context.width / 2 - 1.5,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xff202329)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'assets/images/moneycode.png',
-                              height: 56,
-                            ),
-                            Image.asset(
-                              'assets/images/Arrow.png',
-                              height: 56,
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'Issue Money Code',
-                            style: GoogleFonts.dmSans(
-                              fontSize: 14,
-                              color: const Color(0xffD0D0D0),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                )
+                const DashboardTab(
+                  title: 'Issue Money Code',
+                  imageLink: 'assets/images/moneycode.png',
+                  onTapLink: '/', //TODO implement IssueMoneyScreen
+                ),
               ],
             )
           ],
