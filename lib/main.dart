@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
           NewsScreen.routeName: (context) => const NewsScreen(),
           NewsDetailsScreen.routeName: (context) => const NewsDetailsScreen(),
           SettlementScreen.routeName: (context) => const SettlementScreen(),
+          RatingScreen.routeName: (context) => const RatingScreen(),
         },
       ),
     );

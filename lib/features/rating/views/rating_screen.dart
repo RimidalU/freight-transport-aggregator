@@ -8,6 +8,8 @@ import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 class RatingScreen extends StatefulWidget {
   const RatingScreen({super.key});
 
+  static const routeName = '/rating';
+
   @override
   State<RatingScreen> createState() => _RatingScreenState();
 }

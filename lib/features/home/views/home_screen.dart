@@ -4,11 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/Account/AccountScreen.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
-import 'package:untitled55/view/rating/RatingScreen.dart';
 
-import '../../../ui/ui.dart';
 import '../../features.dart';
-import '../widgets/order_info.dart';
+import '../widgets/app_bar_custom.dart';
 import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,71 +19,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 70,
-              width: context.width - 8,
-              decoration: const BoxDecoration(
-                color: Color(0xff202329),
-              ),
-            ),
-            Container(
-              height: 1,
-              width: context.width - 8,
-              color: const Color(0xffffffff).withOpacity(0.2),
-            ),
-            Container(
-              height: 56,
-              width: context.width - 8,
-              decoration: const BoxDecoration(
-                  color: Color(0xff202329),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(17),
-                    bottomRight: Radius.circular(17),
-                  )),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      16.widthBox,
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          5.heightBox,
-                          Text(
-                            'Hello',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46)),
-                          ),
-                          3.widthBox,
-                          Text(
-                            'Thusday 04.05.2023',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14, color: const Color(0xffD0D0D0)),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      IconButtonGrey(
-                        onTap: () {},
-                        child: Image.asset('assets/images/Search.png'),
-                      ),
-                      8.widthBox,
-                      IconButtonGrey(
-                        onTap: () {},
-                        child:
-                            Image.asset('assets/images/NotificationWhite.png'),
-                      ),
-                      16.widthBox,
-                    ],
-                  ),
-                ],
-              ),
+            AppBarCustom(
+              date: DateTime.now(),
+              onTapBell: () {},
+              onTapSearch: () {},
             ),
             3.heightBox,
             Row(
@@ -146,50 +83,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 4.widthBox,
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const RatingScreen()));
-                  },
-                  child: Container(
-                    width: 111,
-                    height: 72,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: const Color(0xff202329),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        children: [
-                          Image.asset('assets/images/rating.png'),
-                          4.widthBox,
-                          Column(
-                            children: [
-                              Text(
-                                'Rating',
-                                style: GoogleFonts.dmSans(
-                                  fontSize: 12,
-                                  color:
-                                      const Color(0xffFCFCFC).withOpacity(0.46),
-                                ),
-                              ),
-                              Text(
-                                '9.23',
-                                style: GoogleFonts.dmSans(
-                                  fontSize: 16,
-                                  color: const Color(0xffD0D0D0),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                )
+                const RatingInfoButton(
+                  onTapLink: RatingScreen.routeName,
+                  rating: 9.23,
+                ),
               ],
             ),
             3.heightBox,
