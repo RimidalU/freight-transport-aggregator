@@ -8,6 +8,7 @@ import 'package:untitled55/view/rating/RatingScreen.dart';
 
 import '../../../ui/ui.dart';
 import '../../features.dart';
+import '../widgets/order_info.dart';
 import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -192,109 +193,12 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             3.heightBox,
-            Container(
-              width: context.width,
-              height: 72,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: const Color(0xff202329),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  16.widthBox,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Truck:',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 12,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46),
-                        ),
-                      ),
-                      Text(
-                        '5263',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 16,
-                          color: const Color(0xffD0D0D0),
-                        ),
-                      ),
-                    ],
-                  ),
-                  20.widthBox,
-                  Container(
-                    height: 27,
-                    width: 2,
-                    color: const Color(0xffFCFCFC).withOpacity(0.08),
-                  ),
-                  20.widthBox,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Trailer:',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 12,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46),
-                        ),
-                      ),
-                      Text(
-                        '5263',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 16,
-                          color: const Color(0xffD0D0D0),
-                        ),
-                      ),
-                    ],
-                  ),
-                  20.widthBox,
-                  Container(
-                    height: 27,
-                    width: 2,
-                    color: const Color(0xffFCFCFC).withOpacity(0.08),
-                  ),
-                  20.widthBox,
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Vehicle:',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 12,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46),
-                        ),
-                      ),
-                      Text(
-                        'Volvo FMX...',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 16,
-                          color: const Color(0xffD0D0D0),
-                        ),
-                      ),
-                    ],
-                  ),
-                  7.widthBox,
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(111),
-                      color: const Color(0xff32A5D7).withOpacity(0.08),
-                    ),
-                    height: 40,
-                    width: 104,
-                    child: Center(
-                      child: Text(
-                        'Vacation',
-                        style:
-                            GoogleFonts.dmSans(color: const Color(0xff32A5D7)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            OrderInfo(
+              onTap: () {},
+              status: 'Vacation',
+              trailer: '5263',
+              truck: '5263',
+              vehicle: 'Volvo FMX...',
             ),
             Padding(
               padding:
