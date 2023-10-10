@@ -2,6 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../features/features.dart';
+
 class NavBarWidget extends StatelessWidget {
   final int selectedIndex;
   const NavBarWidget({super.key, required this.selectedIndex});
@@ -27,7 +29,8 @@ class NavBarWidget extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushReplacementNamed("home");
+                      Navigator.of(context)
+                          .pushReplacementNamed(HomeScreen.routeName);
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +41,11 @@ class NavBarWidget extends StatelessWidget {
                             Text(
                               'Dashboard',
                               style: GoogleFonts.dmSans(
-                                  fontSize: 12, color: selectedIndex == 0 ? const Color(0xFFD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                  fontSize: 12,
+                                  color: selectedIndex == 0
+                                      ? const Color(0xFFD0D0D0)
+                                      : const Color(0xffFCFCFC)
+                                          .withOpacity(0.46)),
                             ),
                           ],
                         ),
@@ -59,7 +66,11 @@ class NavBarWidget extends StatelessWidget {
                             Text(
                               'My trip',
                               style: GoogleFonts.dmSans(
-                                  fontSize: 12, color: selectedIndex == 1 ? const Color(0xFFD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                  fontSize: 12,
+                                  color: selectedIndex == 1
+                                      ? const Color(0xFFD0D0D0)
+                                      : const Color(0xffFCFCFC)
+                                          .withOpacity(0.46)),
                             ),
                           ],
                         ),
@@ -80,7 +91,11 @@ class NavBarWidget extends StatelessWidget {
                             Text(
                               'User',
                               style: GoogleFonts.dmSans(
-                                  fontSize: 12, color: selectedIndex == 2 ? const Color(0xFFD0D0D0) : const Color(0xffFCFCFC).withOpacity(0.46)),
+                                  fontSize: 12,
+                                  color: selectedIndex == 2
+                                      ? const Color(0xFFD0D0D0)
+                                      : const Color(0xffFCFCFC)
+                                          .withOpacity(0.46)),
                             ),
                           ],
                         ),
@@ -123,7 +138,13 @@ class SelectedLine extends StatelessWidget {
             topRight: Radius.circular(12),
           ),
         ),
-        shadows: [BoxShadow(color: Color(0xFF2551EB), blurRadius: 21, offset: Offset(1, 7), spreadRadius: 0)],
+        shadows: [
+          BoxShadow(
+              color: Color(0xFF2551EB),
+              blurRadius: 21,
+              offset: Offset(1, 7),
+              spreadRadius: 0)
+        ],
       ),
     );
   }

@@ -28,10 +28,9 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: darkTheme,
-        home: const HomeScreen(),
+        // home: const HomeScreen(),
         routes: {
-          // '/': (context) => const HomeScreen(),
-          'home': (context) => const HomeScreen(),
+          HomeScreen.routeName: (context) => const HomeScreen(),
           '/chats': (context) => const ChatsScreen(),
           '/chat': (context) => const ChatScreen(),
           '/auth': (context) => const AuthScreen(),
