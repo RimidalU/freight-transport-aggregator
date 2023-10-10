@@ -9,14 +9,14 @@ class OrderInfo extends StatelessWidget {
     required this.truck,
     required this.trailer,
     required this.vehicle,
-    required this.status,
+    this.status,
   });
 
   final VoidCallback? onTap;
   final String truck;
   final String trailer;
   final String vehicle;
-  final String status;
+  final String? status;
 
   @override
   Widget build(BuildContext context) {
@@ -110,20 +110,21 @@ class OrderInfo extends StatelessWidget {
             ),
           ),
           7.widthBox,
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(111),
-              color: const Color(0xff32A5D7).withOpacity(0.08),
-            ),
-            height: 40,
-            width: 104,
-            child: Center(
-              child: Text(
-                status,
-                style: GoogleFonts.dmSans(color: const Color(0xff32A5D7)),
+          if (status != null)
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(111),
+                color: const Color(0xff32A5D7).withOpacity(0.08),
+              ),
+              height: 40,
+              width: 104,
+              child: Center(
+                child: Text(
+                  status!,
+                  style: GoogleFonts.dmSans(color: const Color(0xff32A5D7)),
+                ),
               ),
             ),
-          ),
         ],
       ),
     );

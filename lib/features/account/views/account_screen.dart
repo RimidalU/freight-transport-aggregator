@@ -2,10 +2,10 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled55/view/global_widgets/navbarWidget.dart';
-import 'package:untitled55/view/user/UserScreen.dart';
 
-import '../widgets/2block.dart';
+import '../../../features/features.dart';
+import '../../../view/global_widgets/navbarWidget.dart';
+import '../../home/widgets/order_info.dart';
 
 bool val = false;
 
@@ -169,7 +169,12 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ),
               3.heightBox,
-              const TwoBlock(),
+              OrderInfo(
+                vehicle: 'Volvo FMXXD 63j',
+                onTap: () {},
+                trailer: '5263',
+                truck: '5263',
+              ),
               4.heightBox,
               Container(
                 height: 52,
@@ -211,10 +216,7 @@ class _AccountScreenState extends State<AccountScreen> {
               4.heightBox,
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const UserScreen()));
+                  Navigator.of(context).pushNamed(UserScreen.routeName);
                 },
                 child: Container(
                   height: 52,

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/ui/colors.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
-import '../../ui/text_style.dart';
+
+import '../../../ui/text_style.dart';
 
 TextEditingController toController = TextEditingController();
 TextEditingController fromController = TextEditingController();
@@ -12,6 +13,8 @@ TextEditingController noteController = TextEditingController();
 
 class UserScreen extends StatefulWidget {
   const UserScreen({super.key});
+
+  static const routeName = '/user';
 
   @override
   State<UserScreen> createState() => _UserScreenState();

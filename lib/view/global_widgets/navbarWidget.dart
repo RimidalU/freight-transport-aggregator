@@ -80,7 +80,7 @@ class NavBarWidget extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushReplacementNamed("profile");
+                      Navigator.of(context).pushNamed(AccountScreen.routeName);
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
