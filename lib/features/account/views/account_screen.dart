@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
-import '../../../ui/ui.dart';
 import '../../../view/global_widgets/navbarWidget.dart';
 import '../../home/widgets/order_info.dart';
+import '../widgets/account_info.dart';
 import '../widgets/widgets.dart';
 
 bool val = false;
@@ -71,88 +71,11 @@ class _AccountScreenState extends State<AccountScreen> {
               const SizedBox(
                 height: 3,
               ),
-              Container(
-                height: 291,
-                width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 24,
-                    ),
-                    Image.asset('assets/images/iconaccount.png'),
-                    Text(
-                      'Abdula Azis',
-                      style: GoogleFonts.dmSans(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: const Color(0xffD0D0D0),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(111),
-                        color: const Color(0xff32A5D7).withOpacity(0.08),
-                      ),
-                      height: 40,
-                      width: 104,
-                      child: Center(
-                        child: Text(
-                          'Vacation',
-                          style: GoogleFonts.dmSans(
-                              color: const Color(0xff32A5D7)),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      'Erichbachman@piedpiper.com',
-                      style: GoogleFonts.dmSans(
-                          color: const Color(0xffffffff).withOpacity(0.5)),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButtonGrey(
-                          onTap: () {},
-                          size: 'tag',
-                          child: Text(
-                            'Team 1',
-                            style: GoogleFonts.inter(
-                              fontSize: 10,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 3,
-                        ),
-                        IconButtonGrey(
-                          onTap: () {},
-                          size: 'tag',
-                          child: Text(
-                            'Team 3',
-                            style: GoogleFonts.inter(
-                              fontSize: 10,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              AccountInfo(
+                onTap: () {},
+                email: 'Erichbachman@piedpiper.com',
+                name: 'Abdula Azis',
+                tags: const ['Team 1', 'Team 3'],
               ),
               3.heightBox,
               OrderInfo(
