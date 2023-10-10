@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../features/features.dart';
 import '../../../view/global_widgets/navbarWidget.dart';
 import '../../home/widgets/order_info.dart';
+import '../widgets/widgets.dart';
 
 bool val = false;
 
@@ -176,139 +177,51 @@ class _AccountScreenState extends State<AccountScreen> {
                 truck: '5263',
               ),
               4.heightBox,
-              Container(
-                height: 52,
-                width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              AccountLink(
+                imageLink: 'assets/images/Notification.png',
+                title: 'Turn on notifications',
+                action: Row(
                   children: [
-                    Row(
-                      children: [
-                        16.widthBox,
-                        Image.asset('assets/images/Notification.png'),
-                        4.widthBox,
-                        Text(
-                          'Turn on notifications',
-                          style: GoogleFonts.dmSans(
-                            color: const Color(0xffFCFCFC),
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        CupertinoSwitch(
-                            value: val,
-                            onChanged: (v) {
-                              val = v;
-                              setState(() {});
-                            }),
-                        16.widthBox,
-                      ],
-                    ),
+                    CupertinoSwitch(
+                        value: val,
+                        onChanged: (v) {
+                          val = v;
+                          setState(() {});
+                        }),
+                    16.widthBox,
                   ],
                 ),
               ),
               4.heightBox,
-              InkWell(
+              AccountLink(
+                imageLink: 'assets/images/invite.png',
                 onTap: () {
                   Navigator.of(context).pushNamed(UserScreen.routeName);
                 },
-                child: Container(
-                  height: 52,
-                  width: context.width - 8,
-                  decoration: BoxDecoration(
-                      color: const Color(0xff202329),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          16.widthBox,
-                          Image.asset('assets/images/invite.png'),
-                          4.widthBox,
-                          Text(
-                            'Invite people',
-                            style: GoogleFonts.dmSans(
-                              color: const Color(0xffFCFCFC),
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 16.0),
-                        child: Image.asset('assets/images/Arrow.png'),
-                      ),
-                    ],
-                  ),
+                title: 'Invite people',
+                action: Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: Image.asset('assets/images/Arrow.png'),
                 ),
               ),
               4.heightBox,
-              Container(
-                height: 52,
-                width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        16.widthBox,
-                        Image.asset('assets/images/Time.png'),
-                        4.widthBox,
-                        Text(
-                          'Time off',
-                          style: GoogleFonts.dmSans(
-                            color: const Color(0xffFCFCFC),
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16.0),
-                      child: Image.asset('assets/images/Arrow.png'),
-                    ),
-                  ],
+              AccountLink(
+                imageLink: 'assets/images/Time.png',
+                onTap: () {},
+                title: 'Time off',
+                action: Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: Image.asset('assets/images/Arrow.png'),
                 ),
               ),
               4.heightBox,
-              Container(
-                height: 52,
-                width: context.width - 8,
-                decoration: BoxDecoration(
-                    color: const Color(0xff202329),
-                    borderRadius: BorderRadius.circular(12)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        16.widthBox,
-                        Image.asset('assets/images/timeout.png'),
-                        4.widthBox,
-                        Text(
-                          'Log out',
-                          style: GoogleFonts.dmSans(
-                            color: const Color(0xffFCFCFC),
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16.0),
-                      child: Image.asset('assets/images/Arrow.png'),
-                    ),
-                  ],
+              AccountLink(
+                imageLink: 'assets/images/timeout.png',
+                onTap: () {},
+                title: 'Log out',
+                action: Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: Image.asset('assets/images/Arrow.png'),
                 ),
               ),
             ],
