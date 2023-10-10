@@ -3,10 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
 
+import 'widgets/tags_set.dart';
+
 class NewsDetailsScreen extends StatefulWidget {
-  const NewsDetailsScreen({super.key});
+  const NewsDetailsScreen({
+    super.key,
+    this.tags,
+  });
 
   static const routeName = '/news-details';
+
+  final List<String>? tags;
 
   @override
   State<NewsDetailsScreen> createState() => _NewsDetailsScreenState();
@@ -38,22 +45,10 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4),
-                              color: const Color(0xffFCFCFC).withOpacity(0.08),
-                            ),
-                            height: 20,
-                            width: 39,
-                            child: Center(
-                              child: Text(
-                                'Tag 1',
-                                style: GoogleFonts.dmSans(
-                                  fontSize: 10,
-                                  color: const Color(0xffD0D0D0),
-                                ),
-                              ),
-                            ),
+                          const TagsSet(
+                            tags: [
+                              'Tag2',
+                            ],
                           ),
                           Text(
                             '20 Jun 2021',
