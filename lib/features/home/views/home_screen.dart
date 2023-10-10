@@ -1,12 +1,10 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled55/view/Account/AccountScreen.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 
 import '../../features.dart';
-import '../widgets/app_bar_custom.dart';
 import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {

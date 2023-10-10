@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled55/models.dart';
-import 'package:untitled55/view/Account/AccountScreen.dart';
 import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chats/groups_chats.dart';
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
         home: const HomeScreen(),
         routes: {
           // '/': (context) => const HomeScreen(),
-          'profile': (context) => const AccountScreen(),
           'home': (context) => const HomeScreen(),
           '/chats': (context) => const ChatsScreen(),
           '/chat': (context) => const ChatScreen(),
@@ -44,6 +42,7 @@ class MyApp extends StatelessWidget {
           NewsDetailsScreen.routeName: (context) => const NewsDetailsScreen(),
           SettlementScreen.routeName: (context) => const SettlementScreen(),
           RatingScreen.routeName: (context) => const RatingScreen(),
+          AccountScreen.routeName: (context) => const AccountScreen(),
         },
       ),
     );

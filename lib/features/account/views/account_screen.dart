@@ -2,14 +2,17 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled55/view/Account/widgets/2block.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 import 'package:untitled55/view/user/UserScreen.dart';
+
+import '../widgets/2block.dart';
 
 bool val = false;
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
+
+  static const routeName = '/account';
 
   @override
   State<AccountScreen> createState() => _AccountScreenState();
