@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
+import '../../../ui/ui.dart';
 import '../../../view/global_widgets/navbarWidget.dart';
 import '../../home/widgets/order_info.dart';
 import '../widgets/widgets.dart';
@@ -123,47 +124,31 @@ class _AccountScreenState extends State<AccountScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          height: 20,
-                          width: 47,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                color: Colors.white.withOpacity(0.08)),
-                            color: const Color(0xffFCFCFC).withOpacity(0.08),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Team 1',
-                              style: GoogleFonts.inter(
-                                fontSize: 10,
-                                color: Colors.white,
-                              ),
+                        IconButtonGrey(
+                          onTap: () {},
+                          size: 'tag',
+                          child: Text(
+                            'Team 1',
+                            style: GoogleFonts.inter(
+                              fontSize: 10,
+                              color: Colors.white,
                             ),
                           ),
                         ),
                         const SizedBox(
                           width: 3,
                         ),
-                        Container(
-                          height: 20,
-                          width: 47,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                color: Colors.white.withOpacity(0.08)),
-                            color: const Color(0xffFCFCFC).withOpacity(0.08),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Team 3',
-                              style: GoogleFonts.inter(
-                                fontSize: 10,
-                                color: Colors.white,
-                              ),
+                        IconButtonGrey(
+                          onTap: () {},
+                          size: 'tag',
+                          child: Text(
+                            'Team 3',
+                            style: GoogleFonts.inter(
+                              fontSize: 10,
+                              color: Colors.white,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],
