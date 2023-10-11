@@ -7,9 +7,11 @@ import 'package:untitled55/view/my_trips/trip.model.dart';
 
 import '../../../ui/ui.dart';
 
-class TripDetailTrackingPage extends StatelessWidget {
+class TripDetailTrackingScreen extends StatelessWidget {
   final TripModel trip;
-  const TripDetailTrackingPage({super.key, required this.trip});
+  const TripDetailTrackingScreen({super.key, required this.trip});
+
+  static const routeName = '/trip-detail-tracking';
 
   @override
   Widget build(BuildContext context) {

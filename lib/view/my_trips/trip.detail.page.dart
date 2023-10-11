@@ -6,8 +6,8 @@ import 'package:untitled55/components/app_bar_widget.dart';
 import 'package:untitled55/view/my_trips/trip.controller.dart';
 import 'package:untitled55/view/my_trips/trip.model.dart';
 import 'package:untitled55/view/my_trips/widgets/tripdetail.issuemoney.page.dart';
-import 'package:untitled55/view/my_trips/widgets/tripdetail.tracking.page.dart';
 
+import '../../features/features.dart';
 import '../../ui/ui.dart';
 
 class TripDetailsPage extends GetView<MyTripController> {
@@ -401,7 +401,7 @@ class TripDetailsPage extends GetView<MyTripController> {
                         controller: controller.tripsDetailsPage,
                         physics: const NeverScrollableScrollPhysics(),
                         children: [
-                          TripDetailTrackingPage(trip: data),
+                          TripDetailTrackingScreen(trip: data),
                           TripDetailIssueMoneyPage(data: data),
                         ],
                       ),
