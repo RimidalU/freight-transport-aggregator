@@ -2,6 +2,7 @@ export './account/account.dart';
 export './auth/auth.dart';
 export './chat/chat.dart';
 export './chats/chats.dart';
+export './groups_chats/groups_chats.dart';
 export './home/home.dart';
 export './my_trips/my_trips.dart';
 export './navigator/navigator.dart';

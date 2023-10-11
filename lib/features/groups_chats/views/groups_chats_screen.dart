@@ -4,11 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:untitled55/features/chat/models/massege_model.dart';
 import 'package:untitled55/features/chat/models/user_model.dart';
 
-import '../../constants/images_path.dart';
-import '../../constants/text.dart';
-import '../../ui/colors.dart';
-import '../../ui/text_style.dart';
-import '../../ui/ui.dart';
+import '../../../constants/images_path.dart';
+import '../../../constants/text.dart';
+import '../../../ui/colors.dart';
+import '../../../ui/text_style.dart';
+import '../../../ui/ui.dart';
 
 class GroupsChatScreen extends StatefulWidget {
   final User? user;
