@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/my_trips/trip.controller.dart';
 import 'package:untitled55/view/my_trips/trip.model.dart';
 
+import '../../../ui/ui.dart';
+
 class TripDetailTrackingPage extends StatelessWidget {
   final TripModel trip;
   const TripDetailTrackingPage({super.key, required this.trip});
@@ -24,7 +26,8 @@ class TripDetailTrackingPage extends StatelessWidget {
             margin: const EdgeInsets.only(left: 16, right: 16),
             decoration: ShapeDecoration(
               color: const Color(0x14D7BD32),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(13)),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -33,7 +36,10 @@ class TripDetailTrackingPage extends StatelessWidget {
               children: [
                 Text(
                   'Pick Up',
-                  style: GoogleFonts.dmSans(color: const Color(0xFFD7BC31), fontSize: 14, fontWeight: FontWeight.w400),
+                  style: GoogleFonts.dmSans(
+                      color: const Color(0xFFD7BC31),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400),
                 ),
               ],
             ),
@@ -46,77 +52,95 @@ class TripDetailTrackingPage extends StatelessWidget {
                 (index) => ListTile(
                   minLeadingWidth: 32,
                   leading: Column(
-                    mainAxisAlignment: index != 14 ? MainAxisAlignment.end : MainAxisAlignment.start,
+                    mainAxisAlignment: index != 14
+                        ? MainAxisAlignment.end
+                        : MainAxisAlignment.start,
                     children: [
-                      if (index != 0) Container(width: 3, height: 12, color: const Color(0xFF32343A)),
+                      if (index != 0)
+                        Container(
+                            width: 3,
+                            height: 12,
+                            color: const Color(0xFF32343A)),
                       Container(
                         width: 32,
                         height: 32,
                         decoration: ShapeDecoration(
-                          color: index == 0 ? const Color(0xFFFB923C) : const Color(0xFF32343A),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.33)),
+                          color: index == 0
+                              ? const Color(0xFFFB923C)
+                              : const Color(0xFF32343A),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.33)),
                         ),
                         child: index == 0
                             ? const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: CircularProgressIndicator(
                                   strokeWidth: 2,
-                                  valueColor: AlwaysStoppedAnimation(Colors.white),
+                                  valueColor:
+                                      AlwaysStoppedAnimation(Colors.white),
                                 ),
                               )
-                            : Icon(Icons.place, color: const Color(0xFFFCFCFC).withOpacity(.46), size: 16),
+                            : Icon(Icons.place,
+                                color: const Color(0xFFFCFCFC).withOpacity(.46),
+                                size: 16),
                       ),
-                      if (index != 14) Container(width: 3, height: 12, color: const Color(0xFF32343A)),
+                      if (index != 14)
+                        Container(
+                            width: 3,
+                            height: 12,
+                            color: const Color(0xFF32343A)),
                     ],
                   ),
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Icon(Icons.check, color: const Color(0xFFFCFCFC).withOpacity(.46), size: 16),
+                      Icon(Icons.check,
+                          color: const Color(0xFFFCFCFC).withOpacity(.46),
+                          size: 16),
                       8.widthBox,
                       Text("54 Radley Street, Off 25",
-                          style: GoogleFonts.dmSans(color: const Color(0xFFD0D0D0), fontSize: 16, fontWeight: FontWeight.w400)),
+                          style: GoogleFonts.dmSans(
+                              color: const Color(0xFFD0D0D0),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400)),
                     ],
                   ),
                   subtitle: Row(
                     children: [
                       24.widthBox,
                       Text('Mon 23 Mar.  11:00',
-                          style: GoogleFonts.dmSans(color: const Color(0x75FCFCFC), fontSize: 14, fontWeight: FontWeight.w400)),
+                          style: GoogleFonts.dmSans(
+                              color: const Color(0x75FCFCFC),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400)),
                     ],
                   ),
                 ),
               ),
             ),
           ),
-          GestureDetector(
-            onTap: () => controller.onTripCheckinTap(trip),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xFFFCFCFC).withOpacity(0.08),
-                borderRadius: const BorderRadius.only(topLeft: Radius.circular(17), topRight: Radius.circular(17)),
-              ),
-              child: Container(
-                height: 44,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                margin: const EdgeInsets.all(16),
-                clipBehavior: Clip.antiAlias,
-                decoration: ShapeDecoration(
-                  gradient: const LinearGradient(
-                    begin: Alignment(1.00, -0.02),
-                    end: Alignment(-1, 0.02),
-                    colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
-                  ),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                ),
+          Container(
+            decoration: BoxDecoration(
+              color: const Color(0xFFFCFCFC).withOpacity(0.08),
+              borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(17), topRight: Radius.circular(17)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              child: ActionButton(
+                onTap: () => controller.onTripCheckinTap(trip),
+                type: 'normal',
                 child: Text(
                   'Check In',
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.dmSans(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500),
+                  style: GoogleFonts.dmSans(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500),
                 ),
               ),
             ),
-          ),
+          )
         ],
       ),
     );

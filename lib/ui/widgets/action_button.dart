@@ -32,12 +32,12 @@ class ActionButton extends StatelessWidget {
 
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(8),
       child: Container(
         width: width - 16,
         height: 44,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(8),
             gradient: LinearGradient(
               colors: [
                 Color(firstGradientItem),
