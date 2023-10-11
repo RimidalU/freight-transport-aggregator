@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled55/view/my_trips/trip.model.dart';
+import 'package:untitled55/features/my_trips/trip.model.dart';
 
-import '../../features/features.dart';
+import '../features.dart';
 
 class MyTripController extends GetxController {
   PageController tripsPage = PageController();

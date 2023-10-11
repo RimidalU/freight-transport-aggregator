@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/components/app_bar_widget.dart';
-import 'package:untitled55/view/my_trips/trip.controller.dart';
-import 'package:untitled55/view/my_trips/trip.model.dart';
-import 'package:untitled55/view/my_trips/widgets/tripdetail.issuemoney.page.dart';
+import 'package:untitled55/features/my_trips/trip.controller.dart';
+import 'package:untitled55/features/my_trips/trip.model.dart';
+import 'package:untitled55/features/my_trips/widgets/tripdetail.issuemoney.page.dart';
 
 import '../../features.dart';
 import '../../../ui/ui.dart';

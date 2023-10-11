@@ -6,7 +6,6 @@ import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chats/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
-import 'package:untitled55/view/my_trips/new_trip_screen.dart';
 
 import './features/features.dart';
 import 'ui/ui.dart';
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
           '/chat': (context) => const ChatScreen(),
           '/auth': (context) => const AuthScreen(),
           '/group_chat': (context) => const GroupsChatScreen(),
-          '/mytrips': (context) => const NewTripScreen(),
+          NewTripScreen.routeName: (context) => const NewTripScreen(),
           "/navigator": (context) => const NavigatorPage(),
           NewsScreen.routeName: (context) => const NewsScreen(),
           NewsDetailsScreen.routeName: (context) => const NewsDetailsScreen(),

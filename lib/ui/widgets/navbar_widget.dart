@@ -39,7 +39,7 @@ class NavBarWidget extends StatelessWidget {
                   ),
                   NavBarWidgetItem(
                     onTap: () {
-                      Navigator.of(context).pushNamed("/mytrips");
+                      Navigator.of(context).pushNamed(NewTripScreen.routeName);
                     },
                     selectedIndex: selectedIndex,
                     title: 'My trip',

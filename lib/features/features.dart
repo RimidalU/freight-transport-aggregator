@@ -1,5 +1,6 @@
 export './account/account.dart';
 export './home/home.dart';
+export './my_trips/my_trips.dart';
 export './navigator/navigator.dart';
 export './news/news.dart';
 export './news_details/news_details.dart';

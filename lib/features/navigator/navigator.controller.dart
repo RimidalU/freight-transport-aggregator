@@ -1,6 +1,7 @@
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:get/get.dart';
-import 'package:untitled55/view/my_trips/trip.model.dart';
+
+import '../../features/my_trips/trip.model.dart';
 
 class NavigatorController extends GetxController {
   late TripModel trip;
