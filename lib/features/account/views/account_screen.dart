@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
-import '../../../view/global_widgets/navbarWidget.dart';
+import '../../../ui/widgets/widgets.dart';
 import '../../home/widgets/order_info.dart';
 import '../widgets/account_info.dart';
 import '../widgets/widgets.dart';
