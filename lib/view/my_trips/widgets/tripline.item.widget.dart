@@ -270,21 +270,11 @@ class TripLineItemWidget extends StatelessWidget {
             ),
           ),
           if (data.status != TripStatus.closed)
-            GestureDetector(
-              onTap: () => controller.onTripClick(data),
-              child: Container(
-                width: 334,
-                height: 36,
-                clipBehavior: Clip.antiAlias,
-                decoration: ShapeDecoration(
-                  gradient: const LinearGradient(
-                    begin: Alignment(1.00, -0.02),
-                    end: Alignment(-1, 0.02),
-                    colors: [Color(0xFF2550EB), Color(0xFF2897FF)],
-                  ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: ActionButton(
+                onTap: () => controller.onTripClick(data),
+                type: 'normal',
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
