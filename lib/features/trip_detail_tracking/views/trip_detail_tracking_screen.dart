@@ -128,7 +128,7 @@ class TripDetailTrackingScreen extends StatelessWidget {
                   topLeft: Radius.circular(17), topRight: Radius.circular(17)),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: ActionButton(
                 onTap: () => controller.onTripCheckinTap(trip),
                 type: 'normal',

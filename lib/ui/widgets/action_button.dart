@@ -6,15 +6,17 @@ class ActionButton extends StatelessWidget {
     this.onTap,
     this.type,
     required this.child,
+    this.isAuth = false,
   });
 
   final VoidCallback? onTap;
   final Widget child;
   final String? type;
+  final bool isAuth;
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width - 16;
 
     final firstGradientItem = {
           'normal': 0xff2551eb,
@@ -35,7 +37,7 @@ class ActionButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(8),
       child: Container(
         width: width - 16,
-        height: 44,
+        height: isAuth ? 52 : 44,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             gradient: LinearGradient(

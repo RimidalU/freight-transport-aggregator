@@ -4,7 +4,6 @@ import 'package:untitled55/ui/ui.dart';
 
 import '../../../constants/images_path.dart';
 import '../../../constants/text.dart';
-import '../../../features/auth/widgets/auth_container.dart';
 import '../../../ui/text_style.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -103,7 +102,17 @@ class _AuthScreenState extends State<AuthScreen> {
                       ],
                     ),
                     const Spacer(),
-                    const AuthContainer(),
+                    ActionButton(
+                      onTap: () {},
+                      type: 'normal',
+                      isAuth: true,
+                      child: Text(
+                        'Login in',
+                        style: HeadlineTextStyle.style500w14.copyWith(
+                          color: ProjectColors.white,
+                        ),
+                      ),
+                    ),
                     SizedBox(height: height * 0.02),
                   ],
                 ),
