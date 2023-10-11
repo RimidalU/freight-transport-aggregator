@@ -1,8 +1,9 @@
-import 'package:untitled55/view/chat/widgets/user_model.dart';
+import 'package:untitled55/features/chat/models/user_model.dart';
 
 class Message {
   final User sender;
-  final String time; // Would usually be type DateTime or Firebase Timestamp in production apps
+  final String
+      time; // Would usually be type DateTime or Firebase Timestamp in production apps
   final String text;
   final bool unread;
 
@@ -49,7 +50,8 @@ List<Message> chats = [
   Message(
     sender: thor,
     time: '12:30 PM',
-    text: 'I\'m hitting gym bro. I\'m immune to mortal deseases. Are you coming?',
+    text:
+        'I\'m hitting gym bro. I\'m immune to mortal deseases. Are you coming?',
     unread: false,
   ),
   Message(
@@ -95,13 +97,15 @@ List<Message> messages = [
   Message(
     sender: currentUser,
     time: '2:30 PM',
-    text: 'But that spider kid is having some difficulties due his identity reveal by a blog called daily bugle.',
+    text:
+        'But that spider kid is having some difficulties due his identity reveal by a blog called daily bugle.',
     unread: true,
   ),
   Message(
     sender: currentUser,
     time: '2:30 PM',
-    text: 'Pepper & Morgan is fine. They\'re strong as you. Morgan is a very brave girl, one day she\'ll make you proud.',
+    text:
+        'Pepper & Morgan is fine. They\'re strong as you. Morgan is a very brave girl, one day she\'ll make you proud.',
     unread: true,
   ),
   Message(

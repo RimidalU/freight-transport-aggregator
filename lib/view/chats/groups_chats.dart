@@ -1,8 +1,8 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:untitled55/view/chat/widgets/massege_model.dart';
-import 'package:untitled55/view/chat/widgets/user_model.dart';
+import 'package:untitled55/features/chat/models/massege_model.dart';
+import 'package:untitled55/features/chat/models/user_model.dart';
 
 import '../../constants/images_path.dart';
 import '../../constants/text.dart';

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled55/models.dart';
-import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chats/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
 
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
           // HomeScreen.routeName: (context) => const HomeScreen(),
           InviteUserScreen.routeName: (context) => const InviteUserScreen(),
           '/chats': (context) => const ChatsScreen(),
-          '/chat': (context) => const ChatScreen(),
+          ChatScreen.routeName: (context) => const ChatScreen(),
           '/auth': (context) => const AuthScreen(),
           '/group_chat': (context) => const GroupsChatScreen(),
           NewTripScreen.routeName: (context) => const NewTripScreen(),
