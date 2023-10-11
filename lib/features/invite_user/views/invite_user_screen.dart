@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/ui/colors.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 
-import '../../../ui/text_style.dart';
+import '../../../ui/ui.dart';
+import 'widgets/widgets.dart';
 
 TextEditingController toController = TextEditingController();
 TextEditingController fromController = TextEditingController();
@@ -87,90 +88,31 @@ class _InviteUserScreenState extends State<InviteUserScreen> {
                             fontSize: 14, color: const Color(0xffD0D0D0)),
                       ),
                       16.heightBox,
-                      TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              12,
-                            ),
-                          ),
-                          label: Text(
-                            'To',
-                            style: HeadlineTextStyle.style500w14.copyWith(
-                              color: Colors.grey.shade500,
-                            ),
-                          ),
-                        ),
+                      const FieldForm(
+                        label: 'To',
                       ),
                       16.heightBox,
-                      TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              12,
-                            ),
-                          ),
-                          label: Text(
-                            'From',
-                            style: HeadlineTextStyle.style500w14.copyWith(
-                              color: Colors.grey.shade500,
-                            ),
-                          ),
-                        ),
+                      const FieldForm(
+                        label: 'From',
                       ),
                       16.heightBox,
-                      TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              12,
-                            ),
-                          ),
-                          label: Text(
-                            'Location',
-                            style: HeadlineTextStyle.style500w14.copyWith(
-                              color: Colors.grey.shade500,
-                            ),
-                          ),
-                        ),
+                      const FieldForm(
+                        label: 'Location',
                       ),
                       16.heightBox,
-                      TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              12,
-                            ),
-                          ),
-                          label: Text(
-                            'Note',
-                            style: HeadlineTextStyle.style500w14.copyWith(
-                              color: Colors.grey.shade500,
-                            ),
-                          ),
-                        ),
+                      const FieldForm(
+                        label: 'Note',
                       ),
                       16.heightBox,
-                      Container(
-                        width: context.width - 16,
-                        height: 44,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            gradient: const LinearGradient(
-                              colors: [
-                                Color(0xff2551eb),
-                                Color(0xff2898ff),
-                              ],
-                            )),
-                        child: Center(
-                          child: Text(
-                            'Save',
-                            style: GoogleFonts.dmSans(
-                              color: ProjectColors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
+                      ActionButton(
+                        child: Text(
+                          'Save',
+                          style: GoogleFonts.dmSans(
+                            color: ProjectColors.white,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
+                        onTap: () {},
                       ),
                       16.heightBox,
                     ],
