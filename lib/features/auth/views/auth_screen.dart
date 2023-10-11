@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:untitled55/features/auth/widgets/auth_container.dart';
-import 'package:untitled55/features/auth/widgets/auth_textfield.dart';
 import 'package:untitled55/ui/colors.dart';
+import 'package:untitled55/ui/ui.dart';
 
 import '../../../constants/images_path.dart';
 import '../../../constants/text.dart';
+import '../../../features/auth/widgets/auth_container.dart';
 import '../../../ui/text_style.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -63,7 +63,30 @@ class _AuthScreenState extends State<AuthScreen> {
                     SizedBox(
                       height: height * 0.02,
                     ),
-                    const AuthTextField(),
+                    // const AuthTextField(),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 12),
+                      child: FieldForm(label: 'email'),
+                    ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: FieldForm(
+                        label: 'password',
+                        icon: IconButton(
+                          icon: const Icon(
+                            Icons.visibility_off_outlined,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+
                     SizedBox(height: height * 0.02),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,

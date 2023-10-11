@@ -45,7 +45,7 @@ class _AuthTextFieldState extends State<AuthTextField> {
           width: width * 0.95,
           height: height * 0.06,
           child: TextField(
-            obscureText: active,
+            // obscureText: active,
             decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(

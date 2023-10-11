@@ -6,9 +6,11 @@ class FieldForm extends StatelessWidget {
   const FieldForm({
     super.key,
     required this.label,
+    this.icon,
   });
 
   final String label;
+  final Widget? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class FieldForm extends StatelessWidget {
             color: Colors.grey.shade500,
           ),
         ),
+        suffixIcon: icon,
       ),
     );
   }
