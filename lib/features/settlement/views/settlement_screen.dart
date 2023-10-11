@@ -2,7 +2,7 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/constants/icons_path.dart';
-import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
+import 'package:untitled55/ui/widgets/AppbarAndNotifications.dart';
 
 import '../../../ui/ui.dart';
 import '../widgets/widgets.dart';

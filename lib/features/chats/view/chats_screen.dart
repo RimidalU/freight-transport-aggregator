@@ -1,6 +1,6 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
+import 'package:untitled55/ui/widgets/AppbarAndNotifications.dart';
 
 import '/constants/images_path.dart' as image;
 import '../../../constants/text.dart';
