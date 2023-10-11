@@ -6,7 +6,6 @@ import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chats/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
-import 'package:untitled55/view/my_trips/navigator/navigator.page.dart';
 import 'package:untitled55/view/my_trips/new_trip_screen.dart';
 
 import './features/features.dart';

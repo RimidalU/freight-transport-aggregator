@@ -7,12 +7,12 @@ import 'package:untitled55/view/my_trips/trip.controller.dart';
 import 'package:untitled55/view/my_trips/trip.model.dart';
 import 'package:untitled55/view/my_trips/widgets/tripdetail.issuemoney.page.dart';
 
-import '../../features/features.dart';
-import '../../ui/ui.dart';
+import '../../features.dart';
+import '../../../ui/ui.dart';
 
-class TripDetailsPage extends GetView<MyTripController> {
+class TripDetailsScreen extends GetView<MyTripController> {
   final TripModel data;
-  const TripDetailsPage({super.key, required this.data});
+  const TripDetailsScreen({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
