@@ -1,15 +1,10 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled55/ui/widgets/AppbarAndNotifications.dart';
 
-import '/constants/images_path.dart' as image;
-import '../../../constants/text.dart';
-import '../../../ui/colors.dart';
-import '../../../ui/text_style.dart';
-import '../widgets/chat_container.dart';
-import '../widgets/chats_search.dart';
-import '../widgets/groups_container.dart';
-import '../widgets/notif_container.dart';
+import '/constants/constants.dart' as image;
+import '../../../constants/constants.dart';
+import '../../../ui/ui.dart';
+import '../widgets/widgets.dart';
 
 class ChatsScreen extends StatefulWidget {
   const ChatsScreen({super.key});

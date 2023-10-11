@@ -1,7 +1,8 @@
-import '/constants/images_path.dart' as image;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../constants/text.dart';
+
+import '/constants/constants.dart' as image;
+import '../../../constants/constants.dart';
 import '../../../ui/text_style.dart';
 
 class GroupsContaine extends StatelessWidget {

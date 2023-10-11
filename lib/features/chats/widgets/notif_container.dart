@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/images_path.dart';
-import '../../../constants/text.dart';
-import '../../../ui/colors.dart';
-import '../../../ui/text_style.dart';
+import '../../../constants/constants.dart';
 import '../../../ui/ui.dart';
 
 class NotifContainer extends StatelessWidget {

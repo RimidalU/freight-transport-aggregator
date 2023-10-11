@@ -1,8 +1,6 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 
-import '../../../ui/colors.dart';
-import '../../../ui/text_style.dart';
 import '../../../ui/ui.dart';
 
 class ChatsScreenAppBar extends StatelessWidget implements PreferredSizeWidget {

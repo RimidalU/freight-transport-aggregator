@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled55/ui/colors.dart';
-import 'package:untitled55/ui/ui.dart';
 
-import '../../../constants/images_path.dart';
-import '../../../constants/text.dart';
-import '../../../ui/text_style.dart';
+import '../../../constants/constants.dart';
+import '../../../ui/ui.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -64,7 +61,6 @@ class _AuthScreenState extends State<AuthScreen> {
                     SizedBox(
                       height: height * 0.02,
                     ),
-                    // const AuthTextField(),
                     const SizedBox(
                       height: 24,
                     ),
@@ -87,7 +83,6 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                       ),
                     ),
-
                     SizedBox(height: height * 0.02),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,

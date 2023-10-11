@@ -1,10 +1,9 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 
-import '../../../ui/widgets/widgets.dart';
-import '../../features.dart';
+import '../../../features/features.dart';
+import '../../../ui/ui.dart';
 import '../widgets/account_tab.dart';
-import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets.dart';
+import '../widgets/widgets.dart';
 
 class NewsTabSet extends StatelessWidget {
   const NewsTabSet({

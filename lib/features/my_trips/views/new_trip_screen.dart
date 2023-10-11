@@ -2,11 +2,10 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled55/ui/widgets/app_bar_widget.dart';
-import 'package:untitled55/features/my_trips/trip.controller.dart';
-import 'package:untitled55/features/my_trips/widgets/tripline.item.widget.dart';
 
-import '../../../ui/widgets/widgets.dart';
+import '../../../features/features.dart';
+import '../../../ui/ui.dart';
+import '../widgets/tripline.item.widget.dart';
 
 class NewTripScreen extends GetView<MyTripController> {
   const NewTripScreen({Key? key}) : super(key: key);

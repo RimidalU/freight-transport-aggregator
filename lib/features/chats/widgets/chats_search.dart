@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants/images_path.dart';
-import '../../../constants/text.dart';
-import '../../../ui/colors.dart';
-import '../../../ui/text_style.dart';
+import '../../../constants/constants.dart';
+import '../../../ui/ui.dart';
 
 class ChatsSearch extends StatelessWidget {
   const ChatsSearch({super.key});

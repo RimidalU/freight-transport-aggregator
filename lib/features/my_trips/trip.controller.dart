@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled55/features/my_trips/trip.model.dart';
 
 import '../features.dart';
 

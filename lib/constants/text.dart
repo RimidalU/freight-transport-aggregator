@@ -1,6 +1,6 @@
 const String chat = 'Chat';
 const String chatDrivers = 'Chat Drivers';
-const String groups = 'Groups';
+const String _groups = 'Groups';
 const String hintOfSearch = 'Search';
 const String allContacts = 'All Contacts · 24';
 const String mansName = 'Wade Warren';
