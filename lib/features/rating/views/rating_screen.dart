@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled55/view/global_widgets/AppbarAndNotifications.dart';
 import 'package:untitled55/view/global_widgets/navbarWidget.dart';
 
+import '../widgets/widgets.dart';
+
 class RatingScreen extends StatefulWidget {
   const RatingScreen({super.key});
 
@@ -66,69 +68,12 @@ class _RatingScreenState extends State<RatingScreen> {
                     ),
                   ),
                   12.heightBox,
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            Text(
-                              'Closen trips',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46),
-                              ),
-                            ),
-                            Text(
-                              '36',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                                color: const Color(0xffD0D0D0),
-                              ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              'Total miles in VTS',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46),
-                              ),
-                            ),
-                            Text(
-                              '36 244ml',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                                color: const Color(0xffD0D0D0),
-                              ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              'Year to date ml',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46),
-                              ),
-                            ),
-                            Text(
-                              '360days',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                                color: const Color(0xffD0D0D0),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: InfoRowSet(
+                      days: 360,
+                      miles: 36244,
+                      trips: 36,
                     ),
                   )
                 ],
