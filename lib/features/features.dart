@@ -4,4 +4,4 @@ export './news/news.dart';
 export './news_details/news_details.dart';
 export './rating/rating.dart';
 export './settlement/settlement.dart';
-export './user/user.dart';
+export 'invite_user/invite_user.dart';

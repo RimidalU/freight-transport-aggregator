@@ -11,16 +11,16 @@ TextEditingController fromController = TextEditingController();
 TextEditingController locationController = TextEditingController();
 TextEditingController noteController = TextEditingController();
 
-class UserScreen extends StatefulWidget {
-  const UserScreen({super.key});
+class InviteUserScreen extends StatefulWidget {
+  const InviteUserScreen({super.key});
 
-  static const routeName = '/user';
+  static const routeName = '/invite-user';
 
   @override
-  State<UserScreen> createState() => _UserScreenState();
+  State<InviteUserScreen> createState() => _InviteUserScreenState();
 }
 
-class _UserScreenState extends State<UserScreen> {
+class _InviteUserScreenState extends State<InviteUserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
