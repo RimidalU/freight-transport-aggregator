@@ -15,6 +15,8 @@ class GroupsChatScreen extends StatefulWidget {
 
   const GroupsChatScreen({super.key, this.user});
 
+  static const routeName = '/group-chat';
+
   @override
   _GroupsChatScreenState createState() => _GroupsChatScreenState();
 }

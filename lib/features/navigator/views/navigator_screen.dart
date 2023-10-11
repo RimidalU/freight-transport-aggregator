@@ -8,6 +8,8 @@ import 'package:untitled55/features/navigator/navigator.controller.dart';
 import '../../../ui/ui.dart';
 
 class NavigatorPage extends GetView<NavigatorController> {
+  static const routeName = '/navigator';
+
   const NavigatorPage({super.key});
   @override
   Widget build(BuildContext context) {
