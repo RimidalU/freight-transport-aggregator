@@ -1,6 +1,7 @@
 export './account/account.dart';
 export './auth/auth.dart';
 export './chat/chat.dart';
+export './chats/chats.dart';
 export './home/home.dart';
 export './my_trips/my_trips.dart';
 export './navigator/navigator.dart';

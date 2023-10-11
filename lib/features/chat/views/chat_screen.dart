@@ -9,7 +9,7 @@ import '../../../constants/text.dart';
 import '../../../ui/colors.dart';
 import '../../../ui/text_style.dart';
 import '../../../ui/ui.dart';
-import '../../../view/chats/view/chats_screen.dart';
+import '../../chats/view/chats_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   final User? user;

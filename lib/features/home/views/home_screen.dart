@@ -1,8 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import '../../../ui/widgets/widgets.dart';
 
-import '../../../view/chats/view/chats_screen.dart';
+import '../../../ui/widgets/widgets.dart';
 import '../../features.dart';
 import '../widgets/account_tab.dart';
 import '../widgets/widgets.dart';
