@@ -104,7 +104,7 @@ class _AccountScreenState extends State<AccountScreen> {
               AccountLink(
                 imageLink: 'assets/images/invite.png',
                 onTap: () {
-                  Navigator.of(context).pushNamed(UserScreen.routeName);
+                  Navigator.of(context).pushNamed(InviteUserScreen.routeName);
                 },
                 title: 'Invite people',
                 action: Padding(
