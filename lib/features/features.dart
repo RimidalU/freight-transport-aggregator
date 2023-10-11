@@ -9,3 +9,4 @@ export './settlement/settlement.dart';
 export './trip_detail/trip_detail.dart';
 export './trip_detail_tracking/trip_detail_tracking.dart';
 export 'invite_user/invite_user.dart';
+export './auth/auth.dart';

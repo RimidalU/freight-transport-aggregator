@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../ui/text_style.dart';
+import '../../../ui/text_style.dart';
 
 class FieldForm extends StatelessWidget {
   const FieldForm({

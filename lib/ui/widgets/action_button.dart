@@ -14,7 +14,7 @@ class ActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width - 16;
+    final width = MediaQuery.of(context).size.width;
 
     final firstGradientItem = {
           'normal': 0xff2551eb,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled55/models.dart';
-import 'package:untitled55/view/auth/auth.dart';
 import 'package:untitled55/view/chat/chat_screen.dart';
 import 'package:untitled55/view/chats/groups_chats.dart';
 import 'package:untitled55/view/chats/view/chats_screen.dart';
@@ -26,9 +25,9 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: darkTheme,
-        // home: const HomeScreen(),
+        home: const AuthScreen(),
         routes: {
-          HomeScreen.routeName: (context) => const HomeScreen(),
+          // HomeScreen.routeName: (context) => const HomeScreen(),
           InviteUserScreen.routeName: (context) => const InviteUserScreen(),
           '/chats': (context) => const ChatsScreen(),
           '/chat': (context) => const ChatScreen(),

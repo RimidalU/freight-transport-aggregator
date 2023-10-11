@@ -5,7 +5,7 @@ import 'package:untitled55/ui/colors.dart';
 import '../../../ui/widgets/widgets.dart';
 
 import '../../../ui/ui.dart';
-import 'widgets/widgets.dart';
+import '../widgets/widgets.dart';
 
 TextEditingController toController = TextEditingController();
 TextEditingController fromController = TextEditingController();

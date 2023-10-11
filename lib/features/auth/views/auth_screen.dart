@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:untitled55/features/auth/widgets/auth_container.dart';
+import 'package:untitled55/features/auth/widgets/auth_textfield.dart';
 import 'package:untitled55/ui/colors.dart';
-import 'package:untitled55/view/auth/widgets/auth_container.dart';
-import 'package:untitled55/view/auth/widgets/auth_textfield.dart';
 
-import '../../constants/images_path.dart';
-import '../../constants/text.dart';
-import '../../ui/text_style.dart';
+import '../../../constants/images_path.dart';
+import '../../../constants/text.dart';
+import '../../../ui/text_style.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -34,12 +34,12 @@ class _AuthScreenState extends State<AuthScreen> {
               Container(
                 width: double.infinity,
                 height: height * 0.76,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
-                  color: Colors.grey.shade900,
+                  color: Color(0xff202329),
                 ),
                 child: Column(
                   children: [
