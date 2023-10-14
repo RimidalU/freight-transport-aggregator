@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
 import '../../../ui/ui.dart';
+import '../widgets/widgets.dart';
 
 class TripDetailIssueMoneyScreen extends StatelessWidget {
   final TripModel data;
@@ -16,50 +17,10 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(16),
-                  bottomRight: Radius.circular(16)),
-              color: Color(0xFF202329),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Trip #${data.index}',
-                      style: darkTheme(context).primaryTextTheme.headlineMedium,
-                    ),
-                    16.widthBox,
-                    Image.asset("assets/images/TruckIcon.png"),
-                    4.widthBox,
-                    Text(
-                      '44',
-                      style: darkTheme(context).primaryTextTheme.titleMedium,
-                    ),
-                    8.widthBox,
-                    Image.asset("assets/images/TrailerIcon.png"),
-                    4.widthBox,
-                    Text(
-                      '36',
-                      style: darkTheme(context).primaryTextTheme.titleMedium,
-                    ),
-                  ],
-                ),
-                8.heightBox,
-                Text(
-                  'Issue Money Code',
-                  style: GoogleFonts.dmSans(
-                      color: const Color(0xFFD0D0D0),
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500),
-                ),
-              ],
-            ),
+          const IssueMoneyHeader(
+            order: 1,
+            trailer: 36,
+            vehicle: 44,
           ),
           3.heightBox,
           Row(
