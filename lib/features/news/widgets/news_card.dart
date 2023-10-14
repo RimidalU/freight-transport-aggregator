@@ -16,6 +16,7 @@ class NewsCard extends StatelessWidget {
         onTap: () {
           Navigator.of(context).pushNamed(NewsDetailsScreen.routeName);
         },
+        borderRadius: BorderRadius.circular(12),
         child: Container(
           height: 249,
           width: 217,

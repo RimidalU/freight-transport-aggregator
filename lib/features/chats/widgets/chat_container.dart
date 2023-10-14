@@ -20,13 +20,12 @@ class ChatContainer extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, '/chat');
       },
+      borderRadius: BorderRadius.circular(12),
       child: Container(
         width: width * 0.05,
-        height: height * 0.096,
+        height: height < 800 ? 76 : height * 0.096,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(
-            12,
-          ),
+          borderRadius: BorderRadius.circular(12),
           color: Colors.grey.shade900,
         ),
         child: Row(

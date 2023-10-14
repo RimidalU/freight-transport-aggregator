@@ -14,7 +14,7 @@ class ChatsSearch extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: width * 0.02),
       child: SizedBox(
-        height: height * 0.065,
+        height: height < 800 ? 44 : height * 0.065,
         width: width * 0.95,
         child: TextField(
           decoration: InputDecoration(

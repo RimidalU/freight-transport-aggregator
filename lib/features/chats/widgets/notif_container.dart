@@ -12,7 +12,7 @@ class NotifContainer extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return Container(
       width: width * 0.99,
-      height: height * 0.09,
+      height: 63,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           12,

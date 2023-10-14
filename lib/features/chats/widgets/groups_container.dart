@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:untitled55/features/features.dart';
 
 import '/constants/constants.dart' as image;
 import '../../../constants/constants.dart';
@@ -14,15 +15,14 @@ class GroupsContaine extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, '/group_chat');
+        Navigator.of(context).pushNamed(GroupsChatScreen.routeName);
       },
+      borderRadius: BorderRadius.circular(12),
       child: Container(
         width: width * 0.05,
-        height: height * 0.096,
+        height: height < 800 ? 76 : height * 0.096,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(
-            12,
-          ),
+          borderRadius: BorderRadius.circular(12),
           color: Colors.grey.shade900,
         ),
         child: Row(

@@ -12,10 +12,12 @@ class NewsTabSet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        if (news.isNotEmpty) ...news.map((e) => const NewsTab()).toList(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          if (news.isNotEmpty) ...news.map((e) => const NewsTab()).toList(),
+        ],
+      ),
     );
   }
 }

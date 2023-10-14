@@ -63,7 +63,6 @@ class _NewsScreenState extends State<NewsScreen> {
               3.heightBox,
               Container(
                 width: context.width - 8,
-                height: context.height,
                 decoration: BoxDecoration(
                   color: const Color(0xff202329),
                   borderRadius: BorderRadius.circular(12),
@@ -92,9 +91,8 @@ class _NewsScreenState extends State<NewsScreen> {
                         ],
                       ),
                       10.heightBox,
-                      const SingleChildScrollView(
-                        child: NewsTabSet(news: ['', '']),
-                      )
+                      const NewsTabSet(news: ['', '']),
+                      // )
                     ],
                   ),
                 ),

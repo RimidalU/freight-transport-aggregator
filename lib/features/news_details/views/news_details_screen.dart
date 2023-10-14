@@ -24,9 +24,9 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff121418),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 4.0),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
           child: Column(
             children: [
               const AppBarAndNotifications(),
@@ -71,10 +71,12 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                             fontSize: 24, color: const Color(0xffD0D0D0)),
                       ),
                       7.heightBox,
-                      Text(
-                        'Former President Donald Trump did not invent fake news. He appropriated it, exploited it and weaponized it. He defined fake news in purely utilitarian Trumpian interests to separate enemies from friends in the news mediaJournalists and their media that disagreed with Trump or exposed his egregious lies became not just his enemies but fake journalists and the purveyors of fake news. He used the label and the insults as weapons in his often-futile attempts to impugn the integrity of responsible journalists and their equally responsible media who would not buy into his lies and alternative facts.Trump is reputedly the greatest liar and dissembler that ever occupied the Oval Office. That he loves to accuse others of lying and faking the news must go down as a kind of special irony. New York City celebrated him as a great liar by erecting a 50-foot wall on which it detailed 50,000 of his greatest lies to the American people. When Twitter could stomach him no more, it yanked out his twitter page, the platform on which he stood to rant and rave and lie to the American people.',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 16, color: const Color(0xffD0D0D0)),
+                      Expanded(
+                        child: Text(
+                          'Former President Donald Trump did not invent fake news. He appropriated it, exploited it and weaponized it. He defined fake news in purely utilitarian Trumpian interests to separate enemies from friends in the news mediaJournalists and their media that disagreed with Trump or exposed his egregious lies became not just his enemies but fake journalists and the purveyors of fake news. He used the label and the insults as weapons in his often-futile attempts to impugn the integrity of responsible journalists and their equally responsible media who would not buy into his lies and alternative facts.Trump is reputedly the greatest liar and dissembler that ever occupied the Oval Office. That he loves to accuse others of lying and faking the news must go down as a kind of special irony. New York City celebrated him as a great liar by erecting a 50-foot wall on which it detailed 50,000 of his greatest lies to the American people. When Twitter could stomach him no more, it yanked out his twitter page, the platform on which he stood to rant and rave and lie to the American people.',
+                          style: GoogleFonts.dmSans(
+                              fontSize: 16, color: const Color(0xffD0D0D0)),
+                        ),
                       )
                     ],
                   ),
