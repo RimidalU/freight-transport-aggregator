@@ -52,11 +52,9 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                           ),
                           Text(
                             '20 Jun 2021',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 12,
-                                color:
-                                    const Color(0xffFCFCFC).withOpacity(0.46)),
-                          )
+                            style:
+                                darkTheme(context).primaryTextTheme.titleSmall,
+                          ),
                         ],
                       ),
                       10.heightBox,
@@ -74,8 +72,8 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                       Expanded(
                         child: Text(
                           'Former President Donald Trump did not invent fake news. He appropriated it, exploited it and weaponized it. He defined fake news in purely utilitarian Trumpian interests to separate enemies from friends in the news mediaJournalists and their media that disagreed with Trump or exposed his egregious lies became not just his enemies but fake journalists and the purveyors of fake news. He used the label and the insults as weapons in his often-futile attempts to impugn the integrity of responsible journalists and their equally responsible media who would not buy into his lies and alternative facts.Trump is reputedly the greatest liar and dissembler that ever occupied the Oval Office. That he loves to accuse others of lying and faking the news must go down as a kind of special irony. New York City celebrated him as a great liar by erecting a 50-foot wall on which it detailed 50,000 of his greatest lies to the American people. When Twitter could stomach him no more, it yanked out his twitter page, the platform on which he stood to rant and rave and lie to the American people.',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 16, color: const Color(0xffD0D0D0)),
+                          style:
+                              darkTheme(context).primaryTextTheme.headlineLarge,
                         ),
                       )
                     ],

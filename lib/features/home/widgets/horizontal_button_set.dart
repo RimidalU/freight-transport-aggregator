@@ -1,6 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class HorizontalButtonSet extends StatelessWidget {
   @override
@@ -16,18 +17,11 @@ class HorizontalButtonSet extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10),
           child: Row(
             children: [
-              Text(
-                'Overview',
-                style: GoogleFonts.dmSans(
-                    fontSize: 14, color: const Color(0xffD0D0D0)),
-              ),
+              Text('Overview',
+                  style: darkTheme(context).primaryTextTheme.headlineMedium),
               16.widthBox,
-              Text(
-                'Productivity',
-                style: GoogleFonts.dmSans(
-                    fontSize: 14,
-                    color: const Color(0xffD0D0D0).withOpacity(0.46)),
-              )
+              Text('Productivity',
+                  style: darkTheme(context).primaryTextTheme.titleMedium)
             ],
           ),
         ),

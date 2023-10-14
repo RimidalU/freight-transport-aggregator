@@ -90,8 +90,9 @@ class NavigatorPage extends GetView<NavigatorController> {
                         children: [
                           Text(
                             'Trip #${controller.trip.index}',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14, color: const Color(0xffD0D0D0)),
+                            style: darkTheme(context)
+                                .primaryTextTheme
+                                .headlineMedium,
                           ),
                           Row(
                             children: [
@@ -99,20 +100,18 @@ class NavigatorPage extends GetView<NavigatorController> {
                               4.widthBox,
                               Text(
                                 '44',
-                                style: GoogleFonts.dmSans(
-                                    color: const Color(0x75FCFCFC),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleMedium,
                               ),
                               8.widthBox,
                               Image.asset("assets/images/TrailerIcon.png"),
                               4.widthBox,
                               Text(
                                 '36',
-                                style: GoogleFonts.dmSans(
-                                    color: const Color(0x75FCFCFC),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleMedium,
                               ),
                             ],
                           ),
@@ -145,10 +144,9 @@ class NavigatorPage extends GetView<NavigatorController> {
                                           4.widthBox,
                                           Text(
                                             'Distance',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 12,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleSmall,
                                           ),
                                         ],
                                       ),
@@ -156,16 +154,15 @@ class NavigatorPage extends GetView<NavigatorController> {
                                         children: [
                                           Text(
                                             '2260',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                           Text(
                                             'ml',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleLarge,
                                           ),
                                         ],
                                       ),
@@ -185,10 +182,9 @@ class NavigatorPage extends GetView<NavigatorController> {
                                           4.widthBox,
                                           Text(
                                             'Time',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 12,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleSmall,
                                           ),
                                         ],
                                       ),
@@ -196,44 +192,41 @@ class NavigatorPage extends GetView<NavigatorController> {
                                         children: [
                                           Text(
                                             '2',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                           Text(
                                             'd',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleLarge,
                                           ),
                                           const Text(' '),
                                           Text(
                                             '16',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                           Text(
                                             'h',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleLarge,
                                           ),
                                           const Text(' '),
                                           Text(
                                             '23',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                           Text(
                                             'm',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleLarge,
                                           ),
                                         ],
                                       ),
@@ -253,10 +246,9 @@ class NavigatorPage extends GetView<NavigatorController> {
                                           4.widthBox,
                                           Text(
                                             'Speed',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 12,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleSmall,
                                           ),
                                         ],
                                       ),
@@ -264,16 +256,15 @@ class NavigatorPage extends GetView<NavigatorController> {
                                         children: [
                                           Text(
                                             '75.06',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                           Text(
                                             'mph',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleMedium,
                                           ),
                                         ],
                                       ),
@@ -338,21 +329,23 @@ class NavigatorPage extends GetView<NavigatorController> {
                                         .withOpacity(.46),
                                     size: 16),
                                 8.widthBox,
-                                Text("54 Radley Street, Off 25",
-                                    style: GoogleFonts.dmSans(
-                                        color: const Color(0xFFD0D0D0),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400)),
+                                Text(
+                                  "54 Radley Street, Off 25",
+                                  style: darkTheme(context)
+                                      .primaryTextTheme
+                                      .headlineLarge,
+                                ),
                               ],
                             ),
                             subtitle: Row(
                               children: [
                                 24.widthBox,
-                                Text('Mon 23 Mar.  11:00',
-                                    style: GoogleFonts.dmSans(
-                                        color: const Color(0x75FCFCFC),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400)),
+                                Text(
+                                  'Mon 23 Mar.  11:00',
+                                  style: darkTheme(context)
+                                      .primaryTextTheme
+                                      .titleMedium,
+                                ),
                               ],
                             ),
                           ),

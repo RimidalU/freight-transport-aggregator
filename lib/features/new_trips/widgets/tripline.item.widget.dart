@@ -73,28 +73,20 @@ class TripLineItemWidget extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Distance',
-                              style: GoogleFonts.dmSans(
-                                  fontSize: 12,
-                                  color: const Color(0xffFCFCFC)
-                                      .withOpacity(0.46)),
-                            ),
+                            Text('Distance',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleSmall),
                             Row(
                               children: [
-                                Text(
-                                  '2260',
-                                  style: GoogleFonts.dmSans(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                Text(
-                                  'ml',
-                                  style: GoogleFonts.dmSans(
-                                      fontSize: 16,
-                                      color: const Color(0xffFCFCFC)
-                                          .withOpacity(0.46)),
-                                ),
+                                Text('2260',
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .headlineLarge),
+                                Text('ml',
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .titleLarge),
                               ],
                             ),
                           ],
@@ -103,28 +95,20 @@ class TripLineItemWidget extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Money',
-                              style: GoogleFonts.dmSans(
-                                  fontSize: 12,
-                                  color: const Color(0xffFCFCFC)
-                                      .withOpacity(0.46)),
-                            ),
+                            Text('Money',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleSmall),
                             Row(
                               children: [
-                                Text(
-                                  '\$',
-                                  style: GoogleFonts.dmSans(
-                                      fontSize: 16,
-                                      color: const Color(0xffFCFCFC)
-                                          .withOpacity(0.46)),
-                                ),
-                                Text(
-                                  '500',
-                                  style: GoogleFonts.dmSans(
-                                    fontSize: 16,
-                                  ),
-                                ),
+                                Text('\$',
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .titleLarge),
+                                Text('500',
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .headlineLarge),
                               ],
                             ),
                           ],
@@ -137,55 +121,37 @@ class TripLineItemWidget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Time',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
-                        ),
+                        Text('Time',
+                            style:
+                                darkTheme(context).primaryTextTheme.titleSmall),
                         Row(
                           children: [
-                            Text(
-                              '2',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                              ),
-                            ),
-                            Text(
-                              'd',
-                              style: GoogleFonts.dmSans(
-                                  fontSize: 16,
-                                  color: const Color(0xffFCFCFC)
-                                      .withOpacity(0.46)),
-                            ),
+                            Text('2',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .headlineLarge),
+                            Text('d',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleLarge),
                             const Text(' '),
-                            Text(
-                              '16',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                              ),
-                            ),
-                            Text(
-                              'h',
-                              style: GoogleFonts.dmSans(
-                                  fontSize: 16,
-                                  color: const Color(0xffFCFCFC)
-                                      .withOpacity(0.46)),
-                            ),
+                            Text('16',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .headlineLarge),
+                            Text('h',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleLarge),
                             const Text(' '),
-                            Text(
-                              '23',
-                              style: GoogleFonts.dmSans(
-                                fontSize: 16,
-                              ),
-                            ),
-                            Text(
-                              'm',
-                              style: GoogleFonts.dmSans(
-                                  fontSize: 16,
-                                  color: const Color(0xffFCFCFC)
-                                      .withOpacity(0.46)),
-                            ),
+                            Text('23',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .headlineLarge),
+                            Text('m',
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleLarge),
                             const Text(' '),
                           ],
                         ),
@@ -230,12 +196,9 @@ class TripLineItemWidget extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-                        Text(
-                          'Mon 10/13 00:00',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
-                        ),
+                        Text('Mon 10/13 00:00',
+                            style:
+                                darkTheme(context).primaryTextTheme.titleSmall),
                       ],
                     ),
                   ],
@@ -263,12 +226,9 @@ class TripLineItemWidget extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-                        Text(
-                          'Mon 10/13 00:00',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
-                        ),
+                        Text('Mon 10/13 00:00',
+                            style:
+                                darkTheme(context).primaryTextTheme.titleSmall),
                       ],
                     ),
                   ],

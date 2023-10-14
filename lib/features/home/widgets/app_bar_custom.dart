@@ -1,6 +1,5 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../ui/ui.dart';
@@ -54,18 +53,14 @@ class AppBarCustom extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         5.heightBox,
-                        Text(
-                          'Hello',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 12,
-                              color: const Color(0xffFCFCFC).withOpacity(0.46)),
-                        ),
+                        Text('Hello',
+                            style:
+                                darkTheme(context).primaryTextTheme.titleSmall),
                         3.widthBox,
-                        Text(
-                          DateFormat('EEEE dd.MM.yyy').format(date),
-                          style: GoogleFonts.dmSans(
-                              fontSize: 14, color: const Color(0xffD0D0D0)),
-                        )
+                        Text(DateFormat('EEEE dd.MM.yyy').format(date),
+                            style: darkTheme(context)
+                                .primaryTextTheme
+                                .headlineMedium)
                       ],
                     ),
                   ],

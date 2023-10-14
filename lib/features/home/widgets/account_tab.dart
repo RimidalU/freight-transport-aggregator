@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
+import '../../../ui/ui.dart';
 
 class AccountTab extends StatelessWidget {
   const AccountTab({
@@ -42,20 +43,13 @@ class AccountTab extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Good Morning',
-                          style: GoogleFonts.dmSans(
-                            fontSize: 12,
-                            color: const Color(0xffFCFCFC).withOpacity(0.46),
-                          ),
-                        ),
-                        Text(
-                          userName,
-                          style: GoogleFonts.dmSans(
-                            fontSize: 16,
-                            color: const Color(0xffD0D0D0),
-                          ),
-                        ),
+                        Text('Good Morning',
+                            style:
+                                darkTheme(context).primaryTextTheme.titleSmall),
+                        Text(userName,
+                            style: darkTheme(context)
+                                .primaryTextTheme
+                                .headlineLarge),
                       ],
                     )
                   ],

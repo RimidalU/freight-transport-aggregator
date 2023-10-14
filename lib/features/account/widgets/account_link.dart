@@ -1,6 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class AccountLink extends StatelessWidget {
   const AccountLink({
@@ -35,13 +36,8 @@ class AccountLink extends StatelessWidget {
                 16.widthBox,
                 Image.asset(imageLink),
                 4.widthBox,
-                Text(
-                  title,
-                  style: GoogleFonts.dmSans(
-                    color: const Color(0xffFCFCFC),
-                    fontSize: 14,
-                  ),
-                ),
+                Text(title,
+                    style: darkTheme(context).primaryTextTheme.titleMedium),
               ],
             ),
             action

@@ -2,6 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../ui.dart';
+
 class TripDashboardTab extends StatelessWidget {
   const TripDashboardTab({
     super.key,
@@ -32,10 +34,7 @@ class TripDashboardTab extends StatelessWidget {
                 children: [
                   Text(
                     'Good Morning',
-                    style: GoogleFonts.dmSans(
-                      fontSize: 14,
-                      color: const Color(0xffFCFCFC).withOpacity(0.46),
-                    ),
+                    style: darkTheme(context).primaryTextTheme.titleMedium,
                   ),
                   Text(
                     'Abdula Azis',

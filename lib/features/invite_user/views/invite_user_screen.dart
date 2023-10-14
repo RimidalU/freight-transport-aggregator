@@ -59,9 +59,9 @@ class _InviteUserScreenState extends State<InviteUserScreen> {
                       3.widthBox,
                       Text(
                         'Back',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
-                      )
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineMedium,
+                      ),
                     ],
                   ),
                 ),
@@ -81,8 +81,8 @@ class _InviteUserScreenState extends State<InviteUserScreen> {
                       16.heightBox,
                       Text(
                         'Time off',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineMedium,
                       ),
                       16.heightBox,
                       const FieldForm(

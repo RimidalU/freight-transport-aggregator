@@ -1,10 +1,9 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
-import '../../../ui/widgets/widgets.dart';
+import '../../../ui/ui.dart';
 import '../widgets/widgets.dart';
 
 bool val = false;
@@ -57,11 +56,10 @@ class _AccountScreenState extends State<AccountScreen> {
                       16.widthBox,
                       Image.asset('assets/images/back.png'),
                       3.widthBox,
-                      Text(
-                        'Back',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
-                      )
+                      Text('Back',
+                          style: darkTheme(context)
+                              .primaryTextTheme
+                              .headlineMedium),
                     ],
                   ),
                 ),

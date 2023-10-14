@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class InfoRow extends StatelessWidget {
   const InfoRow({
@@ -17,17 +18,11 @@ class InfoRow extends StatelessWidget {
       children: [
         Text(
           description,
-          style: GoogleFonts.dmSans(
-            fontSize: 12,
-            color: const Color(0xffFCFCFC).withOpacity(0.46),
-          ),
+          style: darkTheme(context).primaryTextTheme.titleSmall,
         ),
         Text(
           title,
-          style: GoogleFonts.dmSans(
-            fontSize: 16,
-            color: const Color(0xffD0D0D0),
-          ),
+          style: darkTheme(context).primaryTextTheme.headlineLarge,
         )
       ],
     );

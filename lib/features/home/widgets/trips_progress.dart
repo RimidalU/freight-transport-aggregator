@@ -1,6 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class TripsProgress extends StatelessWidget {
   const TripsProgress({
@@ -28,28 +29,20 @@ class TripsProgress extends StatelessWidget {
               children: [
                 Text(
                   'Trips progress',
-                  style: GoogleFonts.dmSans(
-                    fontSize: 14,
-                    color: const Color(0xffD0D0D0),
-                  ),
+                  style: darkTheme(context).primaryTextTheme.headlineMedium,
                 ),
                 Row(
                   children: [
                     Text(
                       '$progress%',
-                      style: GoogleFonts.dmSans(
-                        fontSize: 14,
-                        color: const Color(0xffD0D0D0),
-                      ),
+                      style: darkTheme(context).primaryTextTheme.headlineMedium,
                     ),
                     2.widthBox,
                     Image.asset('assets/images/Amount.png'),
                     2.widthBox,
                     Text(
                       '100%',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 12,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                      style: darkTheme(context).primaryTextTheme.titleSmall,
                     ),
                   ],
                 )

@@ -41,7 +41,6 @@ class AccountInfo extends StatelessWidget {
             style: GoogleFonts.dmSans(
               fontWeight: FontWeight.bold,
               fontSize: 20,
-              color: const Color(0xffD0D0D0),
             ),
           ),
           const SizedBox(
@@ -66,8 +65,7 @@ class AccountInfo extends StatelessWidget {
           ),
           Text(
             email,
-            style: GoogleFonts.dmSans(
-                color: const Color(0xffffffff).withOpacity(0.5)),
+            style: darkTheme(context).primaryTextTheme.titleMedium,
           ),
           const SizedBox(
             height: 15,

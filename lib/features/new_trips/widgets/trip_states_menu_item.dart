@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class TripStatesMenuItem extends StatelessWidget {
   const TripStatesMenuItem({
@@ -15,13 +16,9 @@ class TripStatesMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      '$title · ${count.toString()}',
-      style: GoogleFonts.dmSans(
-          fontSize: 14,
-          color: isActive
-              ? const Color(0xffD0D0D0)
-              : const Color(0xffFCFCFC).withOpacity(0.46)),
-    );
+    return Text('$title · ${count.toString()}',
+        style: isActive
+            ? darkTheme(context).primaryTextTheme.headlineMedium
+            : darkTheme(context).primaryTextTheme.titleMedium);
   }
 }

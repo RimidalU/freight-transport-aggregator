@@ -2,6 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../ui/ui.dart';
+
 class RatingInfoButton extends StatelessWidget {
   const RatingInfoButton({
     super.key,
@@ -36,17 +38,11 @@ class RatingInfoButton extends StatelessWidget {
                 children: [
                   Text(
                     'Rating',
-                    style: GoogleFonts.dmSans(
-                      fontSize: 12,
-                      color: const Color(0xffFCFCFC).withOpacity(0.46),
-                    ),
+                    style: darkTheme(context).primaryTextTheme.titleSmall,
                   ),
                   Text(
                     rating.toStringAsFixed(2),
-                    style: GoogleFonts.dmSans(
-                      fontSize: 16,
-                      color: const Color(0xffD0D0D0),
-                    ),
+                    style: darkTheme(context).primaryTextTheme.headlineLarge,
                   ),
                 ],
               )

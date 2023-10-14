@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class NewsTag extends StatelessWidget {
   const NewsTag({
@@ -33,9 +34,7 @@ class NewsTag extends StatelessWidget {
           child: Center(
             child: Text(
               title,
-              style: GoogleFonts.dmSans(
-                color: const Color(0xffD0D0D0),
-              ),
+              style: darkTheme(context).primaryTextTheme.headlineMedium,
             ),
           ),
         ),

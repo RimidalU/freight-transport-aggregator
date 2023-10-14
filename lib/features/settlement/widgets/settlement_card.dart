@@ -1,6 +1,5 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../ui/ui.dart';
@@ -47,16 +46,12 @@ class SettlementCard extends StatelessWidget {
                     children: [
                       Text(
                         order,
-                        style: GoogleFonts.dmSans(
-                          color: const Color(0xffD0D0D0),
-                        ),
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineMedium,
                       ),
                       Text(
                         name,
-                        style: GoogleFonts.dmSans(
-                          fontSize: 12,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46),
-                        ),
+                        style: darkTheme(context).primaryTextTheme.titleSmall,
                       ),
                     ],
                   ),
@@ -67,16 +62,11 @@ class SettlementCard extends StatelessWidget {
                 children: [
                   Text(
                     '\$${price.toInt()}',
-                    style: GoogleFonts.dmSans(
-                      color: const Color(0xffD0D0D0),
-                    ),
+                    style: darkTheme(context).primaryTextTheme.headlineMedium,
                   ),
                   Text(
                     DateFormat('dd MMM yyy').format(date),
-                    style: GoogleFonts.dmSans(
-                      fontSize: 12,
-                      color: const Color(0xffFCFCFC).withOpacity(0.46),
-                    ),
+                    style: darkTheme(context).primaryTextTheme.titleSmall,
                   ),
                 ],
               )

@@ -2,6 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../ui/ui.dart';
+
 class OrderInfo extends StatelessWidget {
   const OrderInfo({
     super.key,
@@ -37,17 +39,11 @@ class OrderInfo extends StatelessWidget {
             children: [
               Text(
                 'Truck:',
-                style: GoogleFonts.dmSans(
-                  fontSize: 12,
-                  color: const Color(0xffFCFCFC).withOpacity(0.46),
-                ),
+                style: darkTheme(context).primaryTextTheme.titleSmall,
               ),
               Text(
                 truck,
-                style: GoogleFonts.dmSans(
-                  fontSize: 16,
-                  color: const Color(0xffD0D0D0),
-                ),
+                style: darkTheme(context).primaryTextTheme.headlineLarge,
               ),
             ],
           ),
@@ -64,17 +60,11 @@ class OrderInfo extends StatelessWidget {
             children: [
               Text(
                 'Trailer:',
-                style: GoogleFonts.dmSans(
-                  fontSize: 12,
-                  color: const Color(0xffFCFCFC).withOpacity(0.46),
-                ),
+                style: darkTheme(context).primaryTextTheme.titleSmall,
               ),
               Text(
                 trailer,
-                style: GoogleFonts.dmSans(
-                  fontSize: 16,
-                  color: const Color(0xffD0D0D0),
-                ),
+                style: darkTheme(context).primaryTextTheme.headlineLarge,
               ),
             ],
           ),
@@ -92,17 +82,11 @@ class OrderInfo extends StatelessWidget {
               children: [
                 Text(
                   'Vehicle:',
-                  style: GoogleFonts.dmSans(
-                    fontSize: 12,
-                    color: const Color(0xffFCFCFC).withOpacity(0.46),
-                  ),
+                  style: darkTheme(context).primaryTextTheme.titleSmall,
                 ),
                 Text(
                   vehicle,
-                  style: GoogleFonts.dmSans(
-                    fontSize: 16,
-                    color: const Color(0xffD0D0D0),
-                  ),
+                  style: darkTheme(context).primaryTextTheme.headlineLarge,
                   softWrap: true,
                   overflow: TextOverflow.ellipsis,
                 ),

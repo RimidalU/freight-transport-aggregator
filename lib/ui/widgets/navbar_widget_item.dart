@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../ui.dart';
 
@@ -32,11 +31,9 @@ class NavBarWidgetItem extends StatelessWidget {
               Image.asset(imageUrl),
               Text(
                 title,
-                style: GoogleFonts.dmSans(
-                    fontSize: 12,
-                    color: selectedIndex == index
-                        ? const Color(0xFFD0D0D0)
-                        : const Color(0xffFCFCFC).withOpacity(0.46)),
+                style: selectedIndex == index
+                    ? darkTheme(context).primaryTextTheme.headlineSmall
+                    : darkTheme(context).primaryTextTheme.titleSmall,
               ),
             ],
           ),

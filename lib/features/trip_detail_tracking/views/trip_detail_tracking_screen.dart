@@ -99,21 +99,20 @@ class TripDetailTrackingScreen extends StatelessWidget {
                           color: const Color(0xFFFCFCFC).withOpacity(.46),
                           size: 16),
                       8.widthBox,
-                      Text("54 Radley Street, Off 25",
-                          style: GoogleFonts.dmSans(
-                              color: const Color(0xFFD0D0D0),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400)),
+                      Text(
+                        "54 Radley Street, Off 25",
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineLarge,
+                      ),
                     ],
                   ),
                   subtitle: Row(
                     children: [
                       24.widthBox,
-                      Text('Mon 23 Mar.  11:00',
-                          style: GoogleFonts.dmSans(
-                              color: const Color(0x75FCFCFC),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400)),
+                      Text(
+                        'Mon 23 Mar.  11:00',
+                        style: darkTheme(context).primaryTextTheme.titleMedium,
+                      ),
                     ],
                   ),
                 ),

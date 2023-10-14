@@ -64,28 +64,25 @@ class TripDetailsScreen extends GetView<MyTripController> {
                         children: [
                           Text(
                             'Trip #${data.index}',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14, color: const Color(0xffD0D0D0)),
+                            style: darkTheme(context)
+                                .primaryTextTheme
+                                .headlineMedium,
                           ),
                           16.widthBox,
                           Image.asset("assets/images/TruckIcon.png"),
                           4.widthBox,
                           Text(
                             '44',
-                            style: GoogleFonts.dmSans(
-                                color: const Color(0x75FCFCFC),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400),
+                            style:
+                                darkTheme(context).primaryTextTheme.titleMedium,
                           ),
                           8.widthBox,
                           Image.asset("assets/images/TrailerIcon.png"),
                           4.widthBox,
                           Text(
                             '36',
-                            style: GoogleFonts.dmSans(
-                                color: const Color(0x75FCFCFC),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400),
+                            style:
+                                darkTheme(context).primaryTextTheme.titleMedium,
                           ),
                         ],
                       ),
@@ -109,25 +106,23 @@ class TripDetailsScreen extends GetView<MyTripController> {
                                     children: [
                                       Text(
                                         'Distance',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 12,
-                                            color: const Color(0xffFCFCFC)
-                                                .withOpacity(0.46)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .titleSmall,
                                       ),
                                       Row(
                                         children: [
                                           Text(
                                             '2260',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                           Text(
                                             'ml',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleLarge,
                                           ),
                                         ],
                                       ),
@@ -140,25 +135,23 @@ class TripDetailsScreen extends GetView<MyTripController> {
                                     children: [
                                       Text(
                                         'Money',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 12,
-                                            color: const Color(0xffFCFCFC)
-                                                .withOpacity(0.46)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .titleSmall,
                                       ),
                                       Row(
                                         children: [
                                           Text(
                                             '\$',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .titleLarge,
                                           ),
                                           Text(
                                             '500',
-                                            style: GoogleFonts.dmSans(
-                                                fontSize: 16,
-                                                color: const Color(0xffD0D0D0)),
+                                            style: darkTheme(context)
+                                                .primaryTextTheme
+                                                .headlineLarge,
                                           ),
                                         ],
                                       ),
@@ -175,53 +168,49 @@ class TripDetailsScreen extends GetView<MyTripController> {
                                 children: [
                                   Text(
                                     'Time',
-                                    style: GoogleFonts.dmSans(
-                                        fontSize: 12,
-                                        color: const Color(0xffFCFCFC)
-                                            .withOpacity(0.46)),
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .titleSmall,
                                   ),
                                   Row(
                                     children: [
                                       Text(
                                         '2',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 16,
-                                            color: const Color(0xffD0D0D0)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .headlineLarge,
                                       ),
                                       Text(
                                         'd',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 16,
-                                            color: const Color(0xffFCFCFC)
-                                                .withOpacity(0.46)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .titleLarge,
                                       ),
                                       const Text(' '),
                                       Text(
                                         '16',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 16,
-                                            color: const Color(0xffD0D0D0)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .headlineLarge,
                                       ),
                                       Text(
                                         'h',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 16,
-                                            color: const Color(0xffFCFCFC)
-                                                .withOpacity(0.46)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .titleLarge,
                                       ),
                                       const Text(' '),
                                       Text(
                                         '23',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 16,
-                                            color: const Color(0xffD0D0D0)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .headlineLarge,
                                       ),
                                       Text(
                                         'm',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 16,
-                                            color: const Color(0xffFCFCFC)
-                                                .withOpacity(0.46)),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .titleLarge,
                                       ),
                                       const Text(' '),
                                     ],
@@ -254,10 +243,9 @@ class TripDetailsScreen extends GetView<MyTripController> {
                               Text(
                                 'Trips progress',
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.dmSans(
-                                    color: const Color(0xFFD0D0D0),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .headlineMedium,
                               ),
                             ],
                           ),
@@ -360,35 +348,39 @@ class TripDetailsScreen extends GetView<MyTripController> {
                                 GestureDetector(
                                   onTap: () =>
                                       controller.onChangeTripDetailsPage(0),
-                                  child: Obx(() => Text(
-                                        'Tracking',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 14,
-                                            color: controller
-                                                        .currentTripDetailsPage
-                                                        .value ==
-                                                    0
-                                                ? const Color(0xffD0D0D0)
-                                                : const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
-                                      )),
+                                  child: Obx(
+                                    () => Text(
+                                      'Tracking',
+                                      style: controller.currentTripDetailsPage
+                                                  .value ==
+                                              0
+                                          ? darkTheme(context)
+                                              .primaryTextTheme
+                                              .headlineMedium
+                                          : darkTheme(context)
+                                              .primaryTextTheme
+                                              .titleMedium,
+                                    ),
+                                  ),
                                 ),
                                 15.widthBox,
                                 GestureDetector(
                                   onTap: () =>
                                       controller.onChangeTripDetailsPage(1),
-                                  child: Obx(() => Text(
-                                        'Issue Money Code',
-                                        style: GoogleFonts.dmSans(
-                                            fontSize: 14,
-                                            color: controller
-                                                        .currentTripDetailsPage
-                                                        .value ==
-                                                    1
-                                                ? const Color(0xffD0D0D0)
-                                                : const Color(0xffFCFCFC)
-                                                    .withOpacity(0.46)),
-                                      )),
+                                  child: Obx(
+                                    () => Text(
+                                      'Issue Money Code',
+                                      style: controller.currentTripDetailsPage
+                                                  .value ==
+                                              1
+                                          ? darkTheme(context)
+                                              .primaryTextTheme
+                                              .headlineMedium
+                                          : darkTheme(context)
+                                              .primaryTextTheme
+                                              .titleMedium,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),

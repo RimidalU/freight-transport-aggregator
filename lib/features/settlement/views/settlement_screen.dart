@@ -1,6 +1,5 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constants/constants.dart';
 import '../../../ui/ui.dart';
@@ -57,8 +56,8 @@ class _SettlementScreenState extends State<SettlementScreen> {
                       12.heightBox,
                       Text(
                         'My Settlement',
-                        style: GoogleFonts.dmSans(
-                            fontSize: 14, color: const Color(0xffD0D0D0)),
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineMedium,
                       ),
                       12.heightBox,
                       SizedBox(

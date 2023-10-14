@@ -32,28 +32,21 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Trip #${data.index}',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 14, color: const Color(0xffD0D0D0)),
+                      style: darkTheme(context).primaryTextTheme.headlineMedium,
                     ),
                     16.widthBox,
                     Image.asset("assets/images/TruckIcon.png"),
                     4.widthBox,
                     Text(
                       '44',
-                      style: GoogleFonts.dmSans(
-                          color: const Color(0x75FCFCFC),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                      style: darkTheme(context).primaryTextTheme.titleMedium,
                     ),
                     8.widthBox,
                     Image.asset("assets/images/TrailerIcon.png"),
                     4.widthBox,
                     Text(
                       '36',
-                      style: GoogleFonts.dmSans(
-                          color: const Color(0x75FCFCFC),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                      style: darkTheme(context).primaryTextTheme.titleMedium,
                     ),
                   ],
                 ),
@@ -87,10 +80,8 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                         Text(
                           'Lamper',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.dmSans(
-                              color: const Color(0x75FCFCFC),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400),
+                          style:
+                              darkTheme(context).primaryTextTheme.titleMedium,
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.min,
@@ -106,17 +97,15 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                                     children: [
                                       TextSpan(
                                         text: '\$',
-                                        style: GoogleFonts.dmSans(
-                                            color: const Color(0x75FCFCFC),
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .titleSmall,
                                       ),
                                       TextSpan(
                                         text: '100',
-                                        style: GoogleFonts.dmSans(
-                                            color: const Color(0xFFD0D0D0),
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500),
+                                        style: darkTheme(context)
+                                            .primaryTextTheme
+                                            .headlineSmall,
                                       ),
                                     ],
                                   ),
@@ -154,10 +143,9 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                                     Text(
                                       '\$250',
                                       textAlign: TextAlign.center,
-                                      style: GoogleFonts.dmSans(
-                                          color: const Color(0x75FCFCFC),
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400),
+                                      style: darkTheme(context)
+                                          .primaryTextTheme
+                                          .titleSmall,
                                     ),
                                   ],
                                 ),
@@ -520,10 +508,7 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                   children: [
                     Text(
                       'History',
-                      style: GoogleFonts.dmSans(
-                          color: const Color(0xFFD0D0D0),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                      style: darkTheme(context).primaryTextTheme.headlineMedium,
                     ),
                     Text(
                       'See more',
@@ -565,17 +550,15 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                             children: [
                               Text(
                                 'Lumper',
-                                style: GoogleFonts.dmSans(
-                                    color: const Color(0xFFD0D0D0),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500),
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .headlineMedium,
                               ),
                               Text(
                                 'Andrey Bozhenko, 20 Jun 2021',
-                                style: GoogleFonts.dmSans(
-                                    color: const Color(0x75FCFCFC),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400),
+                                style: darkTheme(context)
+                                    .primaryTextTheme
+                                    .titleMedium,
                               ),
                             ],
                           ),
@@ -589,34 +572,30 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                                 children: [
                                   TextSpan(
                                     text: '+',
-                                    style: GoogleFonts.dmSans(
-                                        color: const Color(0xFFD0D0D0),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .headlineMedium,
                                   ),
                                   TextSpan(
                                     text: '\$',
-                                    style: GoogleFonts.dmSans(
-                                        color: const Color(0x75FCFCFC),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .titleMedium,
                                   ),
                                   TextSpan(
                                     text: '36',
-                                    style: GoogleFonts.dmSans(
-                                        color: const Color(0xFFD0D0D0),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
+                                    style: darkTheme(context)
+                                        .primaryTextTheme
+                                        .headlineMedium,
                                   ),
                                 ],
                               ),
                             ),
                             Text(
                               'Trip #${data.index}',
-                              style: GoogleFonts.dmSans(
-                                  color: const Color(0x75FCFCFC),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
+                              style: darkTheme(context)
+                                  .primaryTextTheme
+                                  .titleMedium,
                             ),
                           ],
                         )

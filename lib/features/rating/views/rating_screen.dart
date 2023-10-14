@@ -44,11 +44,7 @@ class _RatingScreenState extends State<RatingScreen> {
                     12.heightBox,
                     Text(
                       'Driver',
-                      style: GoogleFonts.dmSans(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12,
-                        color: const Color(0xffFCFCFC).withOpacity(0.46),
-                      ),
+                      style: darkTheme(context).primaryTextTheme.titleSmall,
                     ),
                     Text(
                       'Abdula Azis',

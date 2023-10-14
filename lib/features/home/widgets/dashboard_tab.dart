@@ -1,6 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../../ui/ui.dart';
 
 class DashboardTab extends StatelessWidget {
   const DashboardTab({
@@ -49,13 +50,9 @@ class DashboardTab extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      title,
-                      style: GoogleFonts.dmSans(
-                        fontSize: 14,
-                        color: const Color(0xffD0D0D0),
-                      ),
-                    ),
+                    child: Text(title,
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineMedium),
                   )
                 ],
               ),

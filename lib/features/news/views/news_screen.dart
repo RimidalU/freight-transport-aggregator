@@ -2,7 +2,7 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../ui/widgets/widgets.dart';
+import '../../../ui/ui.dart';
 import '../widgets/widgets.dart';
 
 class NewsScreen extends StatefulWidget {
@@ -77,9 +77,9 @@ class _NewsScreenState extends State<NewsScreen> {
                         children: [
                           Text(
                             'See more',
-                            style: GoogleFonts.dmSans(
-                              color: const Color(0xffD0D0D0),
-                            ),
+                            style: darkTheme(context)
+                                .primaryTextTheme
+                                .headlineMedium,
                           ),
                           Text(
                             'Recomendation',

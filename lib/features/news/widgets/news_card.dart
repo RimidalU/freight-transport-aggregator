@@ -58,16 +58,19 @@ class NewsCard extends StatelessWidget {
                 3.heightBox,
                 Text(
                   'USOSA carnival ends amid funfare in Lagos',
-                  style: GoogleFonts.dmSans(color: const Color(0xffD0D0D0)),
+                  style: darkTheme(context).primaryTextTheme.headlineMedium,
+                  softWrap: true,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 7.heightBox,
                 Text(
                   'SDjaposdjapodjapsodjapsodjaspdaspodakopjdpoasdjpoa',
-                  style: GoogleFonts.dmSans(
-                    color: const Color(0xffFCFCFC).withOpacity(0.46),
-                    fontSize: 12,
-                  ),
-                )
+                  style: darkTheme(context).primaryTextTheme.titleSmall,
+                  softWrap: true,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ],
             ),
           ),

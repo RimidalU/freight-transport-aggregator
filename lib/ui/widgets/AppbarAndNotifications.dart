@@ -1,6 +1,5 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../ui.dart';
 
@@ -51,9 +50,8 @@ class _AppBarAndNotificationsState extends State<AppBarAndNotifications> {
                     3.widthBox,
                     Text(
                       'Back',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 14, color: const Color(0xffD0D0D0)),
-                    )
+                      style: darkTheme(context).primaryTextTheme.headlineMedium,
+                    ),
                   ],
                 ),
               ),

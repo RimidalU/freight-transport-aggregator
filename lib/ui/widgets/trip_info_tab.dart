@@ -1,6 +1,7 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../ui.dart';
 
 class TripInfoTab extends StatelessWidget {
   const TripInfoTab({
@@ -32,36 +33,27 @@ class TripInfoTab extends StatelessWidget {
               children: [
                 Text(
                   'Earmed',
-                  style: GoogleFonts.dmSans(
-                      fontSize: 12,
-                      color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                  style: darkTheme(context).primaryTextTheme.titleSmall,
                 ),
                 Row(
                   children: [
                     Text(
                       '\$',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 16,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                      style: darkTheme(context).primaryTextTheme.titleLarge,
                     ),
                     Text(
                       earmed.toString(),
-                      style: GoogleFonts.dmSans(
-                          fontSize: 16, color: const Color(0xffD0D0D0)),
+                      style: darkTheme(context).primaryTextTheme.headlineLarge,
                     ),
                     3.widthBox,
                     Text(
                       '/',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 16,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                      style: darkTheme(context).primaryTextTheme.titleLarge,
                     ),
                     3.widthBox,
                     Text(
                       '\$${earmedTotal.toString()}',
-                      style: GoogleFonts.dmSans(
-                          fontSize: 16,
-                          color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                      style: darkTheme(context).primaryTextTheme.titleLarge,
                     ),
                   ],
                 ),
@@ -80,14 +72,11 @@ class TripInfoTab extends StatelessWidget {
                 children: [
                   Text(
                     'Truck:',
-                    style: GoogleFonts.dmSans(
-                        fontSize: 12,
-                        color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                    style: darkTheme(context).primaryTextTheme.titleSmall,
                   ),
                   Text(
                     truck,
-                    style: GoogleFonts.dmSans(
-                        fontSize: 16, color: const Color(0xffD0D0D0)),
+                    style: darkTheme(context).primaryTextTheme.headlineLarge,
                   ),
                 ],
               ),
@@ -98,16 +87,11 @@ class TripInfoTab extends StatelessWidget {
                 children: [
                   Text(
                     'Trailer:',
-                    style: GoogleFonts.dmSans(
-                        fontSize: 12,
-                        color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                    style: darkTheme(context).primaryTextTheme.titleSmall,
                   ),
                   Text(
                     trailer,
-                    style: GoogleFonts.dmSans(
-                      fontSize: 16,
-                      color: const Color(0xffD0D0D0),
-                    ),
+                    style: darkTheme(context).primaryTextTheme.headlineLarge,
                     softWrap: true,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -120,14 +104,11 @@ class TripInfoTab extends StatelessWidget {
                 children: [
                   Text(
                     'Vehicle:',
-                    style: GoogleFonts.dmSans(
-                        fontSize: 12,
-                        color: const Color(0xffFCFCFC).withOpacity(0.46)),
+                    style: darkTheme(context).primaryTextTheme.titleSmall,
                   ),
                   Text(
                     vehicle,
-                    style: GoogleFonts.dmSans(
-                        fontSize: 16, color: const Color(0xffD0D0D0)),
+                    style: darkTheme(context).primaryTextTheme.headlineLarge,
                     softWrap: true,
                     overflow: TextOverflow.ellipsis,
                   ),

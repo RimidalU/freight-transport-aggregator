@@ -61,10 +61,11 @@ class NewsTab extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Text(
                         'UX/UI desigrers be one ofthe best\njob in the world',
-                        style: GoogleFonts.dmSans(
-                          fontSize: 14,
-                          color: const Color(0xffD0D0D0),
-                        ),
+                        style:
+                            darkTheme(context).primaryTextTheme.headlineMedium,
+                        softWrap: true,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ],
