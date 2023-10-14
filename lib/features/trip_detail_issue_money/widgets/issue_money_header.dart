@@ -1,7 +1,6 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 
 import '../../../ui/ui.dart';
 
@@ -11,11 +10,13 @@ class IssueMoneyHeader extends StatelessWidget {
     required this.order,
     required this.vehicle,
     required this.trailer,
+    this.isTitle = true,
   });
 
   final int order;
   final int vehicle;
   final int trailer;
+  final bool isTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -52,14 +53,15 @@ class IssueMoneyHeader extends StatelessWidget {
               ),
             ],
           ),
-          8.heightBox,
-          Text(
-            'Issue Money Code',
-            style: GoogleFonts.dmSans(
-                color: const Color(0xFFD0D0D0),
-                fontSize: 24,
-                fontWeight: FontWeight.w500),
-          ),
+          if (isTitle) 8.heightBox,
+          if (isTitle)
+            Text(
+              'Issue Money Code',
+              style: GoogleFonts.dmSans(
+                  color: const Color(0xFFD0D0D0),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500),
+            ),
         ],
       ),
     );

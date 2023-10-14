@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
 import '../../../ui/ui.dart';
+import '../../trip_detail_issue_money/widgets/widgets.dart';
 
 class TripDetailsScreen extends GetView<MyTripController> {
   // final TripModel data;
@@ -57,273 +58,20 @@ class TripDetailsScreen extends GetView<MyTripController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Trip #${data.index}',
-                            style: darkTheme(context)
-                                .primaryTextTheme
-                                .headlineMedium,
-                          ),
-                          16.widthBox,
-                          Image.asset("assets/images/TruckIcon.png"),
-                          4.widthBox,
-                          Text(
-                            '44',
-                            style:
-                                darkTheme(context).primaryTextTheme.titleMedium,
-                          ),
-                          8.widthBox,
-                          Image.asset("assets/images/TrailerIcon.png"),
-                          4.widthBox,
-                          Text(
-                            '36',
-                            style:
-                                darkTheme(context).primaryTextTheme.titleMedium,
-                          ),
-                        ],
-                      ),
+                    IssueMoneyHeader(
+                      order: data.index,
+                      trailer: 44,
+                      vehicle: 36,
+                      isTitle: false,
                     ),
                     Container(
                         height: 1,
                         color: const Color(0xffFCFCFC).withOpacity(0.08)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Row(
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Distance',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .titleSmall,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            '2260',
-                                            style: darkTheme(context)
-                                                .primaryTextTheme
-                                                .headlineLarge,
-                                          ),
-                                          Text(
-                                            'ml',
-                                            style: darkTheme(context)
-                                                .primaryTextTheme
-                                                .titleLarge,
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  30.widthBox,
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Money',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .titleSmall,
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            '\$',
-                                            style: darkTheme(context)
-                                                .primaryTextTheme
-                                                .titleLarge,
-                                          ),
-                                          Text(
-                                            '500',
-                                            style: darkTheme(context)
-                                                .primaryTextTheme
-                                                .headlineLarge,
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 16.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Time',
-                                    style: darkTheme(context)
-                                        .primaryTextTheme
-                                        .titleSmall,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        '2',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .headlineLarge,
-                                      ),
-                                      Text(
-                                        'd',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .titleLarge,
-                                      ),
-                                      const Text(' '),
-                                      Text(
-                                        '16',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .headlineLarge,
-                                      ),
-                                      Text(
-                                        'h',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .titleLarge,
-                                      ),
-                                      const Text(' '),
-                                      Text(
-                                        '23',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .headlineLarge,
-                                      ),
-                                      Text(
-                                        'm',
-                                        style: darkTheme(context)
-                                            .primaryTextTheme
-                                            .titleLarge,
-                                      ),
-                                      const Text(' '),
-                                    ],
-                                  ),
-                                  16.heightBox,
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Image.asset('assets/images/Truck.png'),
-                      ],
-                    ),
+                    const CarDashboard(),
                     Container(
                         height: 1,
                         color: const Color(0xffFCFCFC).withOpacity(0.08)),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 16),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Trips progress',
-                                textAlign: TextAlign.center,
-                                style: darkTheme(context)
-                                    .primaryTextTheme
-                                    .headlineMedium,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    '70%',
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.dmSans(
-                                        color: const Color(0xFFD0D0D0),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ],
-                              ),
-                              4.widthBox,
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    '/',
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.inter(
-                                        color: const Color(0x75FCFCFC),
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: -0.05),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(width: 4),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        '100%',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.dmSans(
-                                            color: const Color(0x75FCFCFC),
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w400),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(16, 10, 16, 20),
-                      child: LinearProgressIndicator(
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
-                        minHeight: 12,
-                        backgroundColor: Color(0x14fcfcfc),
-                        color: Color(0xFF2551EB),
-                        value: 0.7,
-                      ),
-                    ),
+                    const ProgressBar(progress: 70),
                   ],
                 ),
               ),
