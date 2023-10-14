@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled55/features/trip_detail_issue_money/widgets/widgets.dart';
+
+import './issue_money_active_item.dart';
 
 class ActiveItemsSet extends StatelessWidget {
   const ActiveItemsSet({

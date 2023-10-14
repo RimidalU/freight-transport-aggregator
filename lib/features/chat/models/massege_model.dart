@@ -1,4 +1,4 @@
-import 'package:untitled55/features/chat/models/user_model.dart';
+import '../../../features/features.dart';
 
 class Message {
   final User sender;

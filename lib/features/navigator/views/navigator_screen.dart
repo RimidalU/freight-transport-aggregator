@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
 import '../../../ui/ui.dart';
+import '../widgets/widgets.dart';
 
 class NavigatorPage extends GetView<NavigatorController> {
   static const routeName = '/navigator';
@@ -282,74 +283,12 @@ class NavigatorPage extends GetView<NavigatorController> {
                       child: ListView(
                         itemExtent: 56,
                         children: List.generate(
-                          15,
-                          (index) => ListTile(
-                            minLeadingWidth: 32,
-                            leading: Column(
-                              mainAxisAlignment: index != 14
-                                  ? MainAxisAlignment.end
-                                  : MainAxisAlignment.start,
-                              children: [
-                                if (index != 0)
-                                  Container(
-                                      width: 3,
-                                      height: 12,
-                                      color: const Color(0xFF32343A)),
-                                Container(
-                                  width: 32,
-                                  height: 32,
-                                  decoration: ShapeDecoration(
-                                    color: index == 0
-                                        ? const Color(0xFF2551EB)
-                                        : const Color(0xFF32343A),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.33)),
-                                  ),
-                                  child: index == 0
-                                      ? const Icon(Icons.play_circle,
-                                          color: Colors.white, size: 16)
-                                      : Icon(Icons.place,
-                                          color: const Color(0xFFFCFCFC)
-                                              .withOpacity(.46),
-                                          size: 16),
-                                ),
-                                if (index != 14)
-                                  Container(
-                                      width: 3,
-                                      height: 12,
-                                      color: const Color(0xFF32343A)),
-                              ],
-                            ),
-                            title: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Icon(Icons.check,
-                                    color: const Color(0xFFFCFCFC)
-                                        .withOpacity(.46),
-                                    size: 16),
-                                8.widthBox,
-                                Text(
-                                  "54 Radley Street, Off 25",
-                                  style: darkTheme(context)
-                                      .primaryTextTheme
-                                      .headlineLarge,
-                                ),
-                              ],
-                            ),
-                            subtitle: Row(
-                              children: [
-                                24.widthBox,
-                                Text(
-                                  'Mon 23 Mar.  11:00',
-                                  style: darkTheme(context)
-                                      .primaryTextTheme
-                                      .titleMedium,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                            pins.length,
+                            (index) => NavigatorItem(
+                                  index: index,
+                                  date: pins[index]['date'] as DateTime,
+                                  name: pins[index]['name'] as String,
+                                )),
                       ),
                     ),
                     Padding(
@@ -377,3 +316,30 @@ class NavigatorPage extends GetView<NavigatorController> {
     );
   }
 }
+
+final pins = [
+  {
+    'name': '54 Radley Street, Off 25',
+    'date': DateTime.now().add(
+      const Duration(days: -10),
+    )
+  },
+  {
+    'name': '54 Radley Street, Off 25',
+    'date': DateTime.now().add(
+      const Duration(days: -32),
+    )
+  },
+  {
+    'name': '54 Radley Street, Off 25',
+    'date': DateTime.now().add(
+      const Duration(days: -11),
+    )
+  },
+  {
+    'name': '54 Radley Street, Off 25',
+    'date': DateTime.now().add(
+      const Duration(days: -33),
+    )
+  },
+];
