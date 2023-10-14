@@ -8,3 +8,5 @@ export './navbar_widget_item.dart';
 export './selected_line.dart';
 export './trip_dashboard_tab.dart';
 export './trip_info_tab.dart';
+export './trip_states_menu.dart';
+export './trip_states_menu_item.dart';

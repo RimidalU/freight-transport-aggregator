@@ -1,7 +1,6 @@
 import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
 import '../../../ui/ui.dart';
@@ -21,7 +20,7 @@ class NewTripScreen extends GetView<MyTripController> {
         body: SizedBox.expand(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+            children: <Widget>[
               3.heightBox,
               Container(
                 height: 150,
@@ -53,50 +52,32 @@ class NewTripScreen extends GetView<MyTripController> {
                 ),
               ),
               15.heightBox,
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () => controller.onChangeTripPage(0),
-                      child: Obx(() => Text(
-                            'Available Trips · ${controller.avaliable.length}',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                color: controller.currentTripPage.value == 0
-                                    ? const Color(0xffD0D0D0)
-                                    : const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                          )),
-                    ),
-                    15.widthBox,
-                    GestureDetector(
-                      onTap: () => controller.onChangeTripPage(1),
-                      child: Obx(() => Text(
-                            'Current Trips · ${controller.active.length}',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                color: controller.currentTripPage.value == 1
-                                    ? const Color(0xffD0D0D0)
-                                    : const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                          )),
-                    ),
-                    15.widthBox,
-                    GestureDetector(
-                      onTap: () => controller.onChangeTripPage(2),
-                      child: Obx(() => Text(
-                            'Closen Trips · ${controller.closed.length}',
-                            style: GoogleFonts.dmSans(
-                                fontSize: 14,
-                                color: controller.currentTripPage.value == 2
-                                    ? const Color(0xffD0D0D0)
-                                    : const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                          )),
-                    ),
-                  ],
+              TripStatesMenu(
+                selectedIndex: controller.currentTripPage.value,
+                availableCount: Obx(
+                  () => TripStatesMenuItem(
+                    title: 'Available Trips',
+                    count: controller.avaliable.length,
+                    isActive: controller.currentTripPage.value == 0,
+                  ),
                 ),
+                onTapAvailable: () => controller.onChangeTripPage(0),
+                currentCount: Obx(
+                  () => TripStatesMenuItem(
+                    title: 'Current Trips',
+                    count: controller.active.length,
+                    isActive: controller.currentTripPage.value == 1,
+                  ),
+                ),
+                onTapCurrent: () => controller.onChangeTripPage(1),
+                closesCount: Obx(
+                  () => TripStatesMenuItem(
+                    title: 'Closen Trips',
+                    count: controller.closed.length,
+                    isActive: controller.currentTripPage.value == 2,
+                  ),
+                ),
+                onTapCloses: () => controller.onChangeTripPage(2),
               ),
               10.heightBox,
               Expanded(
