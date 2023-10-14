@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: darkTheme,
-        home: const AuthScreen(),
+        theme: darkTheme(context),
+        home: const HomeScreen(),
         routes: {
           // HomeScreen.routeName: (context) => const HomeScreen(),
           InviteUserScreen.routeName: (context) => const InviteUserScreen(),
