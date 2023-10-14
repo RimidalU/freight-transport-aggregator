@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../features.dart';
+import '../../features.dart';
 
 class MyTripController extends GetxController {
   PageController tripsPage = PageController();
@@ -18,8 +18,8 @@ class MyTripController extends GetxController {
 
   onTripClick(TripModel trip) {
     if (trip.status == TripStatus.active) {
-      Navigator.of(Get.context!).push(MaterialPageRoute(
-          builder: (context) => TripDetailsScreen(data: trip)));
+      Navigator.of(Get.context!)
+          .pushNamed(TripDetailsScreen.routeName, arguments: trip);
     }
   }
 

@@ -7,11 +7,19 @@ import '../../../features/features.dart';
 import '../../../ui/ui.dart';
 
 class TripDetailsScreen extends GetView<MyTripController> {
-  final TripModel data;
-  const TripDetailsScreen({super.key, required this.data});
+  // final TripModel data;
+
+  static const routeName = '/trip-detail';
+
+  const TripDetailsScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final TripModel data =
+        ModalRoute.of(context)?.settings.arguments as TripModel;
+
     return Padding(
       padding: const EdgeInsets.only(right: 4.0, left: 4.0, bottom: 4.0),
       child: Scaffold(
@@ -398,7 +406,7 @@ class TripDetailsScreen extends GetView<MyTripController> {
                         physics: const NeverScrollableScrollPhysics(),
                         children: [
                           TripDetailTrackingScreen(trip: data),
-                          TripDetailIssueMoneyPage(data: data),
+                          TripDetailIssueMoneyScreen(data: data),
                         ],
                       ),
                     ),

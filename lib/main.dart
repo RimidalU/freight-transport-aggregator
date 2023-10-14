@@ -30,6 +30,9 @@ class MyApp extends StatelessWidget {
           AuthScreen.routeName: (context) => const AuthScreen(),
           GroupsChatScreen.routeName: (context) => const GroupsChatScreen(),
           NewTripScreen.routeName: (context) => const NewTripScreen(),
+          TripDetailsScreen.routeName: (context) => const TripDetailsScreen(),
+          // TripDetailTrackingScreen.routeName: (context) =>
+          //     TripDetailTrackingScreen(),
           NavigatorPage.routeName: (context) => const NavigatorPage(),
           NewsScreen.routeName: (context) => const NewsScreen(),
           NewsDetailsScreen.routeName: (context) => const NewsDetailsScreen(),

@@ -2,13 +2,13 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled55/features/my_trips/trip.model.dart';
+import 'package:untitled55/features/my_trips/models/trip.model.dart';
 
 import '../../../ui/ui.dart';
 
-class TripDetailIssueMoneyPage extends StatelessWidget {
+class TripDetailIssueMoneyScreen extends StatelessWidget {
   final TripModel data;
-  const TripDetailIssueMoneyPage({super.key, required this.data});
+  const TripDetailIssueMoneyScreen({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {

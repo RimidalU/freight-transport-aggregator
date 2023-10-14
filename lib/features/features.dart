@@ -11,5 +11,6 @@ export './news_details/news_details.dart';
 export './rating/rating.dart';
 export './settlement/settlement.dart';
 export './trip_detail/trip_detail.dart';
+export './trip_detail_issue_money/trip_detail_issue_money.dart';
 export './trip_detail_tracking/trip_detail_tracking.dart';
 export 'invite_user/invite_user.dart';

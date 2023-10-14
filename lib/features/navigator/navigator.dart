@@ -1,2 +1,2 @@
-export './navigator.controller.dart';
 export './views/views.dart';
+export 'controllers/navigator.controller.dart';
