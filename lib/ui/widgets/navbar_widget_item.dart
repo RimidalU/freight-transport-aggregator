@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../ui.dart';
 
 class NavBarWidgetItem extends StatelessWidget {
-  final int selectedIndex;
   const NavBarWidgetItem({
     super.key,
     required this.selectedIndex,
@@ -17,6 +16,7 @@ class NavBarWidgetItem extends StatelessWidget {
   final String title;
   final String imageUrl;
   final VoidCallback onTap;
+  final int selectedIndex;
 
   final int index;
 
