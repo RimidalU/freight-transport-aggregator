@@ -42,120 +42,12 @@ class NewTripScreen extends GetView<MyTripController> {
                       width: Get.width - 45,
                       color: const Color(0xffFCFCFC).withOpacity(0.08),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Earmed',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 12,
-                                    color: const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    '\$',
-                                    style: GoogleFonts.dmSans(
-                                        fontSize: 16,
-                                        color: const Color(0xffFCFCFC)
-                                            .withOpacity(0.46)),
-                                  ),
-                                  Text(
-                                    '1000',
-                                    style: GoogleFonts.dmSans(
-                                        fontSize: 16,
-                                        color: const Color(0xffD0D0D0)),
-                                  ),
-                                  3.widthBox,
-                                  Text(
-                                    '/',
-                                    style: GoogleFonts.dmSans(
-                                        fontSize: 16,
-                                        color: const Color(0xffFCFCFC)
-                                            .withOpacity(0.46)),
-                                  ),
-                                  3.widthBox,
-                                  Text(
-                                    '\$5000',
-                                    style: GoogleFonts.dmSans(
-                                        fontSize: 16,
-                                        color: const Color(0xffFCFCFC)
-                                            .withOpacity(0.46)),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          18.widthBox,
-                          Container(
-                            height: 40,
-                            width: 1,
-                            color: const Color(0xffFCFCFC).withOpacity(0.08),
-                          ),
-                          18.widthBox,
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Truck:',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 12,
-                                    color: const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                              ),
-                              Text(
-                                '5263',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 16,
-                                    color: const Color(0xffD0D0D0)),
-                              ),
-                            ],
-                          ),
-                          18.widthBox,
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Trailer:',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 12,
-                                    color: const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                              ),
-                              Text(
-                                '5263',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 16,
-                                    color: const Color(0xffD0D0D0)),
-                              ),
-                            ],
-                          ),
-                          18.widthBox,
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Vehicle:',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 12,
-                                    color: const Color(0xffFCFCFC)
-                                        .withOpacity(0.46)),
-                              ),
-                              Text(
-                                'Volvo FMX..',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 16,
-                                    color: const Color(0xffD0D0D0)),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                    const TripInfoTab(
+                      trailer: '5263',
+                      truck: '5263',
+                      vehicle: 'Volvo FMX...',
+                      earmed: 1000,
+                      earmedTotal: 5000,
                     ),
                   ],
                 ),
