@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../my_trips/controllers/trip.controller.dart';
-import '../../my_trips/models/trip.model.dart';
+import '../../../features/features.dart';
 import '../../../ui/ui.dart';
 
 class TripDetailTrackingScreen extends StatelessWidget {

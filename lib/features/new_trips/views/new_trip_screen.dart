@@ -2,8 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../features/features.dart';
 import '../../../ui/ui.dart';
+import '../../features.dart';
 
 class NewTripScreen extends GetView<MyTripController> {
   const NewTripScreen({Key? key}) : super(key: key);

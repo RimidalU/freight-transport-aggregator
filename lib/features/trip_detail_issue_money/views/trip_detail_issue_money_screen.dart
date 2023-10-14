@@ -2,8 +2,8 @@ import 'package:awesome_extensions/awesome_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled55/features/my_trips/models/trip.model.dart';
 
+import '../../../features/features.dart';
 import '../../../ui/ui.dart';
 
 class TripDetailIssueMoneyScreen extends StatelessWidget {
