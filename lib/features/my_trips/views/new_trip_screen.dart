@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
 import '../../../ui/ui.dart';
-import '../widgets/tripline.item.widget.dart';
 
 class NewTripScreen extends GetView<MyTripController> {
   const NewTripScreen({Key? key}) : super(key: key);
@@ -33,58 +32,10 @@ class NewTripScreen extends GetView<MyTripController> {
                 ),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/images/testprof.png'),
-                              ),
-                              8.widthBox,
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Good Morning',
-                                    style: GoogleFonts.dmSans(
-                                      fontSize: 14,
-                                      color: const Color(0xffFCFCFC)
-                                          .withOpacity(0.46),
-                                    ),
-                                  ),
-                                  Text(
-                                    'Abdula Azis',
-                                    style: GoogleFonts.dmSans(
-                                        fontSize: 18,
-                                        color: const Color(0xffD0D0D0)),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: const Color(0xffFCFCFC)
-                                          .withOpacity(0.08)),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Center(
-                                  child: Image.asset('assets/images/Arrow.png'),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                    const TripDashboardTab(
+                      imageLink: 'assets/images/testprof.png',
+                      onTapLink: AccountScreen.routeName,
+                      title: 'Abdula Azis',
                     ),
                     Container(
                       height: 1,
