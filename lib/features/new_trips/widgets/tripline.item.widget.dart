@@ -32,7 +32,8 @@ class TripLineItemWidget extends StatelessWidget {
                 Text(
                   'Trip #${data.index}',
                   style: GoogleFonts.dmSans(
-                      fontSize: 14, color: const Color(0xffD0D0D0)),
+                    fontSize: 14,
+                  ),
                 ),
                 IconButtonGrey(
                   onTap: () {},
@@ -45,7 +46,8 @@ class TripLineItemWidget extends StatelessWidget {
                       Text(
                         'Navigator',
                         style: GoogleFonts.dmSans(
-                            fontSize: 10, color: const Color(0xffD0D0D0)),
+                          fontSize: 10,
+                        ),
                       ),
                     ],
                   ),
@@ -83,8 +85,8 @@ class TripLineItemWidget extends StatelessWidget {
                                 Text(
                                   '2260',
                                   style: GoogleFonts.dmSans(
-                                      fontSize: 16,
-                                      color: const Color(0xffD0D0D0)),
+                                    fontSize: 16,
+                                  ),
                                 ),
                                 Text(
                                   'ml',
@@ -120,8 +122,8 @@ class TripLineItemWidget extends StatelessWidget {
                                 Text(
                                   '500',
                                   style: GoogleFonts.dmSans(
-                                      fontSize: 16,
-                                      color: const Color(0xffD0D0D0)),
+                                    fontSize: 16,
+                                  ),
                                 ),
                               ],
                             ),
@@ -146,7 +148,8 @@ class TripLineItemWidget extends StatelessWidget {
                             Text(
                               '2',
                               style: GoogleFonts.dmSans(
-                                  fontSize: 16, color: const Color(0xffD0D0D0)),
+                                fontSize: 16,
+                              ),
                             ),
                             Text(
                               'd',
@@ -159,7 +162,8 @@ class TripLineItemWidget extends StatelessWidget {
                             Text(
                               '16',
                               style: GoogleFonts.dmSans(
-                                  fontSize: 16, color: const Color(0xffD0D0D0)),
+                                fontSize: 16,
+                              ),
                             ),
                             Text(
                               'h',
@@ -172,7 +176,8 @@ class TripLineItemWidget extends StatelessWidget {
                             Text(
                               '23',
                               style: GoogleFonts.dmSans(
-                                  fontSize: 16, color: const Color(0xffD0D0D0)),
+                                fontSize: 16,
+                              ),
                             ),
                             Text(
                               'm',
@@ -222,7 +227,8 @@ class TripLineItemWidget extends StatelessWidget {
                         Text(
                           'Omaha NE',
                           style: GoogleFonts.dmSans(
-                              fontSize: 14, color: const Color(0xffD0D0D0)),
+                            fontSize: 14,
+                          ),
                         ),
                         Text(
                           'Mon 10/13 00:00',
@@ -254,7 +260,8 @@ class TripLineItemWidget extends StatelessWidget {
                         Text(
                           'Oakland, CA',
                           style: GoogleFonts.dmSans(
-                              fontSize: 14, color: const Color(0xffD0D0D0)),
+                            fontSize: 14,
+                          ),
                         ),
                         Text(
                           'Mon 10/13 00:00',
