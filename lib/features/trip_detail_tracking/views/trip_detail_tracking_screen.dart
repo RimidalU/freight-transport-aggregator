@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../features/features.dart';
 import '../../../ui/ui.dart';
+import '../widgets/widgets.dart';
 
 class TripDetailTrackingScreen extends StatelessWidget {
   final TripModel trip;
@@ -50,71 +51,10 @@ class TripDetailTrackingScreen extends StatelessWidget {
               itemExtent: 56,
               children: List.generate(
                 15,
-                (index) => ListTile(
-                  minLeadingWidth: 32,
-                  leading: Column(
-                    mainAxisAlignment: index != 14
-                        ? MainAxisAlignment.end
-                        : MainAxisAlignment.start,
-                    children: [
-                      if (index != 0)
-                        Container(
-                            width: 3,
-                            height: 12,
-                            color: const Color(0xFF32343A)),
-                      Container(
-                        width: 32,
-                        height: 32,
-                        decoration: ShapeDecoration(
-                          color: index == 0
-                              ? const Color(0xFFFB923C)
-                              : const Color(0xFF32343A),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5.33)),
-                        ),
-                        child: index == 0
-                            ? const Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  valueColor:
-                                      AlwaysStoppedAnimation(Colors.white),
-                                ),
-                              )
-                            : Icon(Icons.place,
-                                color: const Color(0xFFFCFCFC).withOpacity(.46),
-                                size: 16),
-                      ),
-                      if (index != 14)
-                        Container(
-                            width: 3,
-                            height: 12,
-                            color: const Color(0xFF32343A)),
-                    ],
-                  ),
-                  title: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Icon(Icons.check,
-                          color: const Color(0xFFFCFCFC).withOpacity(.46),
-                          size: 16),
-                      8.widthBox,
-                      Text(
-                        "54 Radley Street, Off 25",
-                        style:
-                            darkTheme(context).primaryTextTheme.headlineLarge,
-                      ),
-                    ],
-                  ),
-                  subtitle: Row(
-                    children: [
-                      24.widthBox,
-                      Text(
-                        'Mon 23 Mar.  11:00',
-                        style: darkTheme(context).primaryTextTheme.titleMedium,
-                      ),
-                    ],
-                  ),
+                (index) => TripDetailItem(
+                  index: index,
+                  title: "54 Radley Street, Off 25",
+                  dateTime: DateTime.now(),
                 ),
               ),
             ),
