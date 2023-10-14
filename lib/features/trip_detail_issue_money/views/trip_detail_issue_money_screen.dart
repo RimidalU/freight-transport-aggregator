@@ -7,11 +7,43 @@ import '../../../features/features.dart';
 import '../../../ui/ui.dart';
 import '../widgets/widgets.dart';
 
-const items = [
-  {'name': 'Lamer', 'price': 100, 'priceTotal': 250},
-  {'name': 'Palette', 'price': 90, 'priceTotal': 300},
-  {'name': 'Late', 'price': 200, 'priceTotal': 375},
-  {'name': 'Coffee', 'price': 225, 'priceTotal': 250},
+final items = [
+  {
+    'name': 'Lamer',
+    'price': 100,
+    'priceTotal': 250,
+    'fullName': 'Bozhenko',
+    'date': DateTime.now().add(
+      const Duration(days: -10),
+    )
+  },
+  {
+    'name': 'Palette',
+    'price': 90,
+    'priceTotal': 300,
+    'fullName': 'Bozhenko Andrey',
+    'date': DateTime.now().add(
+      const Duration(days: -32),
+    )
+  },
+  {
+    'name': 'Late',
+    'price': 200,
+    'priceTotal': 375,
+    'fullName': 'Andrey Bozhenko',
+    'date': DateTime.now().add(
+      const Duration(days: -11),
+    )
+  },
+  {
+    'name': 'Coffee',
+    'price': 225,
+    'priceTotal': 250,
+    'fullName': 'Andrey',
+    'date': DateTime.now().add(
+      const Duration(days: -33),
+    )
+  },
 ];
 
 class TripDetailIssueMoneyScreen extends StatelessWidget {
@@ -62,88 +94,15 @@ class TripDetailIssueMoneyScreen extends StatelessWidget {
                 ),
                 4.heightBox,
                 ...List.generate(
-                  15,
-                  (index) => Container(
-                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                    margin: const EdgeInsets.only(top: 4, bottom: 4),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: const Color(0x14FCFCFC)),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 40,
-                          height: 40,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: ShapeDecoration(
-                            color: const Color(0x14FCFCFC),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                          child: Image.asset("assets/images/user.png"),
-                        ),
-                        12.widthBox,
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Lumper',
-                                style: darkTheme(context)
-                                    .primaryTextTheme
-                                    .headlineMedium,
-                              ),
-                              Text(
-                                'Andrey Bozhenko, 20 Jun 2021',
-                                style: darkTheme(context)
-                                    .primaryTextTheme
-                                    .titleMedium,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text.rich(
-                              TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: '+',
-                                    style: darkTheme(context)
-                                        .primaryTextTheme
-                                        .headlineMedium,
-                                  ),
-                                  TextSpan(
-                                    text: '\$',
-                                    style: darkTheme(context)
-                                        .primaryTextTheme
-                                        .titleMedium,
-                                  ),
-                                  TextSpan(
-                                    text: '36',
-                                    style: darkTheme(context)
-                                        .primaryTextTheme
-                                        .headlineMedium,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Text(
-                              'Trip #${data.index}',
-                              style: darkTheme(context)
-                                  .primaryTextTheme
-                                  .titleMedium,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
+                    items.length,
+                    (index) => IssueMoneyHistoryItem(
+                          name: items[index]['name'] as String,
+                          price: items[index]['price'] as int,
+                          priceTotal: items[index]['priceTotal'] as int,
+                          fullName: items[index]['fullName'] as String,
+                          date: items[index]['date'] as DateTime,
+                          order: index + 1,
+                        )),
               ],
             ),
           ),
